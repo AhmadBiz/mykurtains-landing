@@ -62,6 +62,50 @@
     });
   });
 
+  /* ---- reviews carousel ---- */
+  var track = document.getElementById("reviewsTrack");
+  var revPrev = document.getElementById("revPrev");
+  var revNext = document.getElementById("revNext");
+  if (track && revPrev && revNext) {
+    var page = function () { return Math.max(280, Math.round(track.clientWidth * 0.85)); };
+
+    var updateArrows = function () {
+      var maxScroll = track.scrollWidth - track.clientWidth;
+      revPrev.disabled = track.scrollLeft <= 8;
+      revNext.disabled = track.scrollLeft >= maxScroll - 8;
+    };
+
+    revPrev.addEventListener("click", function () { track.scrollBy({ left: -page(), behavior: "smooth" }); });
+    revNext.addEventListener("click", function () { track.scrollBy({ left: page(), behavior: "smooth" }); });
+    track.addEventListener("scroll", updateArrows, { passive: true });
+    window.addEventListener("resize", updateArrows);
+    track.scrollLeft = 0; // always start at the first review
+    updateArrows();
+
+    // drag-to-scroll (mouse / trackpad-press only; touch uses native scroll)
+    var down = false, startX = 0, startLeft = 0, moved = 0;
+    track.addEventListener("pointerdown", function (e) {
+      if (e.pointerType === "touch") return;
+      down = true; moved = 0; startX = e.clientX; startLeft = track.scrollLeft;
+      track.classList.add("dragging");
+    });
+    track.addEventListener("pointermove", function (e) {
+      if (!down) return;
+      var dx = e.clientX - startX;
+      moved = Math.max(moved, Math.abs(dx));
+      track.scrollLeft = startLeft - dx;
+    });
+    var endDrag = function () {
+      if (!down) return;
+      down = false; track.classList.remove("dragging"); updateArrows();
+    };
+    track.addEventListener("pointerup", endDrag);
+    track.addEventListener("pointercancel", endDrag);
+    track.addEventListener("pointerleave", endDrag);
+    // suppress accidental link/click after a real drag
+    track.addEventListener("click", function (e) { if (moved > 6) { e.preventDefault(); } }, true);
+  }
+
   /* ---- current year ---- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
