@@ -227,7 +227,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    COLLECTIONS
    ============================================================ */
 .collections { background: var(--cream); }
-.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2vw, 1.6rem); }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.6rem); }
 .card {
   background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
   box-shadow: var(--shadow-sm); border: 1px solid var(--line);
@@ -380,7 +380,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .reveal.in { opacity: 1; transform: none; }
 .cards .reveal.in:nth-child(2), .steps .reveal.in:nth-child(2), .reviews__grid .reveal.in:nth-child(2) { transition-delay: .08s; }
 .cards .reveal.in:nth-child(3), .steps .reveal.in:nth-child(3), .reviews__grid .reveal.in:nth-child(3) { transition-delay: .16s; }
-.cards .reveal.in:nth-child(4) { transition-delay: .24s; }
+.cards .reveal.in:nth-child(4) { transition-delay: .06s; }
+.cards .reveal.in:nth-child(5) { transition-delay: .14s; }
+.cards .reveal.in:nth-child(6) { transition-delay: .22s; }
 
 /* ============================================================
    RESPONSIVE
