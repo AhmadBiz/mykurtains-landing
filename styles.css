@@ -313,6 +313,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .review footer { display: flex; align-items: center; gap: .7rem; font-weight: 600; font-size: .95rem; margin-top: auto; }
 .review footer em { font-style: normal; color: var(--muted); font-weight: 500; font-size: .82rem; margin-left: auto; }
 .review__avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--sand); color: var(--ink); display: grid; place-items: center; font-weight: 700; }
+.reviews__cta { text-align: center; margin-top: 2.5rem; }
 
 /* ============================================================
    CONTACT
@@ -383,6 +384,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .cards .reveal.in:nth-child(4) { transition-delay: .06s; }
 .cards .reveal.in:nth-child(5) { transition-delay: .14s; }
 .cards .reveal.in:nth-child(6) { transition-delay: .22s; }
+.reviews__grid .reveal.in:nth-child(4) { transition-delay: .06s; }
+.reviews__grid .reveal.in:nth-child(5) { transition-delay: .14s; }
+.reviews__grid .reveal.in:nth-child(6) { transition-delay: .22s; }
 
 /* ============================================================
    RESPONSIVE
