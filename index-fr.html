@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#141210" />
+  <title>My Kurtains — Stores, rideaux et film intelligent sur mesure à Montréal</title>
+  <meta name="description" content="Beaucoup de style, à petit prix. Stores, rideaux, toiles zébrées et film intelligent sur mesure à Montréal — motorisés ou manuels, avec installation professionnelle gratuite." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="My Kurtains — Stores et rideaux sur mesure à Montréal" />
+  <meta property="og:description" content="Beaucoup de style, à petit prix. Stores sur mesure avec installation professionnelle gratuite à MTL." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=1200&q=80" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="en" href="index.html" />
+  <link rel="alternate" hreflang="fr" href="index-fr.html" />
+  <link rel="alternate" hreflang="x-default" href="index.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Calendly -->
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#top" class="brand" aria-label="Accueil My Kurtains">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 3h16M4 3v18M20 3v18M4 21h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M8 3c0 6-1.2 11-1.2 15M12 3c0 6 .4 11 .4 15M16 3c0 6 1.2 11 1.2 15" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/>
+          </svg>
+        </span>
+        <span class="brand__name">My<em>Kurtains</em></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Principale">
+        <a href="#collections">Collections</a>
+        <a href="#why">Pourquoi nous</a>
+        <a href="#process">Comment ça marche</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#reviews">Avis</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="index.html" class="btn btn--ghost btn--sm lang-switch" hreflang="en" aria-label="View site in English">EN</a>
+        <a href="tel:+14384020559" class="btn btn--ghost btn--sm">438&nbsp;402&nbsp;0559</a>
+        <a href="#contact" class="btn btn--solid btn--sm" data-calendly>Consultation gratuite</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="navMobile">
+      <a href="#collections">Collections</a>
+      <a href="#why">Pourquoi nous</a>
+      <a href="#process">Comment ça marche</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#reviews">Avis</a>
+      <a href="index.html" hreflang="en" class="nav__mobile-lang">View in English →</a>
+      <a href="#contact" class="btn btn--solid" data-calendly>Réserver une consultation gratuite</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__media">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&q=80"
+             alt="Salon moderne baigné de lumière avec de superbes stores sur mesure" loading="eager" fetchpriority="high" />
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="hero__content container">
+        <p class="eyebrow reveal">Le studio de stores sur mesure de Montréal</p>
+        <h1 class="hero__title reveal">
+          Des fenêtres pensées<br />jusque dans <em>le moindre</em> détail.
+        </h1>
+        <p class="hero__sub reveal">
+          Stores, rideaux, toiles zébrées et film intelligent — motorisés ou manuels,
+          mesurés, fabriqués et installés pour votre espace. Beaucoup de style, un prix honnête.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#contact" class="btn btn--solid btn--lg" data-calendly>Réserver une consultation gratuite</a>
+          <a href="#collections" class="btn btn--outline btn--lg">Explorer les collections</a>
+        </div>
+
+        <div class="hero__badges reveal">
+          <div class="badge"><strong>Gratuite</strong><span>installation professionnelle</span></div>
+          <div class="badge"><strong>Sur mesure</strong><span>fabriqué pour vous</span></div>
+          <div class="badge"><strong>5,0★</strong><span>sur Google</span></div>
+        </div>
+      </div>
+
+      <a href="#collections" class="hero__scroll" aria-label="Défiler vers les collections">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Stores enrouleurs</span><span>•</span>
+        <span>Rideaux</span><span>•</span>
+        <span>Stores bateau</span><span>•</span>
+        <span>Jour et nuit</span><span>•</span>
+        <span>Alvéolaires</span><span>•</span>
+        <span>Film intelligent</span><span>•</span>
+        <span>Motorisés</span><span>•</span>
+        <span>Occultant 100 %</span><span>•</span>
+        <span>Stores extérieurs</span><span>•</span>
+        <span>Stores enrouleurs</span><span>•</span>
+        <span>Rideaux</span><span>•</span>
+        <span>Stores bateau</span><span>•</span>
+        <span>Jour et nuit</span><span>•</span>
+        <span>Alvéolaires</span><span>•</span>
+        <span>Film intelligent</span><span>•</span>
+        <span>Motorisés</span><span>•</span>
+        <span>Occultant 100 %</span><span>•</span>
+        <span>Stores extérieurs</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- ============ COLLECTIONS ============ -->
+    <section class="section collections" id="collections">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Collections</p>
+          <h2 class="section__title">Trouvez votre lumière idéale.</h2>
+          <p class="section__lede">Chaque fenêtre est unique. Chaque tissu, chaque tombée et chaque mécanisme sont choisis avec vous — pour un résultat qui semble avoir toujours été là.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=800&q=80" alt="Stores enrouleurs dans une pièce moderne et lumineuse" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Stores enrouleurs</h3>
+              <p>Épurés, minimalistes et d’une polyvalence infinie. Finis voile, facile d’entretien, jacquard et occultant.</p>
+              <span class="card__tag">Les plus populaires</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80" alt="Rideaux jusqu’au sol encadrant une fenêtre de chambre lumineuse" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Rideaux et draperies</h3>
+              <p>Des tissus qui balaient le sol, adoucissent une pièce et habillent la fenêtre à merveille.</p>
+              <span class="card__tag">Intemporel</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Élégants stores bateau encadrant une fenêtre" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Stores bateau</h3>
+              <p>Des plis souples et sur mesure qui apportent chaleur et luxe discret à toute pièce.</p>
+              <span class="card__tag">Élégant</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=800&q=80" alt="Stores zébrés jour et nuit aux bandes translucides superposées" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Jour et nuit</h3>
+              <p>Des bandes zébrées à double couche qui passent de l’intimité à la lumière du jour d’un seul geste.</p>
+              <span class="card__tag">Polyvalent</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?auto=format&fit=crop&w=800&q=80" alt="Stores occultants motorisés dans une chambre paisible" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Motorisés et occultants</h3>
+              <p>Une automatisation silencieuse et un occultant total pour cinémas maison, chambres d’enfants et chambres à coucher.</p>
+              <span class="card__tag">Intelligent</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Cloison vitrée idéale pour un film intelligent commutable" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Film intelligent</h3>
+              <p>Un film de confidentialité commutable qui rend le verre clair ou dépoli d’une simple pression.</p>
+              <span class="card__tag">Innovant</span>
+            </div>
+          </article>
+
+          <!-- TODO: remplacer la photo temporaire ci-dessous par une vraie photo de stores alvéolaires -->
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=800&q=80" alt="Pièce chaleureuse habillée de stores alvéolaires" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Stores alvéolaires</h3>
+              <p>Des alvéoles qui emprisonnent l’air pour isoler la pièce — hivers plus chauds, étés plus frais, lumière plus douce.</p>
+              <span class="card__tag">Écoénergétique</span>
+            </div>
+          </article>
+
+          <!-- TODO: remplacer la photo temporaire ci-dessous par une vraie photo d’occultant 100 % -->
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" alt="Chambre sombre avec stores occultants" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Occultant 100 %</h3>
+              <p>L’obscurité totale sur demande — parfait pour les chambres, les chambres d’enfants et le sommeil de jour.</p>
+              <span class="card__tag">Noirceur totale</span>
+            </div>
+          </article>
+
+          <!-- TODO: remplacer la photo temporaire ci-dessous par une vraie photo de stores extérieurs -->
+          <article class="card reveal">
+            <div class="card__img">
+              <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80" alt="Patio extérieur couvert avec stores résistants aux intempéries" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Stores extérieurs</h3>
+              <p>Une protection tout-temps pour patios, balcons et terrasses — prolongez votre espace de vie dehors.</p>
+              <span class="card__tag">Tout-temps</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY ============ -->
+    <section class="section why" id="why">
+      <div class="container why__grid">
+        <div class="why__media reveal">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="Designer mesurant une fenêtre pour des stores sur mesure" loading="lazy" />
+          <div class="why__stat">
+            <strong>0$</strong>
+            <span>installation, toujours incluse</span>
+          </div>
+        </div>
+
+        <div class="why__content">
+          <header class="section__head section__head--left reveal">
+            <p class="eyebrow">Pourquoi My Kurtains</p>
+            <h2 class="section__title">Un service de boutique,<br />sans le prix de boutique.</h2>
+          </header>
+
+          <ul class="features">
+            <li class="reveal">
+              <span class="features__icon" aria-hidden="true">✓</span>
+              <div><h4>Installation professionnelle gratuite</h4><p>Chaque commande est installée par notre propre équipe — sans frais cachés, sans surprise.</p></div>
+            </li>
+            <li class="reveal">
+              <span class="features__icon" aria-hidden="true">✓</span>
+              <div><h4>Fabriqué sur mesure</h4><p>Nous mesurons sur place pour que vos stores s’ajustent au millimètre, pas à la taille la plus proche.</p></div>
+            </li>
+            <li class="reveal">
+              <span class="features__icon" aria-hidden="true">✓</span>
+              <div><h4>Des prix honnêtes et transparents</h4><p>Des tissus et mécanismes haut de gamme à des prix qui ont du sens.</p></div>
+            </li>
+            <li class="reveal">
+              <span class="features__icon" aria-hidden="true">✓</span>
+              <div><h4>Rapides et obsédés du détail</h4><p>Un délai court et un fini que vous aurez envie de montrer.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section process" id="process">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Comment ça marche</p>
+          <h2 class="section__title">Trois étapes simples, et c’est réglé.</h2>
+        </header>
+
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Consultation gratuite</h3>
+            <p>Parlez-nous de votre espace. Nous venons, mesurons et vous aidons à choisir tissus et mécanismes — sans pression, sans frais.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Fabrication sur mesure</h3>
+            <p>Vos stores sont coupés et fabriqués précisément selon vos fenêtres, dans les finis que vous avez choisis.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">03</span>
+            <h3>On installe pour vous</h3>
+            <p>Notre équipe installe le tout proprement et vous montre comment ça fonctionne. Vous n’avez qu’à profiter de la vue.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Galerie</p>
+          <h2 class="section__title">De vraies pièces, transformées.</h2>
+          <p class="section__lede">Quelques maisons et espaces montréalais que nous avons habillés.</p>
+        </header>
+      </div>
+
+      <div class="gallery__grid">
+        <figure class="reveal"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80" alt="Salon aux jeux de lumière avec stores modernes" loading="lazy" /></figure>
+        <figure class="reveal"><img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80" alt="Chambre à la douce lumière filtrée" loading="lazy" /></figure>
+        <figure class="reveal"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" alt="Salle à manger minimaliste près d’une grande fenêtre" loading="lazy" /></figure>
+        <figure class="reveal"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80" alt="Intérieur chaleureux aux tons de bois avec stores" loading="lazy" /></figure>
+        <figure class="reveal"><img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Cuisine lumineuse avec stores enrouleurs épurés" loading="lazy" /></figure>
+        <figure class="reveal"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Salon contemporain avec fenêtres pleine hauteur" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Aimés à Montréal</p>
+          <h2 class="section__title">5,0 étoiles, et ça continue.</h2>
+          <p class="section__lede">Chaque mot ci-dessous est un véritable avis Google 5 étoiles, laissé par une maison ou un bureau de Montréal.</p>
+        </header>
+
+        <div class="reviews__scroller reveal">
+          <div class="reviews__track" id="reviewsTrack">
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Great service and quality products! We got custom sheer curtains and blinds for our home. Our favourite are the motorized honeycomb blinds that offer both privacy and blackout options. Highly recommend!&rdquo;</p>
+              <footer><span class="review__avatar">F</span> Fozia&nbsp;Bodi <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Wow, the absolute best product and service. I was looking for curtains for a long time, and couldn&rsquo;t believe how affordable these were for the level of quality. These are irreplaceable.&rdquo;</p>
+              <footer><span class="review__avatar">A</span> Abdullah&nbsp;Habib <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Exceptional service! They went out of their way to ensure we were fully satisfied. Also the quality of the curtains is top! We&rsquo;re very happy.&rdquo;</p>
+              <footer><span class="review__avatar">R</span> Raluca&nbsp;E. <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Great customer service &amp; such a great team! Beautiful selection to customize your own curtains. Very high quality as well! Would highly recommend MyKurtains.&rdquo;</p>
+              <footer><span class="review__avatar">B</span> Bianca&nbsp;Baaklini <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;I purchased curtains for the bedroom and was very impressed with the quality of the curtains, the installation and the service. Highly recommend for a clean, well-done job.&rdquo;</p>
+              <footer><span class="review__avatar">B</span> Behdad&nbsp;K. <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Service parfait! Gars sympathiques qui travaillent bien!! Je suis très très contente de mes rideaux!!&rdquo;</p>
+              <footer><span class="review__avatar">C</span> Chantal&nbsp;Lacroix <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Affordable blinds and very professional and courteous staff. I can&rsquo;t recommend this company enough!&rdquo;</p>
+              <footer><span class="review__avatar">B</span> Bobby&nbsp;Taslimi <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Professional and premium service. Definitely worth the price. Will keep these curtains for a very long time. Thank you guys!&rdquo;</p>
+              <footer><span class="review__avatar">M</span> Manar&nbsp;A. <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Service is impeccable, blinds look fantastic. Would definitely recommend MyKurtains to anyone that needs new blinds installed. Very professional and finished in a timely manner.&rdquo;</p>
+              <footer><span class="review__avatar">A</span> Angela&nbsp;Wilson-Veltri <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Excellent service from the brothers (owners). Responds quickly, multiple different choices and great fabric.&rdquo;</p>
+              <footer><span class="review__avatar">M</span> Mortaza&nbsp;Mirhassan <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Service impeccable et rapide ! Je recommande à 100%.&rdquo;</p>
+              <footer><span class="review__avatar">N</span> Nadia <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;The curtains they put on were custom made and fit my windows perfectly. Overall very satisfied with the service of Fuad and his team.&rdquo;</p>
+              <footer><span class="review__avatar">T</span> Taha&nbsp;Rehman <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Friendly people, great product, amazing value! Would highly recommend.&rdquo;</p>
+              <footer><span class="review__avatar">J</span> Javed&nbsp;Shawotaully <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;Très satisfait. Travail très professionnel, prix raisonnable, utilisation facile et produit de qualité. Très bon service et très disponible. Je recommande fortement!&rdquo;</p>
+              <footer><span class="review__avatar">A</span> Abdelhakim&nbsp;S. <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;MyKurtains delivered not only an amazing product but an exceptional service! I highly recommend this team of nice, polite and very competent brothers. Thank you!&rdquo;</p>
+              <footer><span class="review__avatar">J</span> Julie&nbsp;Bisson <em>Avis Google</em></footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>&ldquo;My Kurtains offers a wide range of colors and kinds that makes it easy to choose the perfect one for you. Very happy with my recent order!&rdquo;</p>
+              <footer><span class="review__avatar">M</span> Mazen&nbsp;Samara <em>Avis Google</em></footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="reviews__controls reveal">
+          <div class="reviews__arrows">
+            <button class="rev-btn" id="revPrev" type="button" aria-label="Avis précédents" aria-controls="reviewsTrack">&larr;</button>
+            <button class="rev-btn" id="revNext" type="button" aria-label="Avis suivants" aria-controls="reviewsTrack">&rarr;</button>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=MyKurtains+Montreal" target="_blank" rel="noopener" class="btn btn--ghost">Lire tous les avis sur Google &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container contact__inner">
+        <div class="contact__copy reveal">
+          <p class="eyebrow">Commençons</p>
+          <h2 class="section__title">Réservez votre consultation design gratuite.</h2>
+          <p class="section__lede">Choisissez un moment qui vous convient — c’est gratuit, sympathique et sans engagement. Vous préférez nous joindre directement ? Nous sommes à un message près.</p>
+
+          <div class="contact__methods">
+            <a class="method" href="tel:+14384020559">
+              <span class="method__ic">📞</span>
+              <span><strong>Appelez-nous</strong>+1 (438) 402-0559</span>
+            </a>
+            <a class="method" href="https://wa.me/14384020559" target="_blank" rel="noopener">
+              <span class="method__ic">💬</span>
+              <span><strong>WhatsApp</strong>Écrivez-nous en tout temps</span>
+            </a>
+            <a class="method" href="mailto:hello@mykurtains.com">
+              <span class="method__ic">✉️</span>
+              <span><strong>Courriel</strong>hello@mykurtains.com</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__booking reveal">
+          <div class="booking__primary">
+            <span class="booking__tag">★ Le plus rapide — choisissez un moment</span>
+            <div class="calendly-inline-widget"
+                 data-url="https://calendly.com/mykurtains/consultation?hide_event_type_details=1&amp;hide_gdpr_banner=1&amp;background_color=fbf8f3&amp;text_color=17130f&amp;primary_color=a67c3d"
+                 style="min-width:300px;height:640px;"></div>
+          </div>
+
+          <div class="booking__divider"><span>ou envoyez-nous les détails</span></div>
+
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" autocomplete="name" required placeholder="Votre nom" />
+            </div>
+            <div class="field">
+              <label for="phone">Téléphone ou courriel</label>
+              <input type="text" id="phone" name="phone" required placeholder="Comment vous joindre ?" />
+            </div>
+            <div class="field">
+              <label for="interest">Je suis intéressé(e) par</label>
+              <select id="interest" name="interest">
+                <option>Rideaux et draperies</option>
+                <option>Stores enrouleurs</option>
+                <option>Stores bateau</option>
+                <option>Jour et nuit (zébrés)</option>
+                <option>Stores alvéolaires</option>
+                <option>Motorisés et occultants</option>
+                <option>Occultant 100 %</option>
+                <option>Stores extérieurs</option>
+                <option>Film intelligent</option>
+                <option>Pas encore sûr — aidez-moi à choisir</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Message <span>(facultatif)</span></label>
+              <textarea id="message" name="message" rows="3" placeholder="Nombre de fenêtres, échéancier, tout ce qui peut aider…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--solid btn--lg btn--block">Demander ma consultation gratuite</button>
+            <p class="contact__note" id="formNote" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__name">My<em>Kurtains</em></span>
+        <p>Beaucoup de style, à petit prix. Stores, rideaux et film intelligent, fabriqués et installés partout à Montréal.</p>
+      </div>
+      <nav class="footer__col" aria-label="Plan du site">
+        <h4>Explorer</h4>
+        <a href="#collections">Collections</a>
+        <a href="#why">Pourquoi nous</a>
+        <a href="#process">Comment ça marche</a>
+        <a href="#gallery">Galerie</a>
+      </nav>
+      <nav class="footer__col" aria-label="Contact">
+        <h4>Nous joindre</h4>
+        <a href="tel:+14384020559">+1 (438) 402-0559</a>
+        <a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a>
+        <a href="https://wa.me/14384020559" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+      <div class="footer__col">
+        <h4>Suivez-nous</h4>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/mykurtains/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <a href="https://www.facebook.com/mykurtains" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar container">
+      <span>© <span id="year"></span> My Kurtains — Montréal, QC</span>
+      <span>Conçu avec soin pour de belles fenêtres.</span>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/14384020559" class="fab" target="_blank" rel="noopener" aria-label="Écrivez-nous sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.86 9.86 0 004.76 1.22h.004c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0012.04 2zm5.8 14.2c-.24.68-1.42 1.32-1.95 1.36-.5.05-.98.24-3.33-.7-2.8-1.1-4.6-3.96-4.74-4.14-.14-.18-1.15-1.53-1.15-2.92s.73-2.07.98-2.35c.26-.28.56-.35.75-.35.18 0 .37 0 .53.01.17.01.4-.06.62.47.24.56.8 1.95.87 2.1.07.14.12.3.02.48-.1.18-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.9 1.06.94 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.18-.2.7-.8.88-1.08.18-.28.36-.24.6-.14.24.09 1.55.73 1.82.86.26.14.44.2.5.32.06.11.06.66-.18 1.34z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -151,6 +151,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav__links a:hover::after { width: 100%; }
 
 .nav__cta { display: flex; align-items: center; gap: .7rem; }
+.lang-switch { letter-spacing: .08em; font-weight: 700; padding-inline: .9rem; }
+.nav__mobile-lang { color: var(--brass-dk) !important; font-weight: 600; }
 
 .nav__toggle { display: none; width: 42px; height: 42px; flex-direction: column; gap: 5px; align-items: center; justify-content: center; }
 .nav__toggle span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .3s var(--ease), opacity .2s var(--ease); }
@@ -441,13 +443,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 1100px) {
+  /* collapse to the hamburger before the desktop nav gets crowded */
+  .nav__links, .nav__cta { display: none; }
+  .nav__toggle { display: flex; }
+}
 @media (max-width: 1024px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .footer__inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 860px) {
-  .nav__links, .nav__cta { display: none; }
-  .nav__toggle { display: flex; }
   .why__grid, .contact__inner { grid-template-columns: 1fr; }
   .steps, .reviews__grid { grid-template-columns: 1fr; }
   .why__media { max-width: 480px; }
