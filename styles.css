@@ -330,6 +330,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .method span span, .method > span:last-child { color: var(--muted); font-size: .9rem; }
 .method strong + * { color: var(--muted); }
 
+/* booking column: Calendly primary, form secondary */
+.contact__booking { display: flex; flex-direction: column; gap: 1.75rem; }
+.booking__primary { position: relative; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: .5rem; overflow: hidden; }
+.booking__tag {
+  position: absolute; top: 1rem; left: 1rem; z-index: 2;
+  background: var(--ink); color: var(--cream);
+  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: .4rem .8rem; border-radius: 100px; box-shadow: var(--shadow-sm);
+}
+.calendly-inline-widget { border-radius: calc(var(--radius-lg) - 6px); overflow: hidden; }
+.booking__divider { display: flex; align-items: center; gap: 1rem; color: var(--muted); font-size: .85rem; letter-spacing: .04em; text-transform: uppercase; }
+.booking__divider::before, .booking__divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
 .contact__form { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(1.5rem, 3vw, 2.4rem); box-shadow: var(--shadow-md); display: grid; gap: 1.1rem; }
 .field { display: grid; gap: .4rem; }
 .field label { font-size: .85rem; font-weight: 600; color: var(--ink-2); }

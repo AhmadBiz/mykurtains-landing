@@ -21,6 +21,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Calendly -->
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
 
@@ -47,7 +51,7 @@
 
       <div class="nav__cta">
         <a href="tel:+14384020559" class="btn btn--ghost btn--sm">438&nbsp;402&nbsp;0559</a>
-        <a href="#contact" class="btn btn--solid btn--sm">Free Consultation</a>
+        <a href="#contact" class="btn btn--solid btn--sm" data-calendly>Free Consultation</a>
       </div>
 
       <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -61,7 +65,7 @@
       <a href="#process">How It Works</a>
       <a href="#gallery">Gallery</a>
       <a href="#reviews">Reviews</a>
-      <a href="#contact" class="btn btn--solid">Book Free Consultation</a>
+      <a href="#contact" class="btn btn--solid" data-calendly>Book Free Consultation</a>
     </div>
   </header>
 
@@ -85,7 +89,7 @@
           measured, made and installed for your space. High style, honest pricing.
         </p>
         <div class="hero__actions reveal">
-          <a href="#contact" class="btn btn--solid btn--lg">Book a free consultation</a>
+          <a href="#contact" class="btn btn--solid btn--lg" data-calendly>Book a free consultation</a>
           <a href="#collections" class="btn btn--outline btn--lg">Explore collections</a>
         </div>
 
@@ -341,7 +345,7 @@
         <div class="contact__copy reveal">
           <p class="eyebrow">Let&rsquo;s begin</p>
           <h2 class="section__title">Book your free design consultation.</h2>
-          <p class="section__lede">Tell us a little about your windows and we&rsquo;ll be in touch within a day. Prefer to talk now? We&rsquo;re a message away.</p>
+          <p class="section__lede">Pick a time that suits you — it&rsquo;s free, friendly and no obligation. Prefer to reach us directly? We&rsquo;re a message away.</p>
 
           <div class="contact__methods">
             <a class="method" href="tel:+14384020559">
@@ -359,32 +363,45 @@
           </div>
         </div>
 
-        <form class="contact__form reveal" id="contactForm" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your name" />
+        <div class="contact__booking reveal">
+          <div class="booking__primary">
+            <span class="booking__tag">★ Fastest — pick a time</span>
+            <div class="calendly-inline-widget"
+                 data-url="https://calendly.com/mykurtains/mykurtains-consultation?hide_event_type_details=1&amp;hide_gdpr_banner=1&amp;background_color=fbf8f3&amp;text_color=17130f&amp;primary_color=a67c3d"
+                 style="min-width:300px;height:640px;"></div>
           </div>
-          <div class="field">
-            <label for="phone">Phone or email</label>
-            <input type="text" id="phone" name="phone" required placeholder="How can we reach you?" />
-          </div>
-          <div class="field">
-            <label for="interest">I&rsquo;m interested in</label>
-            <select id="interest" name="interest">
-              <option>Roller Blinds</option>
-              <option>Roman Shades</option>
-              <option>Day &amp; Night / Zebra</option>
-              <option>Motorized &amp; Blackout</option>
-              <option>Not sure yet — help me choose</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Message <span>(optional)</span></label>
-            <textarea id="message" name="message" rows="3" placeholder="Number of windows, timeline, anything helpful…"></textarea>
-          </div>
-          <button type="submit" class="btn btn--solid btn--lg btn--block">Request my free consultation</button>
-          <p class="contact__note" id="formNote" role="status"></p>
-        </form>
+
+          <div class="booking__divider"><span>or send us the details</span></div>
+
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone or email</label>
+              <input type="text" id="phone" name="phone" required placeholder="How can we reach you?" />
+            </div>
+            <div class="field">
+              <label for="interest">I&rsquo;m interested in</label>
+              <select id="interest" name="interest">
+                <option>Curtains &amp; Drapes</option>
+                <option>Roller Blinds</option>
+                <option>Roman Shades</option>
+                <option>Day &amp; Night / Zebra</option>
+                <option>Motorized &amp; Blackout</option>
+                <option>Smart Film</option>
+                <option>Not sure yet — help me choose</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Message <span>(optional)</span></label>
+              <textarea id="message" name="message" rows="3" placeholder="Number of windows, timeline, anything helpful…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--solid btn--lg btn--block">Request my free consultation</button>
+            <p class="contact__note" id="formNote" role="status"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>

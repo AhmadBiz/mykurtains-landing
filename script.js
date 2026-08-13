@@ -48,6 +48,20 @@
     revealEls.forEach((el) => el.classList.add("in"));
   }
 
+  /* ---- Calendly popup on primary CTAs ---- */
+  var CALENDLY_URL =
+    "https://calendly.com/mykurtains/mykurtains-consultation?hide_gdpr_banner=1&background_color=fbf8f3&text_color=17130f&primary_color=a67c3d";
+  document.querySelectorAll("[data-calendly]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      // If Calendly's widget is loaded, open the popup; otherwise let the
+      // href="#contact" fallback scroll to the inline scheduler.
+      if (window.Calendly && typeof window.Calendly.initPopupWidget === "function") {
+        e.preventDefault();
+        window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+      }
+    });
+  });
+
   /* ---- current year ---- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
