@@ -166,6 +166,9 @@ def render(p, lang="en"):
   <script type="application/ld+json">{json.dumps(article_ld, ensure_ascii=False)}</script>
   <script type="application/ld+json">{json.dumps(faq_ld, ensure_ascii=False)}</script>
   <link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{up}assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="{up}assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{up}assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />

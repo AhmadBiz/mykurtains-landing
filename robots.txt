@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /blog/_build_posts.py
+Disallow: /blog/_content_fr.py
+
+Sitemap: https://www.mykurtains.com/sitemap.xml
