@@ -468,3 +468,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero__badges { gap: 1.6rem; }
   .footer__bar { justify-content: flex-start; }
 }
+
+/* product cards that link to their guide */
+.card--link { color: inherit; text-decoration: none; display: block; }
+.card--link .card__body { position: relative; }
+.card--link .card__body::after {
+  content: "Read the guide →"; display: block; margin-top: .8rem;
+  font-size: .85rem; font-weight: 600; color: var(--brass-dk);
+  transition: transform .3s var(--ease);
+}
+.card--link:hover .card__body::after { transform: translateX(4px); }
