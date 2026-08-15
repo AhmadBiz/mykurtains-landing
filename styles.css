@@ -478,3 +478,4 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: transform .3s var(--ease);
 }
 .card--link:hover .card__body::after { transform: translateX(4px); }
+html[lang="fr"] .card--link .card__body::after { content: "Lire le guide →"; }

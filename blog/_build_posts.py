@@ -9,6 +9,41 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://www.mykurtains.com"
 
+# ---------------------------------------------------------------- i18n
+LANG = {
+  "en": dict(code="en", dir="", up="../", blogdir="blog/", other="fr", other_dir="fr/", other_label="FR", other_aria="Voir ce guide en français",
+    site_home="../index.html", nav=[("../index.html#collections","Collections"),("../index.html#why","Why Us"),("../index.html#process","How It Works"),("index.html","Guides"),("../index.html#reviews","Reviews")],
+    phone_btn="438&nbsp;402&nbsp;0559", consult="Free Consultation", book="Book Free Consultation", book_long="Book a free consultation",
+    contact="../index.html#contact", brand_tag="High style, low cost. Custom blinds, curtains &amp; smart film, made and installed across Montreal.",
+    f_explore="Explore", f_collections="Collections", f_guides="Guides &amp; advice", f_how="How It Works", f_reviews="Reviews", f_contact="Get in touch", f_follow="Follow",
+    f_bar="Made with care for beautiful windows.", f_city="Montreal, QC", wa_aria="Message us on WhatsApp",
+    kind_guide="Product guide", kind_advice="Advice", crumb_guides="Guides", crumb_advice="Advice", home="Home",
+    read="min read", updated="Updated Aug 2026", city="Montreal, QC", pros="Pros", cons="Cons", glance="At a glance", faq="Frequently asked questions",
+    all_guides="All product guides", talk_h="Prefer to talk?", talk_p="Call or WhatsApp us — we answer fast.", keep="Keep reading", related="Related guides",
+    read_more="Read →", title_suffix=" | My Kurtains Montreal", site_name="My Kurtains", locale="en_CA"),
+  "fr": dict(code="fr", dir="fr/", up="../../", blogdir="blog/fr/", other="en", other_dir="", other_label="EN", other_aria="Read this guide in English",
+    site_home="../../index-fr.html", nav=[("../../index-fr.html#collections","Collections"),("../../index-fr.html#why","Pourquoi nous"),("../../index-fr.html#process","Comment ça marche"),("index.html","Guides"),("../../index-fr.html#reviews","Avis")],
+    phone_btn="438&nbsp;402&nbsp;0559", consult="Consultation gratuite", book="Réserver une consultation gratuite", book_long="Réserver une consultation gratuite",
+    contact="../../index-fr.html#contact", brand_tag="Beaucoup de style, à petit prix. Stores, rideaux et film intelligent, fabriqués et installés partout à Montréal.",
+    f_explore="Explorer", f_collections="Collections", f_guides="Guides et conseils", f_how="Comment ça marche", f_reviews="Avis", f_contact="Nous joindre", f_follow="Suivez-nous",
+    f_bar="Conçu avec soin pour de belles fenêtres.", f_city="Montréal, QC", wa_aria="Écrivez-nous sur WhatsApp",
+    kind_guide="Guide produit", kind_advice="Conseils", crumb_guides="Guides", crumb_advice="Conseils", home="Accueil",
+    read="min de lecture", updated="Mis à jour août 2026", city="Montréal, QC", pros="Avantages", cons="Inconvénients", glance="En un coup d’œil", faq="Questions fréquentes",
+    all_guides="Tous les guides produits", talk_h="Vous préférez parler ?", talk_p="Appelez-nous ou écrivez-nous sur WhatsApp — on répond vite.", keep="À lire aussi", related="Guides connexes",
+    read_more="Lire →", title_suffix=" | My Kurtains Montréal", site_name="My Kurtains", locale="fr_CA"),
+}
+GUIDES_FR = [
+    ("honeycomb-blinds.html", "Stores alvéolaires"),
+    ("roller-blinds.html", "Stores enrouleurs"),
+    ("curtains-and-drapes.html", "Rideaux et draperies"),
+    ("roman-shades.html", "Stores bateau"),
+    ("day-and-night-zebra-blinds.html", "Jour et nuit (zébrés)"),
+    ("motorized-blinds.html", "Stores motorisés"),
+    ("blackout-blinds.html", "Occultant 100 %"),
+    ("outdoor-blinds.html", "Stores extérieurs"),
+    ("smart-film.html", "Film intelligent"),
+]
+
 GUIDES = [
     ("honeycomb-blinds.html", "Honeycomb blinds"),
     ("roller-blinds.html", "Roller blinds"),
@@ -29,17 +64,20 @@ def dots(n):
     return '<span class="dots">' + ''.join('<i class="on"></i>' if i < n else '<i></i>' for i in range(5)) + '</span>'
 
 
-def render(p):
+def render(p, lang="en"):
+    L = LANG[lang]
     slug = p["slug"]
     is_guide = p["type"] == "guide"
-    kind = "Product guide" if is_guide else "Advice"
-    crumb = "Guides" if is_guide else "Advice"
-    url = f"{SITE}/blog/{slug}"
+    kind = L["kind_guide"] if is_guide else L["kind_advice"]
+    crumb = L["crumb_guides"] if is_guide else L["crumb_advice"]
+    url = f"{SITE}/{L['blogdir']}{slug}"
+    alt_url = f"{SITE}/blog/{LANG[L['other']]['dir']}{slug}"
+    up = L["up"]
+    guides = GUIDES if lang == "en" else GUIDES_FR
 
-    # ----- JSON-LD
     article_ld = {
-        "@context": "https://schema.org", "@type": "Article",
-        "headline": p["title"], "description": p["description"], "image": p["image"],
+        "@context": "https://schema.org", "@type": "Article", "inLanguage": lang,
+        "headline": p["title"], "description": p["description"], "image": p["image"].replace("../assets", f"{SITE}/assets"),
         "author": {"@type": "Organization", "name": "My Kurtains"},
         "publisher": {"@type": "Organization", "name": "My Kurtains",
                       "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/favicon.svg"}},
@@ -48,15 +86,13 @@ def render(p):
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage",
               "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faq"]]}
 
-    # ----- pros/cons
     proscons = ""
     if p.get("pros"):
-        proscons = ('<div class="proscons"><div class="pros"><h4>Pros</h4><ul>' +
+        proscons = (f'<div class="proscons"><div class="pros"><h4>{L["pros"]}</h4><ul>' +
                     ''.join(f'<li>{x}</li>' for x in p["pros"]) +
-                    '</ul></div><div class="cons"><h4>Cons</h4><ul>' +
+                    f'</ul></div><div class="cons"><h4>{L["cons"]}</h4><ul>' +
                     ''.join(f'<li>{x}</li>' for x in p["cons"]) + '</ul></div></div>')
 
-    # ----- at a glance
     glance = ""
     if p.get("glance"):
         rows = ""
@@ -65,68 +101,76 @@ def render(p):
                 rows += f'<tr><th>{k}</th><td>{dots(v[0])} &nbsp;{v[1]}</td></tr>'
             else:
                 rows += f'<tr><th>{k}</th><td>{v}</td></tr>'
-        glance = f'<h2>At a glance</h2><table class="specs">{rows}</table>'
+        glance = f'<h2>{L["glance"]}</h2><table class="specs">{rows}</table>'
 
-    faq_html = '<h2>Frequently asked questions</h2><div class="faq">' + ''.join(
+    faq_html = f'<h2>{L["faq"]}</h2><div class="faq">' + ''.join(
         f'<details><summary>{html.escape(q)}</summary><p>{a}</p></details>' for q, a in p["faq"]) + '</div>'
 
     aside_links = ''.join(
-        '<li><a href="%s"%s>%s</a></li>' % (f, ' class="is-current"' if f == slug else '', n) for f, n in GUIDES)
+        '<li><a href="%s"%s>%s</a></li>' % (f, ' class="is-current"' if f == slug else '', n) for f, n in guides)
 
     related = ''.join(
-        f'<a class="post-card" href="{r["href"]}"><div class="post-card__img"><img src="{r["img"]}" alt="" loading="lazy" /></div>'
+        f'<a class="post-card" href="{r["href"]}"><div class="post-card__img"><img src="{r["img"].replace("../assets", up + "assets")}" alt="" loading="lazy" /></div>'
         f'<div class="post-card__body"><div class="post-card__meta"><span class="tag">{r["tag"]}</span><span>{r["cat"]}</span></div>'
-        f'<h3>{r["title"]}</h3><p>{r["blurb"]}</p><span class="post-card__more">Read →</span></div></a>' for r in p["related"])
+        f'<h3>{r["title"]}</h3><p>{r["blurb"]}</p><span class="post-card__more">{L["read_more"]}</span></div></a>' for r in p["related"])
 
-    nav = f'''
+    nav_links = ''.join(f'<a href="{h}">{t}</a>' for h, t in L["nav"])
+    lang_btn = f'<a href="{"../" if lang=="en" else ""}{"fr/" if lang=="en" else "../"}{slug}" class="btn btn--ghost btn--sm lang-switch" hreflang="{L["other"]}" aria-label="{L["other_aria"]}">{L["other_label"]}</a>'
+    # fix: EN post -> fr/<slug>; FR post -> ../<slug>
+    lang_btn = f'<a href="{("fr/" if lang=="en" else "../")}{slug}" class="btn btn--ghost btn--sm lang-switch" hreflang="{L["other"]}" aria-label="{L["other_aria"]}">{L["other_label"]}</a>'
+    img_src = p["image"].replace("../assets", up + "assets")
+
+    nav = f"""
   <header class="nav nav--light scrolled" id="nav">
     <div class="nav__inner container">
-      <a href="../index.html" class="brand" aria-label="My Kurtains home"><span class="brand__mark" aria-hidden="true">{LOGO}</span><span class="brand__name">My<em>Kurtains</em></span></a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="../index.html#collections">Collections</a><a href="../index.html#why">Why Us</a><a href="../index.html#process">How It Works</a><a href="index.html">Guides</a><a href="../index.html#reviews">Reviews</a>
-      </nav>
-      <div class="nav__cta"><a href="tel:+14384020559" class="btn btn--ghost btn--sm">438&nbsp;402&nbsp;0559</a><a href="../index.html#contact" class="btn btn--solid btn--sm" data-calendly>Free Consultation</a></div>
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="{L['site_home']}" class="brand" aria-label="My Kurtains"><span class="brand__mark" aria-hidden="true">{LOGO}</span><span class="brand__name">My<em>Kurtains</em></span></a>
+      <nav class="nav__links" aria-label="Primary">{nav_links}</nav>
+      <div class="nav__cta">{lang_btn}<a href="tel:+14384020559" class="btn btn--ghost btn--sm">{L['phone_btn']}</a><a href="{L['contact']}" class="btn btn--solid btn--sm" data-calendly>{L['consult']}</a></div>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
-    <div class="nav__mobile" id="navMobile">
-      <a href="../index.html#collections">Collections</a><a href="../index.html#why">Why Us</a><a href="../index.html#process">How It Works</a><a href="index.html">Guides</a><a href="../index.html#reviews">Reviews</a>
-      <a href="../index.html#contact" class="btn btn--solid" data-calendly>Book Free Consultation</a>
+    <div class="nav__mobile" id="navMobile">{nav_links}
+      <a href="{("fr/" if lang=="en" else "../")}{slug}" hreflang="{L['other']}" class="nav__mobile-lang">{L['other_aria']} →</a>
+      <a href="{L['contact']}" class="btn btn--solid" data-calendly>{L['book']}</a>
     </div>
-  </header>'''
+  </header>"""
 
-    footer = f'''
+    footer = f"""
   <footer class="footer">
     <div class="container footer__inner">
-      <div class="footer__brand"><span class="brand__name">My<em>Kurtains</em></span><p>High style, low cost. Custom blinds, curtains &amp; smart film, made and installed across Montreal.</p></div>
-      <nav class="footer__col" aria-label="Sitemap"><h4>Explore</h4><a href="../index.html#collections">Collections</a><a href="index.html">Guides &amp; advice</a><a href="../index.html#process">How It Works</a><a href="../index.html#reviews">Reviews</a></nav>
-      <nav class="footer__col" aria-label="Contact"><h4>Get in touch</h4><a href="tel:+14384020559">+1 (438) 402-0559</a><a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a><a href="https://wa.me/14384020559" target="_blank" rel="noopener">WhatsApp</a></nav>
-      <div class="footer__col"><h4>Follow</h4><div class="footer__social"><a href="https://www.instagram.com/mykurtains/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/mykurtains" target="_blank" rel="noopener">Facebook</a></div></div>
+      <div class="footer__brand"><span class="brand__name">My<em>Kurtains</em></span><p>{L['brand_tag']}</p></div>
+      <nav class="footer__col" aria-label="Sitemap"><h4>{L['f_explore']}</h4><a href="{L['site_home']}#collections">{L['f_collections']}</a><a href="index.html">{L['f_guides']}</a><a href="{L['site_home']}#process">{L['f_how']}</a><a href="{L['site_home']}#reviews">{L['f_reviews']}</a></nav>
+      <nav class="footer__col" aria-label="Contact"><h4>{L['f_contact']}</h4><a href="tel:+14384020559">+1 (438) 402-0559</a><a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a><a href="https://wa.me/14384020559" target="_blank" rel="noopener">WhatsApp</a></nav>
+      <div class="footer__col"><h4>{L['f_follow']}</h4><div class="footer__social"><a href="https://www.instagram.com/mykurtains/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/mykurtains" target="_blank" rel="noopener">Facebook</a></div></div>
     </div>
-    <div class="footer__bar container"><span>© <span id="year"></span> My Kurtains — Montreal, QC</span><span>Made with care for beautiful windows.</span></div>
+    <div class="footer__bar container"><span>© <span id="year"></span> My Kurtains — {L['f_city']}</span><span>{L['f_bar']}</span></div>
   </footer>
-  <a href="https://wa.me/14384020559" class="fab" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">{WA}</a>'''
+  <a href="https://wa.me/14384020559" class="fab" target="_blank" rel="noopener" aria-label="{L['wa_aria']}">{WA}</a>"""
 
-    return f'''<!DOCTYPE html>
-<html lang="en">
+    return f"""<!DOCTYPE html>
+<html lang="{lang}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#141210" />
-  <title>{html.escape(p["title"])} | My Kurtains Montreal</title>
+  <title>{html.escape(p["title"])}{L['title_suffix']}</title>
   <meta name="description" content="{html.escape(p["description"])}" />
   <link rel="canonical" href="{url}" />
+  <link rel="alternate" hreflang="en" href="{SITE}/blog/{slug}" />
+  <link rel="alternate" hreflang="fr" href="{SITE}/blog/fr/{slug}" />
+  <link rel="alternate" hreflang="x-default" href="{SITE}/blog/{slug}" />
   <meta property="og:type" content="article" />
+  <meta property="og:locale" content="{L['locale']}" />
   <meta property="og:title" content="{html.escape(p["title"])}" />
   <meta property="og:description" content="{html.escape(p["og"])}" />
-  <meta property="og:image" content="{p["image"]}" />
+  <meta property="og:image" content="{p["image"].replace("../assets", SITE + "/assets")}" />
   <script type="application/ld+json">{json.dumps(article_ld, ensure_ascii=False)}</script>
   <script type="application/ld+json">{json.dumps(faq_ld, ensure_ascii=False)}</script>
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="blog.css" />
+  <link rel="stylesheet" href="{up}styles.css" />
+  <link rel="stylesheet" href="{"../" if lang=="fr" else ""}blog.css" />
   <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
@@ -136,22 +180,22 @@ def render(p):
     <section class="post-hero">
       <div class="container post-hero__inner">
         <div>
-          <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">{crumb}</a><span>/</span><span>{p["crumb"]}</span></nav>
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="{L['site_home']}">{L['home']}</a><span>/</span><a href="index.html">{crumb}</a><span>/</span><span>{p["crumb"]}</span></nav>
           <p class="eyebrow" style="margin-top:1.2rem">{kind}</p>
           <h1>{p["h1"]}</h1>
           <p class="lede">{p["lede"]}</p>
-          <div class="post-hero__meta"><span>{p["read"]} min read</span><span>Updated Aug 2026</span><span>Montreal, QC</span></div>
+          <div class="post-hero__meta"><span>{p["read"]} {L['read']}</span><span>{L['updated']}</span><span>{L['city']}</span></div>
         </div>
-        <figure class="post-hero__media"><img src="{p["image"]}" alt="{html.escape(p["alt"])}" /></figure>
+        <figure class="post-hero__media"><img src="{img_src}" alt="{html.escape(p["alt"])}" /></figure>
       </div>
     </section>
 
     <div class="container post-layout">
       <article class="post-body">
-{p["body"]}
+{p["body"].replace("../assets", up + "assets")}
 {proscons}
 {glance}
-{p.get("body2","")}
+{p.get("body2","").replace("../assets", up + "assets")}
 {faq_html}
       </article>
 
@@ -159,10 +203,10 @@ def render(p):
         <div class="aside-card aside-card--dark">
           <h4>{p["aside_h"]}</h4>
           <p>{p["aside_p"]}</p>
-          <a href="../index.html#contact" class="btn btn--solid" data-calendly>Book a free consultation</a>
+          <a href="{L['contact']}" class="btn btn--solid" data-calendly>{L['book_long']}</a>
         </div>
-        <div class="aside-card"><h4>All product guides</h4><ul class="aside-links">{aside_links}</ul></div>
-        <div class="aside-card"><h4>Prefer to talk?</h4><p>Call or WhatsApp us — we answer fast.</p>
+        <div class="aside-card"><h4>{L['all_guides']}</h4><ul class="aside-links">{aside_links}</ul></div>
+        <div class="aside-card"><h4>{L['talk_h']}</h4><p>{L['talk_p']}</p>
           <a href="tel:+14384020559" class="btn btn--ghost" style="margin-bottom:.6rem">+1 (438) 402-0559</a>
           <a href="https://wa.me/14384020559" target="_blank" rel="noopener" class="btn btn--ghost">WhatsApp</a></div>
       </aside>
@@ -171,22 +215,22 @@ def render(p):
     <section class="post-cta">
       <div class="container post-cta__inner">
         <div><h2>{p["cta_h"]}</h2><p>{p["cta_p"]}</p></div>
-        <a href="../index.html#contact" class="btn btn--solid btn--lg" data-calendly>Book a free consultation</a>
+        <a href="{L['contact']}" class="btn btn--solid btn--lg" data-calendly>{L['book_long']}</a>
       </div>
     </section>
 
     <section class="related">
       <div class="container">
-        <header class="section__head section__head--left"><p class="eyebrow">Keep reading</p><h2 class="section__title">Related guides</h2></header>
+        <header class="section__head section__head--left"><p class="eyebrow">{L['keep']}</p><h2 class="section__title">{L['related']}</h2></header>
         <div class="posts__grid">{related}</div>
       </div>
     </section>
   </main>
 {footer}
-  <script src="../script.js"></script>
+  <script src="{up}script.js"></script>
 </body>
 </html>
-'''
+"""
 
 
 # ============================================================================
@@ -855,7 +899,12 @@ dict(slug="blinds-for-condos-and-apartments.html", type="advice", crumb="Blinds 
 
 if __name__ == "__main__":
     for p in POSTS:
-        out = os.path.join(HERE, p["slug"])
-        with open(out, "w", encoding="utf-8") as f:
-            f.write(render(p))
+        with open(os.path.join(HERE, p["slug"]), "w", encoding="utf-8") as f:
+            f.write(render(p, "en"))
         print("wrote", p["slug"])
+    os.makedirs(os.path.join(HERE, "fr"), exist_ok=True)
+    from _content_fr import POSTS_FR
+    for p in POSTS_FR:
+        with open(os.path.join(HERE, "fr", p["slug"]), "w", encoding="utf-8") as f:
+            f.write(render(p, "fr"))
+        print("wrote fr/" + p["slug"])
