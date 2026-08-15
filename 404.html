@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#141210" />
+  <title>Page not found — My Kurtains</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .nf { min-height: 100svh; display: grid; place-items: center; text-align: center; padding: 6rem 1.5rem 4rem; background: var(--linen); }
+    .nf__mark { width: 72px; height: 72px; color: var(--brass-dk); margin: 0 auto 1.5rem; }
+    .nf__mark svg { width: 100%; height: 100%; }
+    .nf h1 { font-family: var(--font-serif); font-weight: 400; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; letter-spacing: -.015em; }
+    .nf h1 em { font-style: italic; color: var(--brass-dk); }
+    .nf p { color: var(--muted); max-width: 46ch; margin: 1rem auto 2rem; font-size: 1.08rem; }
+    .nf__actions { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+    .nf__lang { margin-top: 2.5rem; font-size: .9rem; color: var(--muted); }
+    .nf__lang a { color: var(--brass-dk); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="nf">
+    <div>
+      <div class="nf__mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="3"/><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="9" y1="32" x2="29.5" y2="32"/><line x1="34.5" y1="32" x2="55" y2="32"/><line x1="32" y1="9" x2="32" y2="55"/><line x1="25" y1="10.1" x2="25" y2="53.9"/><line x1="39" y1="10.1" x2="39" y2="53.9"/><line x1="18" y1="32" x2="18" y2="50.25"/><line x1="46" y1="13.75" x2="46" y2="32"/></g></svg>
+      </div>
+      <p class="eyebrow">404</p>
+      <h1>This window doesn’t <em>open.</em></h1>
+      <p>The page you’re looking for has moved or never existed. Let’s get you back somewhere with a better view.</p>
+      <div class="nf__actions">
+        <a href="/" class="btn btn--solid btn--lg">Back to home</a>
+        <a href="/blog/" class="btn btn--ghost btn--lg">Browse the guides</a>
+      </div>
+      <p class="nf__lang">Français ? <a href="/index-fr.html">Aller à l’accueil</a> · <a href="/blog/fr/">Voir les guides</a></p>
+    </div>
+  </main>
+</body>
+</html>
