@@ -237,14 +237,14 @@ def render(p, lang="en"):
 # CONTENT
 # ============================================================================
 IMG = {
-    "roller": "https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1200&q=80",
-    "curtains": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+    "roller": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+    "curtains": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
     "roman": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
-    "zebra": "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=1200&q=80",
-    "motor": "https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?auto=format&fit=crop&w=1200&q=80",
+    "zebra": "https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=1200&q=80",
+    "motor": "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80",
     "blackout": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80",
     "outdoor": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    "film": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+    "film": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
     "honey": "../assets/honeycomb.jpg",
     "living": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
     "bedroom": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
@@ -276,6 +276,58 @@ R = {
 }
 
 POSTS = [
+# ---------------------------------------------------------------- HONEYCOMB
+dict(slug="honeycomb-blinds.html", type="guide", crumb="Honeycomb blinds", read=7, image=IMG["honey"],
+ alt="A top-down honeycomb blind: sheer at the top letting light in, blackout cells below",
+ title="Honeycomb (Cellular) Blinds: How They Work, Pros & Cons",
+ description="Honeycomb blinds explained: how the cellular design insulates your windows, single vs double cell, top-down/bottom-up, blackout options, honest pros and cons, and whether they're right for your Montreal home.",
+ og="The most energy-efficient blind you can buy — and why Montreal winters make them worth it.",
+ h1="Honeycomb blinds: the quiet <em>overachiever</em> of window coverings.",
+ lede="They look soft and simple. Underneath, a row of air-filled cells is doing serious work — insulating your windows, softening light and muffling street noise. Here’s how they work, honestly what they’re good and bad at, and whether they belong in your home.",
+ body="""
+        <h2>What is a honeycomb blind?</h2>
+        <p>Also called <strong>cellular shades</strong>, honeycomb blinds are made from pleated fabric bonded into a row of hexagonal cells — look at one from the side and you’ll see the honeycomb shape that gives them their name. Each cell traps a pocket of still air between your window and the room.</p>
+        <p>That trapped air is the whole point. Still air is a poor conductor of heat, so a honeycomb blind acts like an extra layer of insulation on the glass — the same principle as a down jacket. Of every blind and shade type, cellular shades are consistently the best insulators.</p>
+        <h2>How they work</h2>
+        <p>The fabric is folded accordion-style and glued so the pleats form closed cells. Raise the shade and it stacks flat and small at the top; lower it and the cells open into their full depth. Because there are no slats or cords running through the fabric, the face is smooth and light passes through it evenly — no stripes, no glare lines.</p>
+        <p>You choose the fabric opacity to set how much light comes through:</p>
+        <ul>
+          <li><strong>Sheer / light-filtering</strong> — a soft, glowing daylight, with daytime privacy.</li>
+          <li><strong>Semi-opaque</strong> — more shade, still gentle light.</li>
+          <li><strong>Blackout</strong> — an opaque lining inside the cell for near-total darkness (see below).</li>
+        </ul>
+        <h3>Single cell vs. double cell</h3>
+        <p><strong>Single cell</strong> shades have one layer of pockets and are the everyday choice — light, slim and effective. <strong>Double cell</strong> shades nest a second row of cells inside the first, roughly doubling the insulating value and blocking a touch more sound. They’re a little thicker and cost more, so we recommend them for the coldest rooms: big north-facing windows, drafty older Montreal homes, and bedrooms above a garage.</p>
+        <h3>Top-down / bottom-up</h3>
+        <p>This is the honeycomb feature people fall in love with. The shade can be <em>lowered from the top</em> as well as raised from the bottom — so you can let daylight and sky in through the upper part of the window while keeping the lower part covered for privacy. It’s ideal for street-facing rooms and bathrooms. The photo at the top of this page shows exactly that: light through the top, blackout below.</p>
+        <figure>
+          <img src="../assets/honeycomb.jpg" alt="Honeycomb blind partially lowered from the top, showing the sheer upper section and blackout lower section" />
+          <figcaption>A real installation of ours: top-down honeycomb, sheer above, blackout cells below.</figcaption>
+        </figure>
+        <h2>Honest pros and cons</h2>""",
+ pros=["<strong>Best insulation of any blind</strong> — noticeably warmer in winter, cooler in summer, lower bills.", "<strong>Soft, even light</strong> with no slat lines or glare.", "<strong>Top-down / bottom-up</strong> privacy without losing daylight.", "<strong>Quiet room</strong> — the cells absorb some outside noise.", "<strong>Stacks very small</strong> when raised — you keep the whole view.", "<strong>Cordless and motorized</strong> options — clean look, child-safe.", "<strong>Blackout available</strong> for bedrooms and nurseries."],
+ cons=["<strong>Less “decorative”</strong> than curtains or Roman shades — a clean, minimal look rather than a statement.", "<strong>Cleaning takes care</strong> — dust with a soft brush or vacuum on low; not machine-washable.", "<strong>Cells can trap insects or dust</strong> in the top pleats over years.", "<strong>Blackout needs side channels</strong> for true darkness (light leaks at the edges otherwise — see our <a href='blackout-blinds.html'>blackout guide</a>).", "<strong>Not for high-humidity outdoors</strong> — for balconies see <a href='outdoor-blinds.html'>outdoor blinds</a>."],
+ glance=[("Insulation", (5, "Best in class")), ("Light control", (4, "Sheer to full blackout")), ("Privacy", (5, "Excellent, esp. top-down")), ("Style", (3, "Clean &amp; minimal")), ("Maintenance", (3, "Dust / vacuum gently")), ("Best rooms", "Bedrooms, living rooms, home offices, nurseries, north-facing &amp; large windows"), ("Options", "Single or double cell · sheer / semi / blackout · top-down/bottom-up · cordless · motorized")],
+ body2="""
+        <h2>Who they’re perfect for</h2>
+        <p><strong>If your window is cold to stand near in January, this is your blind.</strong> Honeycomb shades are the answer for anyone who wants real comfort and lower heating bills without wrapping their windows in heavy curtains. They suit modern and minimalist interiors, and — with top-down/bottom-up — any room that faces the street or a neighbour.</p>
+        <p>They’re also our go-to for <strong>bedrooms and nurseries</strong>, where the combination of blackout, insulation and quiet is hard to beat.</p>
+        <div class="callout"><strong>Montreal tip</strong><p>Windows are usually the weakest point of a home’s insulation. On a large or older window, a double-cell honeycomb shade can make a room feel a full degree or two warmer at the same thermostat setting — you notice it most on the coldest nights.</p></div>
+        <h2>When to choose something else</h2>
+        <ul>
+          <li>Want drama, softness or colour on the wall? Look at <a href="curtains-and-drapes.html">curtains &amp; drapes</a> or <a href="roman-shades.html">Roman shades</a>.</li>
+          <li>Want to flick between privacy and full view many times a day? <a href="day-and-night-zebra-blinds.html">Day &amp; night (zebra) blinds</a> do that with one pull.</li>
+          <li>Need the cheapest clean option for a kitchen or utility room? A <a href="roller-blinds.html">roller blind</a> is hard to beat.</li>
+        </ul>""",
+ faq=[("Are honeycomb blinds worth it in Montreal?", "Yes. Of all blind types, cellular shades do the most to cut heat loss through glass in winter and heat gain in summer. With our long heating season the comfort difference is noticeable — especially on big or north-facing windows."),
+      ("Single cell or double cell — which should I get?", "Single cell for most rooms. Double cell for the coldest windows (large, north-facing, older single-pane) or where you also want a bit more sound dampening."),
+      ("Can they be fully blackout?", "Yes — blackout cellular fabric has an opaque inner lining. For <em>total</em> darkness (nurseries, shift workers, home cinema) pair it with side channels so light can’t leak around the edges."),
+      ("Are they child-safe?", "Yes — we recommend cordless or motorized operation, which removes hanging cords entirely."),
+      ("How do I clean them?", "A soft duster or vacuum brush attachment on low. For marks, a damp (not wet) cloth dabbed gently. Avoid soaking the fabric."),
+      ("Do you install them?", "Yes — professional installation is free and included with every order across Montreal. We measure on site so the fit is exact.")],
+ aside_h="See honeycomb samples at home", aside_p="Free in-home consultation. We bring fabrics, measure your windows and give you an honest recommendation.",
+ cta_h="Ready to feel the <em>difference</em> this winter?", cta_p="Book a free consultation. We’ll measure, bring honeycomb samples in single and double cell, and quote on the spot — installation included.",
+ related=[R["winter"], R["blackout"], R["zebra"]]),
 # ---------------------------------------------------------------- ROLLER
 dict(slug="roller-blinds.html", type="guide", crumb="Roller blinds", read=6, image=IMG["roller"],
  alt="Roller blinds in a bright, modern room",
