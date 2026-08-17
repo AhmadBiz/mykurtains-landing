@@ -3,19 +3,19 @@
 
 IMG = {
     "roller": "../assets/roller.jpg",
-    "curtains": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+    "curtains": "../assets/curtains.jpg",
     "roman": "../assets/roman.jpg",
     "zebra": "../assets/zebra.jpg",
-    "motor": "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80",
+    "motor": "../assets/roller-2.jpg",
     "blackout": "../assets/blockout.jpg",
     "outdoor": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    "film": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+    "film": "../assets/smartfilm.jpg",
     "honey": "../assets/honeycomb.jpg",
-    "living": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
-    "bedroom": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
-    "calm": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
-    "measure": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
-    "condo": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+    "living": "../assets/curtains-office.jpg",
+    "bedroom": "../assets/curtains-blackout-wave.jpg",
+    "calm": "../assets/honeycomb-kids.jpg",
+    "measure": "../assets/honeycomb-cells.jpg",
+    "condo": "../assets/curtains-office.jpg",
 }
 
 
@@ -63,6 +63,10 @@ dict(slug="honeycomb-blinds.html", type="guide", crumb="Stores alvéolaires", re
           <li><strong>Occultant</strong> — une doublure opaque dans la cellule pour une noirceur presque totale (voir plus bas).</li>
         </ul>
 
+        <figure>
+          <img src="../assets/honeycomb-cells.jpg" alt="Gros plan d’un store alvéolaire montrant les plis voile au-dessus et les cellules occultantes en dessous" />
+          <figcaption>De près : plis voile en haut, cellules occultantes emprisonnant l’air en bas.</figcaption>
+        </figure>
         <h3>Simple ou double alvéole</h3>
         <p>Les stores à <strong>simple alvéole</strong> ont une couche de poches ; c’est le choix courant — léger, mince et efficace. Les stores à <strong>double alvéole</strong> logent une seconde rangée de cellules dans la première, ce qui double à peu près le pouvoir isolant et bloque un peu plus de bruit. Ils sont un peu plus épais et coûtent plus cher ; on les recommande pour les pièces les plus froides : grandes fenêtres au nord, vieilles maisons montréalaises pleines de courants d’air, chambres au-dessus du garage.</p>
 
@@ -171,10 +175,18 @@ dict(slug="curtains-and-drapes.html", type="guide", crumb="Rideaux et draperies"
         </ul>
         <h3>2. La doublure</h3>
         <p>La doublure, c’est ce qui sépare un rideau qui a l’air bien d’un rideau qui a l’air <em>cher</em>. Elle donne du corps pour que le tissu tombe en plis nets, protège le tissu de face de la décoloration au soleil et — avec une doublure thermique ou occultante — ajoute isolation et noirceur.</p>
+        <figure>
+          <img src="../assets/curtains-blackout-wave.jpg" alt="Gros plan de draperies occultantes à plis vague à côté d’une fenêtre montréalaise enneigée" />
+          <figcaption>Draperies occultantes à vague, en plein hiver montréalais. Le corps du tissu vient de la doublure.</figcaption>
+        </figure>
         <h3>3. L’ampleur</h3>
         <p>L’ampleur, c’est la quantité de tissu par rapport à la largeur de la fenêtre. Les rideaux trop justes sont l’erreur la plus fréquente. Nous utilisons environ <strong>2 à 2,5 fois la largeur du rail</strong> pour que les rideaux paraissent généreux, ouverts comme fermés.</p>
         <h3>4. Le style de tête (plis)</h3>
         <p><strong>Vague / pli S</strong> — ondulations douces et régulières ; le favori moderne sur rail. <strong>Pli pincé</strong> — ajusté, classique. <strong>Œillets</strong> — décontracté, sur tringle. <strong>Pli crayon</strong> — traditionnel et économique.</p>
+        <figure>
+          <img src="../assets/curtains-sheer-tall.jpg" alt="Rideaux voile à vague double hauteur sur rail au plafond devant une vue de lac" />
+          <figcaption>Voiles à vague sur rail au plafond, du plancher au (très haut) plafond — une de nos installations.</figcaption>
+        </figure>
         <h3>5. Rail ou tringle, et hauteur de pose</h3>
         <p>Un <strong>rail fixé au plafond</strong> donne le look le plus propre et le plus haut, et glisse en silence — notre recommandation habituelle. Posez haut et large : accrocher les rideaux juste au-dessus du cadre et les prolonger de chaque côté agrandit visuellement la fenêtre et la pièce.</p>
         <h3>6. La tombée (longueur)</h3>
@@ -187,7 +199,7 @@ dict(slug="curtains-and-drapes.html", type="guide", crumb="Rideaux et draperies"
  body2="""
         <h2>Pour qui c’est parfait</h2>
         <p><strong>Si vous voulez que la pièce paraisse chaleureuse, finie et un brin luxueuse, la réponse, ce sont les rideaux.</strong> C’est notre première recommandation pour les salons et les chambres, pour les fenêtres hautes ou vedettes, et pour quiconque trouve les stores rigides un peu cliniques. Superposez un voile sous une draperie doublée et vous obtenez une lumière douce le jour et une intimité douillette le soir.</p>
-        <div class="callout"><strong>Le look superposé</strong><p>Notre combinaison la plus demandée : un <em>rideau voile à vague</em> sur rail au plafond pour la lumière du jour, avec une <em>draperie doublée</em> devant pour le soir — ou un <a href="honeycomb-blinds.html">store alvéolaire</a> derrière pour l’isolation. Le meilleur des deux, et ça photographie superbement.</p></div>
+        <div class="callout"><strong>Le look superposé</strong><p>Notre combinaison la plus demandée — et exactement ce que montre la photo en haut de cette page : un <em>rideau voile à vague</em> sur rail au plafond pour la lumière du jour, avec une <em>draperie occultante doublée</em> devant pour le soir. Ou un <a href="honeycomb-blinds.html">store alvéolaire</a> derrière pour l’isolation. Le meilleur des deux, et ça photographie superbement.</p></div>
         <h2>Quand choisir autre chose</h2>
         <ul>
           <li>Cuisine, salle de bain ou fenêtre juste à côté de l’évier ? Un <a href="roller-blinds.html">store enrouleur</a> lavable.</li>
@@ -300,11 +312,11 @@ dict(slug="motorized-blinds.html", type="guide", crumb="Stores motorisés", read
  description="Les stores motorisés expliqués : fonctionnement, commande par télécommande / appli / voix, horaires, batterie ou filaire, quels stores se motorisent, avantages et inconvénients honnêtes, et si ça vaut la peine. Installés gratuitement à Montréal.",
  og="Télécommandes, horaires, commande vocale — ce que la motorisation apporte vraiment, et ce que ça coûte.",
  h1="Stores motorisés : est-ce que ça vaut <em>vraiment</em> le coup ?",
- lede="Appuyez sur un bouton — ou dites un mot — et tous les stores de la pièce glissent en place. La motorisation était un luxe optionnel. Aujourd’hui c’est abordable, silencieux et vraiment utile. Voici ce que ça apporte, ce que ça coûte et quand ça en vaut la peine.",
+ lede="Appuyez sur un bouton — ou dites un mot — et tous les stores de la pièce glissent en place. <strong>Chacun de nos produits peut être motorisé</strong> — enrouleurs, zébrés, alvéolaires, stores bateau, stores Blockout et rails de rideaux. Voici ce que ça apporte, ce que ça coûte et quand ça en vaut la peine.",
  body="""
         <h2>Qu’est-ce qu’un store motorisé ?</h2>
         <p>N’importe quel store ou rideau équipé d’un petit moteur silencieux à la place d’une chaînette ou d’un cordon. Vous le commandez avec une <strong>télécommande</strong>, un <strong>interrupteur mural</strong>, une <strong>appli</strong> ou la <strong>voix</strong> (Google, Alexa, Maison d’Apple), et vous pouvez programmer des <strong>horaires</strong> — ouvrir au lever du soleil, fermer au crépuscule, tout automatiquement.</p>
-        <p>Nous motorisons les <a href="roller-blinds.html">stores enrouleurs</a>, les <a href="day-and-night-zebra-blinds.html">stores zébrés</a>, les <a href="honeycomb-blinds.html">stores alvéolaires</a>, les <a href="roman-shades.html">stores bateau</a> et les <a href="curtains-and-drapes.html">rails de rideaux</a>.</p>
+        <p><strong>Tout ce que nous vendons peut être motorisé :</strong> les <a href="roller-blinds.html">stores enrouleurs</a>, les <a href="day-and-night-zebra-blinds.html">stores zébrés</a>, les <a href="honeycomb-blinds.html">stores alvéolaires</a>, les <a href="roman-shades.html">stores bateau</a>, le <a href="blackout-blinds.html">store Blockout</a>, les <a href="outdoor-blinds.html">stores extérieurs</a> et les <a href="curtains-and-drapes.html">rails de rideaux</a>. C’est un choix par fenêtre, et vous pouvez mélanger motorisé et manuel.</p>
 
         <h2>Comment ça fonctionne</h2>
         <h3>L’alimentation</h3>
@@ -469,6 +481,10 @@ dict(slug="smart-film.html", type="guide", crumb="Film intelligent", read=5, ima
           <li><strong>Voix / maison intelligente</strong> — « rends le bureau privé ».</li>
         </ul>
         <p>Le dépoli est l’état <em>par défaut</em> (hors tension), donc l’intimité est garantie même en cas de panne. En mode clair, le film est très transparent avec un léger voile — comme un très bon verre. Il bloque aussi la plupart des UV.</p>
+        <figure>
+          <img src="../assets/smartfilm-before-after.jpg" alt="Film intelligent sur un vitrage latéral de porte d’entrée : dépoli avec l’intimité activée, et clair avec l’intimité désactivée" />
+          <figcaption>Une de nos installations — un vitrage latéral de porte d’entrée. Intimité activée (dépoli) et désactivée (clair), même vitre.</figcaption>
+        </figure>
 
         <h2>Là où c’est génial</h2>
         <ul>
@@ -611,6 +627,10 @@ dict(slug="blackout-blinds-for-nursery.html", type="advice", crumb="Occultant po
         <h3>4. Un fonctionnement silencieux</h3>
         <p>Vous sortirez de cette pièce sur la pointe des pieds. Les ressorts sans cordon sont silencieux ; les bons moteurs sont ultra-silencieux et vous permettent d’ouvrir le store lentement selon un horaire pour que les matins soient doux plutôt que brusques.</p>
 
+        <figure>
+          <img src="../assets/honeycomb-kids.jpg" alt="Une chambre d’enfant avec un store alvéolaire haut-bas — lumière par le voile en haut, cellules occultantes en bas" />
+          <figcaption>Une vraie chambre d’enfant de chez nous : alvéolaire haut-bas, la lumière entre en haut pendant que la moitié inférieure reste couverte.</figcaption>
+        </figure>
         <h2>Notre recommandation pour la chambre de bébé</h2>
         <ul>
           <li><strong>Enrouleur occultant, sans cordon ou motorisé, avec rails latéraux</strong> — le scellage le plus étanche, le plus facile à nettoyer, le plus économique.</li>

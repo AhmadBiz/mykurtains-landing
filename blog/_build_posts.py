@@ -241,19 +241,19 @@ def render(p, lang="en"):
 # ============================================================================
 IMG = {
     "roller": "../assets/roller.jpg",
-    "curtains": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+    "curtains": "../assets/curtains.jpg",
     "roman": "../assets/roman.jpg",
     "zebra": "../assets/zebra.jpg",
-    "motor": "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80",
+    "motor": "../assets/roller-2.jpg",
     "blackout": "../assets/blockout.jpg",
     "outdoor": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    "film": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+    "film": "../assets/smartfilm.jpg",
     "honey": "../assets/honeycomb.jpg",
-    "living": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
-    "bedroom": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
-    "calm": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
-    "measure": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
-    "condo": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+    "living": "../assets/curtains-office.jpg",
+    "bedroom": "../assets/curtains-blackout-wave.jpg",
+    "calm": "../assets/honeycomb-kids.jpg",
+    "measure": "../assets/honeycomb-cells.jpg",
+    "condo": "../assets/curtains-office.jpg",
 }
 
 
@@ -299,6 +299,10 @@ dict(slug="honeycomb-blinds.html", type="guide", crumb="Honeycomb blinds", read=
           <li><strong>Semi-opaque</strong> — more shade, still gentle light.</li>
           <li><strong>Blackout</strong> — an opaque lining inside the cell for near-total darkness (see below).</li>
         </ul>
+        <figure>
+          <img src="../assets/honeycomb-cells.jpg" alt="Close-up of a honeycomb blind showing the sheer pleats above and the blackout cells below" />
+          <figcaption>Up close: sheer pleats on top, air-trapping blackout cells below.</figcaption>
+        </figure>
         <h3>Single cell vs. double cell</h3>
         <p><strong>Single cell</strong> shades have one layer of pockets and are the everyday choice — light, slim and effective. <strong>Double cell</strong> shades nest a second row of cells inside the first, roughly doubling the insulating value and blocking a touch more sound. They’re a little thicker and cost more, so we recommend them for the coldest rooms: big north-facing windows, drafty older Montreal homes, and bedrooms above a garage.</p>
         <h3>Top-down / bottom-up</h3>
@@ -403,10 +407,18 @@ dict(slug="curtains-and-drapes.html", type="guide", crumb="Curtains & drapes", r
         </ul>
         <h3>2. Lining</h3>
         <p>Lining is what separates a curtain that looks good from one that looks <em>expensive</em>. It adds body so the fabric hangs in clean folds, protects the face fabric from sun fade, and — with thermal or blackout lining — adds insulation and darkness.</p>
+        <figure>
+          <img src="../assets/curtains-blackout-wave.jpg" alt="Close-up of blackout wave-pleat drapes beside a snowy Montreal window" />
+          <figcaption>Blackout wave drapes, mid-winter in Montreal. The body of the fabric comes from the lining.</figcaption>
+        </figure>
         <h3>3. Fullness</h3>
         <p>Fullness is how much fabric you use versus the width of the window. Skimpy curtains are the most common mistake. We use roughly <strong>2× to 2.5× the track width</strong> so the curtains look generous both open and closed.</p>
         <h3>4. Heading (pleat) style</h3>
         <p><strong>Wave / S-fold</strong> — soft, even ripples; the modern favourite on a track. <strong>Pinch pleat</strong> — tailored, classic. <strong>Eyelet / grommet</strong> — casual, on a rod. <strong>Pencil pleat</strong> — traditional and economical.</p>
+        <figure>
+          <img src="../assets/curtains-sheer-tall.jpg" alt="Double-height sheer wave curtains on a ceiling track in front of a lake view" />
+          <figcaption>Wave sheers on a ceiling track, floor to (very high) ceiling — one of our installations.</figcaption>
+        </figure>
         <h3>5. Track vs rod, and mounting height</h3>
         <p>A <strong>ceiling-mounted track</strong> gives the cleanest, tallest look and glides silently — our usual recommendation. Mount high and wide: hanging curtains just above the window frame and extending past its sides makes both the window and the room look bigger.</p>
         <h3>6. The drop (length)</h3>
@@ -419,7 +431,7 @@ dict(slug="curtains-and-drapes.html", type="guide", crumb="Curtains & drapes", r
  body2="""
         <h2>Who they’re perfect for</h2>
         <p><strong>If you want the room to feel warm, finished and a little luxurious, curtains are the answer.</strong> They’re our first recommendation for living rooms and bedrooms, for tall or feature windows, and for anyone who finds hard blinds a bit clinical. Layer a sheer under a lined drape and you get soft daylight by day and cosy privacy by night.</p>
-        <div class="callout"><strong>The layered look</strong><p>Our most-requested combination: a <em>sheer wave curtain</em> on a ceiling track for the daytime glow, with a <em>lined drape</em> in front for evenings — or a <a href="honeycomb-blinds.html">honeycomb blind</a> behind for insulation. Best of both, and it photographs beautifully.</p></div>
+        <div class="callout"><strong>The layered look</strong><p>Our most-requested combination — and exactly what the photo at the top of this page shows: a <em>sheer wave curtain</em> on a ceiling track for the daytime glow, with a <em>lined blackout drape</em> in front for evenings. Or a <a href="honeycomb-blinds.html">honeycomb blind</a> behind for insulation. Best of both, and it photographs beautifully.</p></div>
         <h2>When to choose something else</h2>
         <ul>
           <li>Kitchen, bathroom or a window right by the sink? A wipe-clean <a href="roller-blinds.html">roller blind</a>.</li>
@@ -532,11 +544,11 @@ dict(slug="motorized-blinds.html", type="guide", crumb="Motorized blinds", read=
  description="Motorized blinds explained: how they work, remote / app / voice control, schedules, battery vs hardwired, which blinds can be motorized, honest pros and cons and whether they're worth it. Installed free in Montreal.",
  og="Remotes, schedules, voice control — what motorization really adds, and what it costs.",
  h1="Motorized blinds: are they <em>actually</em> worth it?",
- lede="Press a button — or say a word — and every blind in the room glides into place. Motorization used to be a luxury add-on. Now it’s affordable, quiet and genuinely useful. Here’s what it adds, what it costs, and when it’s worth it.",
+ lede="Press a button — or say a word — and every blind in the room glides into place. <strong>Every single product we make can be motorized</strong> — rollers, zebras, honeycomb, Roman shades, Blockout Blinds and curtain tracks. Here’s what it adds, what it costs, and when it’s worth it.",
  body="""
         <h2>What are motorized blinds?</h2>
         <p>Any blind or curtain fitted with a small, quiet motor instead of a chain or cord. You control it with a <strong>remote</strong>, a <strong>wall switch</strong>, a <strong>phone app</strong>, or <strong>voice</strong> (Google, Alexa, Apple Home), and you can set <strong>schedules</strong> — open at sunrise, close at dusk, all automatically.</p>
-        <p>We motorize <a href="roller-blinds.html">roller blinds</a>, <a href="day-and-night-zebra-blinds.html">zebra blinds</a>, <a href="honeycomb-blinds.html">honeycomb blinds</a>, <a href="roman-shades.html">Roman shades</a> and <a href="curtains-and-drapes.html">curtain tracks</a>.</p>
+        <p><strong>Everything we sell can be motorized:</strong> <a href="roller-blinds.html">roller blinds</a>, <a href="day-and-night-zebra-blinds.html">zebra blinds</a>, <a href="honeycomb-blinds.html">honeycomb blinds</a>, <a href="roman-shades.html">Roman shades</a>, the <a href="blackout-blinds.html">Blockout Blind</a>, <a href="outdoor-blinds.html">outdoor blinds</a> and <a href="curtains-and-drapes.html">curtain tracks</a>. It’s a per-window choice, and you can mix motorized and manual.</p>
 
         <h2>How they work</h2>
         <h3>Power</h3>
@@ -701,6 +713,10 @@ dict(slug="smart-film.html", type="guide", crumb="Smart film", read=5, image=IMG
           <li><strong>Voice / smart home</strong> — “make the office private.”</li>
         </ul>
         <p>Frosted is the <em>default</em> (power off), so privacy is guaranteed even in a power cut. In clear mode the film is highly transparent with a slight haze — like very good glass. It also blocks most UV.</p>
+        <figure>
+          <img src="../assets/smartfilm-before-after.jpg" alt="Smart film on a front-door sidelight: frosted with privacy on, and clear with privacy off" />
+          <figcaption>One of our installs — a front-door sidelight. Privacy on (frosted) and privacy off (clear), same glass.</figcaption>
+        </figure>
 
         <h2>Where it’s brilliant</h2>
         <ul>
@@ -843,6 +859,10 @@ dict(slug="blackout-blinds-for-nursery.html", type="advice", crumb="Blackout for
         <h3>4. Quiet operation</h3>
         <p>You will be leaving that room on tiptoe. Cordless springs are silent; good motors are whisper-quiet and let you open the blind slowly on a schedule so mornings are gentle rather than sudden.</p>
 
+        <figure>
+          <img src="../assets/honeycomb-kids.jpg" alt="A kid’s room with a top-down honeycomb blind — light through the sheer top, blackout cells below" />
+          <figcaption>A real kids’ room of ours: top-down honeycomb, so daylight comes in up top while the lower half stays covered.</figcaption>
+        </figure>
         <h2>Our nursery recommendation</h2>
         <ul>
           <li><strong>Blackout roller blind, cordless or motorized, with side channels</strong> — the tightest seal, easiest to clean, most economical.</li>
