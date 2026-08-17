@@ -2,12 +2,12 @@
 """French (Québec) content for every blog post. Same slugs as English so hreflang pairs line up."""
 
 IMG = {
-    "roller": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+    "roller": "../assets/roller.jpg",
     "curtains": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
-    "roman": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
-    "zebra": "https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=1200&q=80",
+    "roman": "../assets/roman.jpg",
+    "zebra": "../assets/zebra.jpg",
     "motor": "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80",
-    "blackout": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80",
+    "blackout": "../assets/blockout.jpg",
     "outdoor": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
     "film": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
     "honey": "../assets/honeycomb.jpg",
@@ -30,7 +30,7 @@ R = {
     "roman": rel("roman-shades.html", IMG["roman"], "Guide", "Bateau", "Stores bateau", "Plis soignés, luxe discret."),
     "zebra": rel("day-and-night-zebra-blinds.html", IMG["zebra"], "Guide", "Zébrés", "Stores jour et nuit (zébrés)", "Intimité et lumière en un seul store."),
     "motor": rel("motorized-blinds.html", IMG["motor"], "Guide", "Motorisés", "Stores motorisés : ça vaut le coup ?", "Ce que l’automatisation apporte vraiment."),
-    "blackout": rel("blackout-blinds.html", IMG["blackout"], "Guide", "Occultant", "Stores occultants 100 %", "Comment obtenir la noirceur totale."),
+    "blackout": rel("blackout-blinds.html", IMG["blackout"], "Guide", "Blockout", "Store Blockout : noirceur 100 %", "Un store encadré et scellé — aucune fuite de lumière."),
     "outdoor": rel("outdoor-blinds.html", IMG["outdoor"], "Guide", "Extérieur", "Stores extérieurs", "De l’ombre pour patios et balcons."),
     "film": rel("smart-film.html", IMG["film"], "Guide", "Film intelligent", "Film intelligent", "Vitre d’intimité d’une simple pression."),
     "vs": rel("blinds-vs-curtains.html", IMG["living"], "Conseils", "Choisir", "Stores ou rideaux ?", "Lequel convient à votre pièce ?"),
@@ -272,7 +272,7 @@ dict(slug="day-and-night-zebra-blinds.html", type="guide", crumb="Jour et nuit (
 
         <h2>Avantages et inconvénients, honnêtement</h2>""",
  pros=["<strong>Intimité et vue avec un seul store</strong> — pas besoin d’un voile plus un store.", "<strong>Lumière infiniment réglable</strong> d’un petit mouvement.", "<strong>Look moderne et rayé</strong> qui convient aux pièces contemporaines.", "<strong>Simplicité de l’enrouleur</strong> et cassette mince.", "<strong>Excellent rapport qualité-prix</strong> pour la flexibilité obtenue.", "<strong>Options sans cordon et motorisées.</strong>"],
- cons=["<strong>Pas vraiment occultant</strong> — les bandes voile laissent toujours passer un peu de lumière. Pour la noirceur totale, voyez les <a href='blackout-blinds.html'>stores occultants</a>.", "<strong>Isolation modeste</strong> — comme un enrouleur. Fenêtre froide ? <a href='honeycomb-blinds.html'>Alvéolaire</a>.", "<strong>Les rayures sont un look</strong> — on aime ou on n’aime pas.", "<strong>Deux couches de tissu</strong>, donc un rouleau un peu plus gros sur les très hautes fenêtres."],
+ cons=["<strong>Pas vraiment occultant</strong> — les bandes voile laissent toujours passer un peu de lumière. Pour la noirceur totale, voyez le <a href='blackout-blinds.html'>store Blockout</a>.", "<strong>Isolation modeste</strong> — comme un enrouleur. Fenêtre froide ? <a href='honeycomb-blinds.html'>Alvéolaire</a>.", "<strong>Les rayures sont un look</strong> — on aime ou on n’aime pas.", "<strong>Deux couches de tissu</strong>, donc un rouleau un peu plus gros sur les très hautes fenêtres."],
  glance=[("Isolation", (2, "Modeste")), ("Contrôle de la lumière", (5, "Infiniment réglable")), ("Intimité", (4, "Excellente (bandes alignées)")), ("Style", (4, "Moderne, rayé")), ("Entretien", (4, "Facile")), ("Rapport qualité-prix", (5, "Excellent")), ("Pièces idéales", "Salons, bureaux à domicile, cuisines, pièces sur la rue"), ("Options", "Bandes filtrantes ou occultantes · chaînette / sans cordon / motorisé · cassette")],
  body2="""
         <h2>Pour qui c’est parfait</h2>
@@ -280,11 +280,11 @@ dict(slug="day-and-night-zebra-blinds.html", type="guide", crumb="Jour et nuit (
         <div class="callout"><strong>Le favori montréalais</strong><p>Les stores zébrés comptent parmi nos produits les plus installés dans les condos et duplex de la ville — grandes fenêtres, voisins proches, et beaucoup de lumière à gérer. Ils règlent les trois.</p></div>
         <h2>Quand choisir autre chose</h2>
         <ul>
-          <li>Besoin de noirceur totale (chambre, chambre de bébé) ? Une solution <a href="blackout-blinds.html">occultante 100 %</a>.</li>
+          <li>Besoin de noirceur totale (chambre, chambre de bébé) ? Un <a href="blackout-blinds.html">store Blockout</a>.</li>
           <li>Fenêtre froide ou au nord ? <a href="honeycomb-blinds.html">Stores alvéolaires</a>.</li>
           <li>Vous préférez une face unie, sans rayures ? Un <a href="roller-blinds.html">store enrouleur</a> avec un rideau voile.</li>
         </ul>""",
- faq=[("Les stores zébrés sont-ils occultants ?", "Les versions à bandes occultantes rendent une pièce très sombre, mais les bandes voile laissent toujours passer un peu de lumière — donc pas 100 %. Pour les chambres de bébé et les travailleurs de nuit, choisissez un vrai store occultant avec rails latéraux."),
+ faq=[("Les stores zébrés sont-ils occultants ?", "Les versions à bandes occultantes rendent une pièce très sombre, mais les bandes voile laissent toujours passer un peu de lumière — donc pas 100 %. Pour les chambres de bébé et les travailleurs de nuit, choisissez le store Blockout — un store encadré qui scelle chaque bord."),
       ("Voit-on à travers les stores zébrés la nuit ?", "Bandes opaques alignées, non — les rayures opaques se chevauchent et bloquent la vue vers l’intérieur. Voiles alignés, une silhouette peut être visible quand la pièce est éclairée, comme avec tout voile."),
       ("Conviennent-ils aux grandes fenêtres ?", "Oui — c’est un mécanisme d’enrouleur, donc ils gèrent bien les fenêtres larges et les portes-patio."),
       ("Chaînette ou motorisé ?", "Les deux fonctionnent bien. Le motorisé est particulièrement agréable ici parce que vous les ajusterez souvent ; une télécommande ou un horaire rend ça sans effort."),
@@ -344,52 +344,65 @@ dict(slug="motorized-blinds.html", type="guide", crumb="Stores motorisés", read
  cta_h="Tous les stores, <em>un seul bouton.</em>", cta_p="Réservez une consultation gratuite. Nous mesurons, faisons la démonstration des commandes et installons gratuitement — pas d’électricien requis pour les modèles à batterie.",
  related=[R["blackout"], R["honey"], R["zebra"]]),
 
-# ---------------------------------------------------------------- BLACKOUT
-dict(slug="blackout-blinds.html", type="guide", crumb="Occultant 100 %", read=6, image=IMG["blackout"],
- alt="Une chambre sombre et calme avec des stores occultants",
- title="Stores occultants 100 % : comment obtenir vraiment la noirceur totale",
- description="Pourquoi le tissu occultant ne suffit pas : rails latéraux, poses extérieures et les détails qui bloquent les fuites de lumière. Options enrouleur, alvéolaire et rideaux occultants, avantages et inconvénients, et les meilleures pièces. Installés gratuitement à Montréal.",
- og="Le tissu occultant seul ne suffit pas — les rails latéraux et les détails qui bloquent les fuites de lumière.",
- h1="Occultant 100 % : comment obtenir <em>vraiment</em> la noirceur totale.",
- lede="Voici ce que la plupart des gens apprennent à leurs dépens : un store « occultant » tout seul n’est pas occultant. La lumière trouve chaque fente. La vraie noirceur, c’est un système — le bon tissu plus le bon ajustement. Voici comment on le construit.",
+# ---------------------------------------------------------------- BLOCKOUT
+dict(slug="blackout-blinds.html", type="guide", crumb="Store Blockout", read=6, image=IMG["blackout"],
+ alt="Un store Blockout noir encadré et scellé dans une fenêtre de chambre, bloquant toute la lumière",
+ title="Store Blockout : le store encadré qui bloque 100 % de la lumière",
+ description="Le store Blockout est un store encadré et scellé sur les bords qui donne une vraie noirceur à 100 % — sans halo, sans fuites latérales. Comment fonctionne le cadre, pour qui c’est fait, options sans cordon et motorisées, avantages et inconvénients honnêtes. Installé gratuitement à Montréal.",
+ og="Un store encadré et scellé qui bloque 100 % de la lumière — sans halo, sans fuites. Une vraie noirceur pour un vrai sommeil.",
+ h1="Store Blockout : le store qui rend enfin une pièce <em>complètement</em> noire.",
+ lede="Tous les stores « occultants » que vous avez eus laissaient passer la lumière sur les bords. Le store Blockout, non — et la raison est simple : ce n’est pas juste un tissu, c’est un tissu dans un cadre qui scelle chaque bord de la fenêtre. Voici comment ça fonctionne et pour qui c’est fait.",
  body="""
-        <h2>Pourquoi les stores occultants laissent encore passer la lumière</h2>
-        <p>Le tissu occultant est entièrement opaque — aucune lumière ne passe <em>à travers</em>. Mais un store posé à l’intérieur du cadre se trouve à quelques millimètres du cadre de chaque côté, et la lumière s’engouffre autour de ces bords en barres lumineuses. Un matin ensoleillé, ce halo suffit à réveiller un dormeur léger. Pour obtenir une vraie noirceur, il faut fermer les fentes.</p>
+        <h2>Le problème des stores occultants ordinaires</h2>
+        <p>Le tissu occultant est entièrement opaque, mais un store ordinaire pend à quelques millimètres du cadre. La lumière s’engouffre autour de ces bords en barres lumineuses — et un matin d’été à Montréal, ce halo arrive avant 5 h. On peut ajouter des rails, des rideaux et du chevauchement pour le combattre, mais on colmate des fentes que le store lui-même crée.</p>
+        <figure>
+          <img src="../assets/roller-blackout.jpg" alt="Un store enrouleur occultant ordinaire avec des fentes de lumière visibles des deux côtés" />
+          <figcaption>Un enrouleur occultant standard. Bon tissu — mais regardez la lumière des deux côtés.</figcaption>
+        </figure>
 
-        <h2>Les trois éléments d’un vrai occultant</h2>
-        <h3>1. Le tissu occultant</h3>
-        <p>Un tissu opaque, enduit ou doublé. Offert pour les <a href="roller-blinds.html">stores enrouleurs</a>, les <a href="honeycomb-blinds.html">stores alvéolaires</a>, les <a href="roman-shades.html">stores bateau</a> et les <a href="curtains-and-drapes.html">rideaux</a> (en doublure occultante).</p>
-        <h3>2. Les rails latéraux</h3>
-        <p>De minces rails fixés de chaque côté du cadre dans lesquels le store coulisse. Ils scellent complètement les bords — c’est la plus grande amélioration entre « sombre » et « noir ». Ajoutez un joint au bas pour la dernière lisière.</p>
-        <h3>3. Pose extérieure / chevauchement</h3>
-        <p>Poser le store sur le mur <em>par-dessus</em> le cadre, plus grand que l’ouverture, pour que le tissu chevauche la fenêtre de tous les côtés. Plus simple que les rails ; un peu de lumière peut encore se glisser sur les bords, alors on combine souvent une pose extérieure avec des rideaux lourds.</p>
-
-        <h2>Quel store occultant choisir ?</h2>
+        <h2>Ce qui rend le store Blockout différent</h2>
+        <p>Le store Blockout installe un mince <strong>cadre</strong> d’aluminium autour de toute l’ouverture de la fenêtre. Le tissu occultant coulisse <em>à l’intérieur</em> de ce cadre dans des rails latéraux tendus, et le haut et le bas se scellent contre lui. Chaque bord est fermé — le haut, les deux côtés et le bas — alors la lumière n’a tout simplement nulle part où passer.</p>
         <ul>
-          <li><strong>Enrouleur occultant + rails latéraux</strong> — le scellage le plus étanche et le look le plus propre. Notre choix pour les chambres de bébé et les travailleurs de nuit.</li>
-          <li><strong>Alvéolaire occultant + rails</strong> — noirceur <em>plus</em> isolation et silence. Le meilleur pour les chambres froides. Voyez les <a href="honeycomb-blinds.html">stores alvéolaires</a>.</li>
-          <li><strong>Store bateau occultant</strong> — plus doux, plus décoratif ; utilisez une pose extérieure et attendez-vous à un peu plus de lumière sur les bords.</li>
-          <li><strong>Rideaux doublés occultants</strong> — beaux et chauds ; faites chevaucher généreusement et ajoutez un rail à retour. Souvent superposés à un store occultant pour un résultat digne d’un hôtel.</li>
+          <li><strong>Cadre scellé</strong> — les bords du tissu logent dans les rails ; aucune fente latérale, aucune fente au bas.</li>
+          <li><strong>Tendu, sans cordon</strong> — tirez la barre du bas et elle reste exactement où vous la laissez. Ni cordon ni chaînette — sécuritaire pour les enfants par conception.</li>
+          <li><strong>Haut-bas ou bas-haut</strong> — abaissez-le par le haut pour laisser entrer un peu de lumière, ou fermez-le complètement.</li>
+          <li><strong>Pose intérieure ou extérieure</strong> — l’intérieure exige environ 2,5 cm (1 po) de profondeur d’embrasure ; l’extérieure, environ 7,5 cm (3 po) de surface plane.</li>
+          <li><strong>Options motorisées et intelligentes</strong> — programmez-le, commandez-le par appli ou par la voix.</li>
+          <li><strong>Plus silencieux et plus frais</strong> — le tissu scellé atténue aussi le bruit extérieur et réduit le gain de chaleur estival.</li>
+        </ul>
+        <figure>
+          <img src="../assets/blockout-sleep.jpg" alt="Une personne qui dort profondément dans une chambre sombre équipée d’un store Blockout" />
+          <figcaption>Le résultat : une chambre noire à 6 h du matin en juin.</figcaption>
+        </figure>
+
+        <h2>Pour qui c’est fait</h2>
+        <ul>
+          <li><strong>Bébés et tout-petits</strong> — siestes et couchers tôt en saison lumineuse. Voyez notre <a href="blackout-blinds-for-nursery.html">guide chambre de bébé</a>.</li>
+          <li><strong>Travailleurs de nuit et couche-tard</strong> — un vrai sommeil à 10 h.</li>
+          <li><strong>Dormeurs légers et migraineux</strong>.</li>
+          <li><strong>Cinémas maison et salles de jeu</strong>.</li>
+          <li><strong>Quiconque vit dans un condo lumineux</strong> avec lampadaires et fenêtres des voisins.</li>
         </ul>
 
         <h2>Avantages et inconvénients, honnêtement</h2>""",
- pros=["<strong>Un vrai sommeil profond</strong> — pour les bébés, les travailleurs de nuit, les dormeurs légers et quiconque vit au nord du 45e parallèle en juin.", "<strong>Cinéma maison</strong> et pièces à écran sans éblouissement.", "<strong>L’intimité est absolue</strong> une fois fermé.", "<strong>Bloque la chaleur estivale</strong> et, avec l’alvéolaire, garde la chaleur hivernale.", "<strong>Compatible motorisation</strong> — réveillez-vous en douceur selon un horaire."],
- cons=["<strong>Le tissu seul ne suffit pas</strong> — il faut des rails ou un chevauchement pour la vraie noirceur (on vous le spécifie).", "<strong>Les rails latéraux sont visibles</strong> — minces, mais présents ; certains préfèrent des rideaux superposés à la place.", "<strong>Coûte un peu plus</strong> qu’un store filtrant du même type.", "<strong>La noirceur totale n’est pas pour toutes les pièces</strong> — les aires de vie veulent généralement du filtrant."],
- glance=[("Noirceur", (5, "Totale, avec rails")), ("Intimité", (5, "Absolue")), ("Isolation", (4, "Bonne ; la meilleure avec l’alvéolaire")), ("Style", (3, "Propre ; rails visibles")), ("Pièces idéales", "Chambres, chambres de bébé, cinémas maison, chambres de travailleurs de nuit"), ("Options", "Enrouleur / alvéolaire / bateau / doublure de rideau · rails latéraux · pose extérieure · motorisé")],
+ pros=["<strong>Vraiment 100 % noir</strong> — le cadre scelle chaque bord ; ni halo ni barres de lumière.", "<strong>Sans cordon et sécuritaire pour les enfants</strong> — une barre tendue, rien qui pend.", "<strong>Flexibilité haut-bas / bas-haut.</strong>", "<strong>Pièce plus silencieuse et plus fraîche</strong> grâce au scellage.", "<strong>Motorisé et prêt pour la maison intelligente.</strong>", "<strong>Fait sur mesure</strong> pour chaque fenêtre."],
+ cons=["<strong>Le cadre est visible</strong> — mince et soigné, mais on le voit autour de la fenêtre. Choisissez le fini assorti à vos moulures.", "<strong>Coûte plus qu’un enrouleur occultant ordinaire</strong> — vous payez pour le cadre et le scellage, et c’est exactement ce qui donne la noirceur.", "<strong>Exige un peu de profondeur ou de surface plane</strong> pour poser le cadre — on vérifie à la consultation.", "<strong>La noirceur totale n’est pas pour les salons</strong> — là, un <a href='roller-blinds.html'>enrouleur</a> tamisant ou un <a href='day-and-night-zebra-blinds.html'>store zébré</a>."],
+ glance=[("Noirceur", (5, "100 % — cadre scellé")), ("Intimité", (5, "Absolue")), ("Isolation", (4, "Bonne ; les bords scellés aident")), ("Bruit", (4, "Nettement plus silencieux")), ("Style", (3, "Propre ; cadre visible")), ("Pièces idéales", "Chambres, chambres de bébé, cinémas maison, chambres de travailleurs de nuit, condos lumineux"), ("Options", "Pose intérieure / extérieure · haut-bas/bas-haut · sans cordon · motorisé · finis du cadre")],
  body2="""
-        <div class="callout"><strong>Note chambre de bébé</strong><p>Pour la chambre d’un bébé, nous recommandons un enrouleur ou un alvéolaire occultant avec rails latéraux, <em>sans cordon ou motorisé</em> (aucun cordon), dans un tissu facile d’entretien. Voyez notre <a href="blackout-blinds-for-nursery.html">guide chambre de bébé</a>.</p></div>
+        <div class="callout"><strong>Store Blockout ou enrouleur occultant + rails latéraux ?</strong><p>On peut s’approcher de la noirceur totale en ajoutant des rails latéraux à un enrouleur occultant — on le fait souvent. Le store Blockout en est la version conçue exprès : le cadre <em>est</em> le système de rails, haut et bas compris, en un seul ensemble propre. Si la noirceur est toute la raison d’être de la pièce, c’est celui-là.</p></div>
         <h2>Quand choisir autre chose</h2>
         <ul>
-          <li>Salon ou cuisine où vous voulez encore la lumière du jour ? Un <a href="roller-blinds.html">enrouleur</a> tamisant ou un <a href="day-and-night-zebra-blinds.html">store zébré</a>.</li>
-          <li>Vous voulez la chaleur autant que la noirceur ? <a href="honeycomb-blinds.html">Alvéolaire occultant</a>.</li>
+          <li>Vous voulez la noirceur <em>et</em> une isolation maximale sur une fenêtre froide ? Un <a href="honeycomb-blinds.html">alvéolaire</a> occultant avec rails.</li>
+          <li>Vous préférez un look doux et décoratif ? Des <a href="curtains-and-drapes.html">rideaux</a> doublés occultants ou un <a href="roman-shades.html">store bateau</a> (attendez-vous à un peu de lumière sur les bords).</li>
         </ul>""",
- faq=[("Pourquoi mon store occultant laisse-t-il encore passer la lumière ?", "Parce que la lumière fuit autour des bords d’un store posé à l’intérieur du cadre, pas à travers le tissu. Installez des rails latéraux (et un joint au bas), ou posez le store à l’extérieur du cadre avec un généreux chevauchement, ou superposez des rideaux occultants par-dessus."),
-      ("Quel est le meilleur store occultant ?", "Pour la noirceur totale : un enrouleur ou un alvéolaire occultant coulissant dans des rails latéraux. L’alvéolaire ajoute isolation et silence ; l’enrouleur est le plus mince et le plus économique."),
-      ("Les stores occultants sont-ils bons contre la chaleur estivale ?", "Oui — ils bloquent très efficacement le gain solaire. Les endos de couleur pâle réfléchissent encore plus la chaleur."),
-      ("Peut-on motoriser les stores occultants ?", "Oui, et c’est une belle combinaison — programmez-les pour s’ouvrir lentement à votre heure de réveil."),
-      ("Est-ce que vous les installez ?", "Oui — nous mesurons avec précision, posons des rails latéraux au besoin et installons gratuitement partout à Montréal.")],
- aside_h="Obtenez une vraie noirceur", aside_p="Consultation gratuite à domicile. Nous examinons votre fenêtre et spécifions le tissu, les rails et la pose qui vous donneront vraiment l’occultant.",
- cta_h="Dormez comme s’il était <em>minuit</em> à midi.", cta_p="Réservez une consultation gratuite. Nous mesurons, spécifions le scellage et installons gratuitement.",
+ faq=[("Le store Blockout est-il vraiment occultant à 100 % ?", "Oui. Contrairement à un store occultant ordinaire, le tissu coulisse à l’intérieur d’un cadre qui scelle le haut, les deux côtés et le bas de la fenêtre, alors il n’y a aucun bord par où la lumière peut fuir."),
+      ("Quelle est la différence entre un store Blockout et un enrouleur occultant ?", "Un enrouleur occultant utilise un tissu opaque mais pend avec de petites fentes sur les côtés par où la lumière entre. Un store Blockout place le tissu dans un cadre scellé avec des rails latéraux tendus — aucune fente."),
+      ("Est-il sécuritaire pour les enfants ?", "Oui — il est sans cordon. On déplace une barre du bas tendue ; il n’y a ni cordon ni chaînette."),
+      ("Peut-on le motoriser ?", "Oui, avec commande par appli, par la voix et par horaire — une belle combinaison pour une chambre qui s’ouvre doucement à votre heure de réveil."),
+      ("Convient-il à ma fenêtre ?", "La pose intérieure exige environ 2,5 cm de profondeur d’embrasure ; la pose extérieure, environ 7,5 cm de surface plane autour de la fenêtre. On le confirme à votre consultation gratuite."),
+      ("Est-ce que vous l’installez ?", "Oui — mesuré, fabriqué à la taille et installé gratuitement partout à Montréal.")],
+ aside_h="Voyez un store Blockout en personne", aside_p="Consultation gratuite à domicile. Nous apportons un échantillon pour que vous voyiez le cadre et le scellage, et vérifions la profondeur de votre fenêtre.",
+ cta_h="Dormez comme s’il était <em>minuit</em> à midi.", cta_p="Réservez une consultation gratuite. Nous mesurons, confirmons la pose et installons gratuitement.",
  related=[R["nursery"], R["honey"], R["motor"]]),
 
 # ---------------------------------------------------------------- OUTDOOR
@@ -468,7 +481,7 @@ dict(slug="smart-film.html", type="guide", crumb="Film intelligent", read=5, ima
 
         <h2>Avantages et inconvénients, honnêtement</h2>""",
  pros=["<strong>Intimité instantanée</strong> — pas de stores, pas de rideaux, rien qui gêne.", "<strong>Garde la lumière</strong> même en mode privé (le dépoli reste lumineux).", "<strong>Zéro nettoyage</strong> — c’est juste du verre.", "<strong>Fonctionne sur le verre existant</strong> — pas besoin de remplacer les fenêtres.", "<strong>Privé par défaut</strong> — sécuritaire en cas de panne.", "<strong>Bloque les UV</strong> ; peut servir d’écran de projection.", "<strong>Prêt pour la maison intelligente.</strong>"],
- cons=["<strong>Pas un occultant</strong> — le dépoli diffuse la lumière, il ne la bloque pas. Pour la noirceur, voyez les <a href='blackout-blinds.html'>stores occultants</a>.", "<strong>A besoin d’électricité</strong> — un transformateur basse tension et un fil discret jusqu’au verre.", "<strong>Coûte plus au mètre carré</strong> qu’un store.", "<strong>Léger voile en mode clair</strong> — à peine perceptible, mais pas invisible.", "<strong>Aucune isolation thermique</strong> notable."],
+ cons=["<strong>Pas un occultant</strong> — le dépoli diffuse la lumière, il ne la bloque pas. Pour la noirceur, voyez le <a href='blackout-blinds.html'>store Blockout</a>.", "<strong>A besoin d’électricité</strong> — un transformateur basse tension et un fil discret jusqu’au verre.", "<strong>Coûte plus au mètre carré</strong> qu’un store.", "<strong>Léger voile en mode clair</strong> — à peine perceptible, mais pas invisible.", "<strong>Aucune isolation thermique</strong> notable."],
  glance=[("Intimité", (5, "Instantanée, totale")), ("Lumière", (5, "Conservée dans les deux modes")), ("Noirceur", (1, "Aucune — pas occultant")), ("Style", (5, "Élégant, invisible")), ("Entretien", (5, "C’est du verre")), ("Idéal pour", "Salles de bain, bureaux, cloisons, vitrines, cliniques"), ("Options", "Interrupteur mural · télécommande · appli · voix · horaires · projection")],
  body2="""
         <div class="callout"><strong>Résidentiel et commercial</strong><p>Nous installons le film intelligent dans les maisons — le plus souvent salles de bain et bureaux à domicile — et dans les bureaux, cliniques et commerces partout à Montréal. Montrez-nous la vitre ; nous vous dirons exactement ce qui est possible.</p></div>""",

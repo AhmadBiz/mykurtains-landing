@@ -39,7 +39,7 @@ GUIDES_FR = [
     ("roman-shades.html", "Stores bateau"),
     ("day-and-night-zebra-blinds.html", "Jour et nuit (zébrés)"),
     ("motorized-blinds.html", "Stores motorisés"),
-    ("blackout-blinds.html", "Occultant 100 %"),
+    ("blackout-blinds.html", "Store Blockout"),
     ("outdoor-blinds.html", "Stores extérieurs"),
     ("smart-film.html", "Film intelligent"),
 ]
@@ -51,7 +51,7 @@ GUIDES = [
     ("roman-shades.html", "Roman shades"),
     ("day-and-night-zebra-blinds.html", "Day &amp; night (zebra)"),
     ("motorized-blinds.html", "Motorized blinds"),
-    ("blackout-blinds.html", "100% blackout"),
+    ("blackout-blinds.html", "Blockout Blind"),
     ("outdoor-blinds.html", "Outdoor blinds"),
     ("smart-film.html", "Smart film"),
 ]
@@ -240,12 +240,12 @@ def render(p, lang="en"):
 # CONTENT
 # ============================================================================
 IMG = {
-    "roller": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+    "roller": "../assets/roller.jpg",
     "curtains": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
-    "roman": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
-    "zebra": "https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=1200&q=80",
+    "roman": "../assets/roman.jpg",
+    "zebra": "../assets/zebra.jpg",
     "motor": "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80",
-    "blackout": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80",
+    "blackout": "../assets/blockout.jpg",
     "outdoor": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
     "film": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
     "honey": "../assets/honeycomb.jpg",
@@ -268,7 +268,7 @@ R = {
     "roman": rel("roman-shades.html", IMG["roman"], "Guide", "Roman", "Roman Shades", "Tailored folds, quiet luxury."),
     "zebra": rel("day-and-night-zebra-blinds.html", IMG["zebra"], "Guide", "Zebra", "Day &amp; Night (Zebra) Blinds", "Privacy and daylight from one blind."),
     "motor": rel("motorized-blinds.html", IMG["motor"], "Guide", "Motorized", "Motorized Blinds: Worth It?", "What automation really adds."),
-    "blackout": rel("blackout-blinds.html", IMG["blackout"], "Guide", "Blackout", "100% Blackout Blinds", "How to get total darkness."),
+    "blackout": rel("blackout-blinds.html", IMG["blackout"], "Guide", "Blockout", "Blockout Blind: 100% Darkness", "A framed, edge-sealed shade — no light leaks."),
     "outdoor": rel("outdoor-blinds.html", IMG["outdoor"], "Guide", "Outdoor", "Outdoor Blinds", "Shade for patios and balconies."),
     "film": rel("smart-film.html", IMG["film"], "Guide", "Smart film", "Smart Film", "Privacy glass at a touch."),
     "vs": rel("blinds-vs-curtains.html", IMG["living"], "Advice", "Choosing", "Blinds vs Curtains", "Which is right for your room?"),
@@ -504,7 +504,7 @@ dict(slug="day-and-night-zebra-blinds.html", type="guide", crumb="Day & night (z
 
         <h2>Honest pros and cons</h2>""",
  pros=["<strong>Privacy and view from one blind</strong> — no need for a sheer plus a blind.", "<strong>Infinitely adjustable</strong> light with a small movement.", "<strong>Modern, striped look</strong> that suits contemporary rooms.", "<strong>Roller-blind simplicity</strong> and slim cassette.", "<strong>Great value</strong> for the flexibility you get.", "<strong>Cordless and motorized</strong> options."],
- cons=["<strong>Not true blackout</strong> — the sheer bands always let a little light through. For total dark see <a href='blackout-blinds.html'>blackout blinds</a>.", "<strong>Modest insulation</strong> — like a roller blind. Cold window? <a href='honeycomb-blinds.html'>Honeycomb</a>.", "<strong>The stripes are a look</strong> — you either love it or you don’t.", "<strong>Two layers of fabric</strong> means a slightly bigger roll on very tall windows."],
+ cons=["<strong>Not true blackout</strong> — the sheer bands always let a little light through. For total dark see the <a href='blackout-blinds.html'>Blockout Blind</a>.", "<strong>Modest insulation</strong> — like a roller blind. Cold window? <a href='honeycomb-blinds.html'>Honeycomb</a>.", "<strong>The stripes are a look</strong> — you either love it or you don’t.", "<strong>Two layers of fabric</strong> means a slightly bigger roll on very tall windows."],
  glance=[("Insulation", (2, "Modest")), ("Light control", (5, "Infinitely adjustable")), ("Privacy", (4, "Excellent (bands aligned)")), ("Style", (4, "Modern, striped")), ("Maintenance", (4, "Easy")), ("Value", (5, "Excellent")), ("Best rooms", "Living rooms, home offices, kitchens, street-facing rooms"), ("Options", "Light-filtering or blackout bands · chain / cordless / motorized · cassette")],
  body2="""
         <h2>Who they’re perfect for</h2>
@@ -512,11 +512,11 @@ dict(slug="day-and-night-zebra-blinds.html", type="guide", crumb="Day & night (z
         <div class="callout"><strong>Montreal favourite</strong><p>Zebra blinds are one of our most-installed products in city condos and duplexes — big windows, close neighbours, and a lot of light to manage. They solve all three.</p></div>
         <h2>When to choose something else</h2>
         <ul>
-          <li>Need total darkness (bedroom, nursery)? A <a href="blackout-blinds.html">100% blackout</a> solution.</li>
+          <li>Need total darkness (bedroom, nursery)? A <a href="blackout-blinds.html">Blockout Blind</a> solution.</li>
           <li>Cold or north-facing window? <a href="honeycomb-blinds.html">Honeycomb blinds</a>.</li>
           <li>Prefer a plain, unstriped face? A <a href="roller-blinds.html">roller blind</a> with a sheer curtain.</li>
         </ul>""",
- faq=[("Are zebra blinds blackout?", "Blackout-band versions get a room very dark, but the sheer stripes always pass a little light — so not 100%. For nurseries and shift workers, choose a true blackout blind with side channels."),
+ faq=[("Are zebra blinds blackout?", "Blackout-band versions get a room very dark, but the sheer stripes always pass a little light — so not 100%. For nurseries and shift workers, choose the Blockout Blind — a framed shade that seals every edge."),
       ("Can you see through zebra blinds at night?", "With the solid bands aligned, no — the opaque stripes overlap and block the view in. With sheers aligned, some silhouette is visible when the room is lit, as with any sheer."),
       ("Are they good for big windows?", "Yes — they’re a roller mechanism, so they handle wide windows and patio doors well."),
       ("Chain or motorized?", "Both work well. Motorized is lovely here because you’ll adjust them often; a remote or schedule makes it effortless."),
@@ -576,52 +576,65 @@ dict(slug="motorized-blinds.html", type="guide", crumb="Motorized blinds", read=
  cta_h="Every blind, <em>one button.</em>", cta_p="Book a free consultation. We measure, demo the controls and install for free — no electrician needed for battery models.",
  related=[R["blackout"], R["honey"], R["zebra"]]),
 
-# ---------------------------------------------------------------- BLACKOUT
-dict(slug="blackout-blinds.html", type="guide", crumb="100% blackout", read=6, image=IMG["blackout"],
- alt="A dark, calm bedroom with blackout blinds",
- title="100% Blackout Blinds: How to Actually Get Total Darkness",
- description="Why blackout fabric alone isn't enough: side channels, outside mounts and the details that stop light leaks. Blackout roller, honeycomb and curtain options, pros and cons, and the best rooms. Installed free in Montreal.",
- og="Blackout fabric alone isn’t enough — the side channels and details that stop light leaks.",
- h1="100% blackout: how to actually get <em>total</em> darkness.",
- lede="Here’s the thing most people learn the hard way: a “blackout” blind on its own is not blackout. Light finds every gap. True darkness is a system — the right fabric plus the right fit. Here’s how we build it.",
+# ---------------------------------------------------------------- BLOCKOUT
+dict(slug="blackout-blinds.html", type="guide", crumb="Blockout Blind", read=6, image=IMG["blackout"],
+ alt="A black framed Blockout Blind sealed into a bedroom window, blocking all light",
+ title="Blockout Blind: The Framed Shade That Blocks 100% of Light",
+ description="The Blockout Blind is a framed, edge-sealed shade that gives true 100% darkness — no light halo, no side leaks. How the frame works, who it's for, cordless and motorized options, honest pros and cons. Installed free in Montreal.",
+ og="A framed, edge-sealed shade that blocks 100% of light — no halo, no leaks. Real darkness for real sleep.",
+ h1="Blockout Blind: the shade that finally makes a room <em>completely</em> dark.",
+ lede="Every “blackout” blind you’ve ever owned leaked light around the edges. The Blockout Blind doesn’t, and the reason is simple: it isn’t just a fabric — it’s a fabric inside a frame that seals every edge of the window. Here’s how it works and who it’s for.",
  body="""
-        <h2>Why blackout blinds still leak light</h2>
-        <p>Blackout fabric is fully opaque — no light passes <em>through</em> it. But an inside-mounted blind sits a few millimetres from the frame on each side, and light streams around those edges as bright bars. On a sunny morning that halo is enough to wake a light sleeper. To get real darkness you have to close the gaps.</p>
+        <h2>The problem with ordinary blackout blinds</h2>
+        <p>Blackout fabric is fully opaque, but an ordinary blind hangs a few millimetres inside the frame. Light pours around those edges as bright bars — and on a summer morning in Montreal that halo arrives before 5 a.m. You can add channels, curtains and overlap to fight it, but you’re patching gaps that the blind itself creates.</p>
+        <figure>
+          <img src="../assets/roller-blackout.jpg" alt="A regular blackout roller blind with visible light gaps down both sides" />
+          <figcaption>A standard blackout roller. Good fabric — but look at the light down both sides.</figcaption>
+        </figure>
 
-        <h2>The three parts of a true blackout</h2>
-        <h3>1. Blackout fabric</h3>
-        <p>An opaque, coated or lined fabric. Available for <a href="roller-blinds.html">roller blinds</a>, <a href="honeycomb-blinds.html">honeycomb blinds</a>, <a href="roman-shades.html">Roman shades</a> and <a href="curtains-and-drapes.html">curtains</a> (as a blackout lining).</p>
-        <h3>2. Side channels</h3>
-        <p>Slim tracks fitted to each side of the frame that the blind runs inside. They seal the edges completely — this is the single biggest upgrade from “dark” to “black.” Add a bottom seal for the last sliver.</p>
-        <h3>3. Outside mount / overlap</h3>
-        <p>Mounting the blind on the wall <em>over</em> the frame, larger than the opening, so the fabric overlaps the window on all sides. Simpler than channels; a little light can still creep at the edges, so we often combine an outside mount with heavy curtains.</p>
-
-        <h2>Which blackout blind should you choose?</h2>
+        <h2>What makes a Blockout Blind different</h2>
+        <p>The Blockout Blind mounts a slim aluminium <strong>frame</strong> around the entire window opening. The blackout fabric runs <em>inside</em> that frame in tensioned side tracks, and the top and bottom seal against it. Every edge is closed — top, both sides and bottom — so there is simply nowhere for light to get in.</p>
         <ul>
-          <li><strong>Blackout roller + side channels</strong> — the tightest seal and the cleanest look. Our go-to for nurseries and shift workers.</li>
-          <li><strong>Blackout honeycomb + channels</strong> — darkness <em>plus</em> insulation and quiet. Best for cold bedrooms. See <a href="honeycomb-blinds.html">honeycomb blinds</a>.</li>
-          <li><strong>Blackout Roman shade</strong> — softer, more decorative; use an outside mount and expect a touch more light at the edges.</li>
-          <li><strong>Blackout-lined curtains</strong> — beautiful and warm; overlap generously and add a wraparound track. Often layered over a blackout blind for a hotel-level result.</li>
+          <li><strong>Sealed frame</strong> — the fabric edges live inside the tracks; no side gap, no bottom gap.</li>
+          <li><strong>Tensioned, cordless</strong> — pull the bottom bar and it stays exactly where you leave it. No cords, no chains — child-safe by design.</li>
+          <li><strong>Top-down or bottom-up</strong> — lower it from the top to let a little light in, or close it fully.</li>
+          <li><strong>Inside or outside mount</strong> — inside needs about 2.5 cm (1&quot;) of recess depth; outside needs about 7.5 cm (3&quot;) of flat surface.</li>
+          <li><strong>Motorized &amp; smart</strong> options — schedule it, control by app or voice.</li>
+          <li><strong>Quieter and cooler</strong> — the sealed fabric also dampens outside noise and cuts summer heat gain.</li>
+        </ul>
+        <figure>
+          <img src="../assets/blockout-sleep.jpg" alt="Someone sleeping soundly in a dark bedroom with a Blockout Blind on the window" />
+          <figcaption>The result: a bedroom that is dark at 6 a.m. in June.</figcaption>
+        </figure>
+
+        <h2>Who it’s for</h2>
+        <ul>
+          <li><strong>Babies and toddlers</strong> — naps and early bedtimes in a bright season. See our <a href="blackout-blinds-for-nursery.html">nursery guide</a>.</li>
+          <li><strong>Shift workers and night owls</strong> — real sleep at 10 a.m.</li>
+          <li><strong>Light sleepers and migraine sufferers</strong>.</li>
+          <li><strong>Home cinemas and gaming rooms</strong>.</li>
+          <li><strong>Anyone in a bright condo</strong> with streetlights and neighbours’ windows.</li>
         </ul>
 
         <h2>Honest pros and cons</h2>""",
- pros=["<strong>Real, deep sleep</strong> — for babies, shift workers, light sleepers and anyone north of the 45th parallel in June.", "<strong>Home cinema</strong> and screen rooms without glare.", "<strong>Privacy is absolute</strong> when closed.", "<strong>Blocks summer heat</strong> and, with honeycomb, keeps winter warmth in.", "<strong>Works with motorization</strong> — wake gently on a schedule."],
- cons=["<strong>Fabric alone isn’t enough</strong> — you need channels or an overlap for true dark (we’ll spec it).", "<strong>Side channels are visible</strong> — slim, but there; some prefer curtains layered over instead.", "<strong>Costs a little more</strong> than a light-filtering blind of the same type.", "<strong>Total darkness isn’t for every room</strong> — living areas usually want light-filtering."],
- glance=[("Darkness", (5, "Total, with channels")), ("Privacy", (5, "Absolute")), ("Insulation", (4, "Good; best with honeycomb")), ("Style", (3, "Clean; channels visible")), ("Best rooms", "Bedrooms, nurseries, home cinemas, shift-worker rooms"), ("Options", "Roller / honeycomb / Roman / curtain lining · side channels · outside mount · motorized")],
+ pros=["<strong>Truly 100% dark</strong> — the frame seals every edge; no halo, no bars of light.", "<strong>Cordless and child-safe</strong> — a tensioned bar, nothing hanging.", "<strong>Top-down / bottom-up</strong> flexibility.", "<strong>Quieter, cooler room</strong> as a side effect of the seal.", "<strong>Motorized and smart-home ready.</strong>", "<strong>Made to measure</strong> for each window."],
+ cons=["<strong>The frame is visible</strong> — slim and neat, but you see it around the window. Choose the finish to match your trim.", "<strong>Costs more than a plain blackout roller</strong> — you’re paying for the frame and the seal, which is exactly what delivers the darkness.", "<strong>Needs some depth or flat surface</strong> to mount the frame — we check at the consultation.", "<strong>Total darkness isn’t for living rooms</strong> — there, use a dim-out <a href='roller-blinds.html'>roller</a> or <a href='day-and-night-zebra-blinds.html'>zebra blind</a>."],
+ glance=[("Darkness", (5, "100% — sealed frame")), ("Privacy", (5, "Absolute")), ("Insulation", (4, "Good; sealed edges help")), ("Noise", (4, "Noticeably quieter")), ("Style", (3, "Clean; frame visible")), ("Best rooms", "Bedrooms, nurseries, home cinemas, shift-worker rooms, bright condos"), ("Options", "Inside / outside mount · top-down/bottom-up · cordless · motorized · frame finishes")],
  body2="""
-        <div class="callout"><strong>Nursery note</strong><p>For a baby’s room we recommend a blackout roller or honeycomb with side channels, <em>cordless or motorized</em> (no cords), in an easy-clean fabric. See our <a href="blackout-blinds-for-nursery.html">nursery guide</a>.</p></div>
+        <div class="callout"><strong>Blockout Blind vs. blackout roller + side channels</strong><p>You can get close to full darkness by adding side channels to a blackout roller — we do it often. The Blockout Blind is the purpose-built version: the frame <em>is</em> the channel system, top and bottom included, in one clean unit. If darkness is the whole point of the room, this is the one.</p></div>
         <h2>When to choose something else</h2>
         <ul>
-          <li>Living room or kitchen where you still want daylight? A dim-out <a href="roller-blinds.html">roller</a> or <a href="day-and-night-zebra-blinds.html">zebra blind</a>.</li>
-          <li>Want warmth as much as darkness? <a href="honeycomb-blinds.html">Blackout honeycomb</a>.</li>
+          <li>Want darkness <em>and</em> maximum insulation on a cold window? A blackout <a href="honeycomb-blinds.html">honeycomb</a> with channels.</li>
+          <li>Prefer a soft, decorative look? Blackout-lined <a href="curtains-and-drapes.html">curtains</a> or a <a href="roman-shades.html">Roman shade</a> (expect a little edge light).</li>
         </ul>""",
- faq=[("Why does my blackout blind still let light in?", "Because light leaks around the edges of an inside-mounted blind, not through the fabric. Fit side channels (and a bottom seal), or mount the blind outside the frame with generous overlap, or layer blackout curtains over it."),
-      ("What is the best blackout blind?", "For total darkness: a blackout roller or honeycomb blind running in side channels. Honeycomb adds insulation and quiet; roller is the slimmest and most economical."),
-      ("Are blackout blinds good for summer heat?", "Yes — they block solar gain very effectively. Light-coloured backings reflect even more heat."),
-      ("Can blackout blinds be motorized?", "Yes, and it’s a lovely combination — schedule them to open slowly at your wake time."),
-      ("Do you install them?", "Yes — we measure precisely, fit side channels where needed and install free across Montreal.")],
- aside_h="Get it truly dark", aside_p="Free in-home consultation. We check your window and spec the fabric, channels and mount that will actually give you blackout.",
- cta_h="Sleep like it’s <em>midnight</em> at noon.", cta_p="Book a free consultation. We measure, spec the seal and install for free.",
+ faq=[("Is the Blockout Blind really 100% blackout?", "Yes. Unlike an ordinary blackout blind, the fabric runs inside a frame that seals the top, both sides and the bottom of the window, so there are no edges for light to leak around."),
+      ("What is the difference between a Blockout Blind and a blackout roller?", "A blackout roller uses opaque fabric but hangs with small gaps at the sides where light gets in. A Blockout Blind puts the fabric inside a sealed frame with tensioned side tracks — no gaps."),
+      ("Is it child-safe?", "Yes — it’s cordless. You move a tensioned bottom bar; there are no cords or chains."),
+      ("Can it be motorized?", "Yes, with app, voice and schedule control — a lovely combination for a bedroom that opens gently at your wake time."),
+      ("Does it fit my window?", "Inside mount needs about 2.5 cm of recess depth; outside mount needs about 7.5 cm of flat surface around the window. We confirm at your free consultation."),
+      ("Do you install it?", "Yes — measured, made to size and installed free across Montreal.")],
+ aside_h="See a Blockout Blind in person", aside_p="Free in-home consultation. We bring a sample so you can see the frame and the seal, and check your window depth.",
+ cta_h="Sleep like it’s <em>midnight</em> at noon.", cta_p="Book a free consultation. We measure, confirm the mount and install for free.",
  related=[R["nursery"], R["honey"], R["motor"]]),
 
 # ---------------------------------------------------------------- OUTDOOR
@@ -700,7 +713,7 @@ dict(slug="smart-film.html", type="guide", crumb="Smart film", read=5, image=IMG
 
         <h2>Honest pros and cons</h2>""",
  pros=["<strong>Instant privacy</strong> — no blinds, no curtains, nothing in the way.", "<strong>Keeps the light</strong> even when private (frosted still glows).", "<strong>Zero cleaning</strong> — it’s just glass.", "<strong>Works on existing glass</strong> — no need to replace windows.", "<strong>Private by default</strong> — safe in a power cut.", "<strong>Blocks UV</strong>; can double as a projection screen.", "<strong>Smart-home ready.</strong>"],
- cons=["<strong>Not a blackout</strong> — frosted diffuses light, it doesn’t block it. For darkness see <a href='blackout-blinds.html'>blackout blinds</a>.", "<strong>Needs power</strong> — a low-voltage transformer and a discreet wire to the glass.", "<strong>Costs more per square metre</strong> than a blind.", "<strong>Slight haze in clear mode</strong> — barely noticeable, but not invisible.", "<strong>No thermal insulation</strong> to speak of."],
+ cons=["<strong>Not a blackout</strong> — frosted diffuses light, it doesn’t block it. For darkness see the <a href='blackout-blinds.html'>Blockout Blind</a>.", "<strong>Needs power</strong> — a low-voltage transformer and a discreet wire to the glass.", "<strong>Costs more per square metre</strong> than a blind.", "<strong>Slight haze in clear mode</strong> — barely noticeable, but not invisible.", "<strong>No thermal insulation</strong> to speak of."],
  glance=[("Privacy", (5, "Instant, total")), ("Light", (5, "Kept in both modes")), ("Darkness", (1, "None — not blackout")), ("Style", (5, "Sleek, invisible")), ("Maintenance", (5, "It’s glass")), ("Best for", "Bathrooms, offices, partitions, storefronts, clinics"), ("Options", "Wall switch · remote · app · voice · schedules · projection")],
  body2="""
         <div class="callout"><strong>Residential &amp; commercial</strong><p>We install smart film in homes — most often bathrooms and home offices — and in offices, clinics and stores across Montreal. Bring us the glass; we’ll tell you exactly what’s possible.</p></div>""",
