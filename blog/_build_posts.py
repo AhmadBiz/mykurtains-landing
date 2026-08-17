@@ -40,7 +40,7 @@ GUIDES_FR = [
     ("day-and-night-zebra-blinds.html", "Jour et nuit (zébrés)"),
     ("motorized-blinds.html", "Stores motorisés"),
     ("blackout-blinds.html", "Store Blockout"),
-    ("outdoor-blinds.html", "Stores extérieurs"),
+    ("outdoor-blinds.html", "Stores robustes (extérieurs)"),
     ("smart-film.html", "Film intelligent"),
 ]
 
@@ -52,7 +52,7 @@ GUIDES = [
     ("day-and-night-zebra-blinds.html", "Day &amp; night (zebra)"),
     ("motorized-blinds.html", "Motorized blinds"),
     ("blackout-blinds.html", "Blockout Blind"),
-    ("outdoor-blinds.html", "Outdoor blinds"),
+    ("outdoor-blinds.html", "Heavy-duty (outdoor) blinds"),
     ("smart-film.html", "Smart film"),
 ]
 
@@ -246,7 +246,7 @@ IMG = {
     "zebra": "../assets/zebra.jpg",
     "motor": "../assets/roller-2.jpg",
     "blackout": "../assets/blockout.jpg",
-    "outdoor": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+    "outdoor": "../assets/outdoor.jpg",
     "film": "../assets/smartfilm.jpg",
     "honey": "../assets/honeycomb.jpg",
     "living": "../assets/curtains-office.jpg",
@@ -269,7 +269,7 @@ R = {
     "zebra": rel("day-and-night-zebra-blinds.html", IMG["zebra"], "Guide", "Zebra", "Day &amp; Night (Zebra) Blinds", "Privacy and daylight from one blind."),
     "motor": rel("motorized-blinds.html", IMG["motor"], "Guide", "Motorized", "Motorized Blinds: Worth It?", "What automation really adds."),
     "blackout": rel("blackout-blinds.html", IMG["blackout"], "Guide", "Blockout", "Blockout Blind: 100% Darkness", "A framed, edge-sealed shade — no light leaks."),
-    "outdoor": rel("outdoor-blinds.html", IMG["outdoor"], "Guide", "Outdoor", "Outdoor Blinds", "Shade for patios and balconies."),
+    "outdoor": rel("outdoor-blinds.html", IMG["outdoor"], "Guide", "Heavy-duty", "Heavy-Duty Outdoor Blinds", "Zip-track screens for patios and balconies."),
     "film": rel("smart-film.html", IMG["film"], "Guide", "Smart film", "Smart Film", "Privacy glass at a touch."),
     "vs": rel("blinds-vs-curtains.html", IMG["living"], "Advice", "Choosing", "Blinds vs Curtains", "Which is right for your room?"),
     "winter": rel("best-blinds-for-montreal-winters.html", IMG["bedroom"], "Advice", "Insulation", "Best Blinds for Montreal Winters", "What actually helps, ranked."),
@@ -548,7 +548,7 @@ dict(slug="motorized-blinds.html", type="guide", crumb="Motorized blinds", read=
  body="""
         <h2>What are motorized blinds?</h2>
         <p>Any blind or curtain fitted with a small, quiet motor instead of a chain or cord. You control it with a <strong>remote</strong>, a <strong>wall switch</strong>, a <strong>phone app</strong>, or <strong>voice</strong> (Google, Alexa, Apple Home), and you can set <strong>schedules</strong> — open at sunrise, close at dusk, all automatically.</p>
-        <p><strong>Everything we sell can be motorized:</strong> <a href="roller-blinds.html">roller blinds</a>, <a href="day-and-night-zebra-blinds.html">zebra blinds</a>, <a href="honeycomb-blinds.html">honeycomb blinds</a>, <a href="roman-shades.html">Roman shades</a>, the <a href="blackout-blinds.html">Blockout Blind</a>, <a href="outdoor-blinds.html">outdoor blinds</a> and <a href="curtains-and-drapes.html">curtain tracks</a>. It’s a per-window choice, and you can mix motorized and manual.</p>
+        <p><strong>Everything we sell can be motorized:</strong> <a href="roller-blinds.html">roller blinds</a>, <a href="day-and-night-zebra-blinds.html">zebra blinds</a>, <a href="honeycomb-blinds.html">honeycomb blinds</a>, <a href="roman-shades.html">Roman shades</a>, the <a href="blackout-blinds.html">Blockout Blind</a>, <a href="outdoor-blinds.html">heavy-duty outdoor blinds</a> and <a href="curtains-and-drapes.html">curtain tracks</a>. It’s a per-window choice, and you can mix motorized and manual.</p>
 
         <h2>How they work</h2>
         <h3>Power</h3>
@@ -650,16 +650,20 @@ dict(slug="blackout-blinds.html", type="guide", crumb="Blockout Blind", read=6, 
  related=[R["nursery"], R["honey"], R["motor"]]),
 
 # ---------------------------------------------------------------- OUTDOOR
-dict(slug="outdoor-blinds.html", type="guide", crumb="Outdoor blinds", read=5, image=IMG["outdoor"],
- alt="A covered outdoor patio with weatherproof blinds",
- title="Outdoor Blinds for Patios & Balconies: How They Work, Pros & Cons",
- description="Outdoor blinds and exterior shades explained: weatherproof fabrics, zip-track and cable systems, wind and sun ratings, honest pros and cons, and how they handle Montreal seasons. Installed free.",
- og="Extend your living space outside — weatherproof shade that handles Montreal seasons.",
- h1="Outdoor blinds: turn your patio into another <em>room.</em>",
- lede="Shade from the afternoon sun, shelter from a breeze, privacy from the neighbours — outdoor blinds make a balcony, terrace or patio usable for far more of the year. Here’s how the systems differ and what holds up in our climate.",
+dict(slug="outdoor-blinds.html", type="guide", crumb="Heavy-duty blinds", read=5, image=IMG["outdoor"],
+ alt="A heavy-duty zip-track outdoor blind enclosing a covered patio, garden visible through the mesh",
+ title="Heavy-Duty Outdoor Blinds for Patios & Balconies: How They Work, Pros & Cons",
+ description="Heavy-duty outdoor blinds explained: zip-track screens that seal the edges and take the wind, weatherproof mesh and PVC fabrics, motorized options with wind sensors, honest pros and cons, and how they handle Montreal seasons. Installed free.",
+ og="Zip-track outdoor screens built for wind, sun and weather — turn a patio or balcony into a room.",
+ h1="Heavy-duty outdoor blinds: turn your patio into another <em>room.</em>",
+ lede="Shade from the afternoon sun, shelter from the wind, privacy from the neighbours — heavy-duty outdoor blinds make a balcony, terrace or patio usable for far more of the year. Ours are zip-track screens: the fabric runs in side channels, so it stays taut and sealed even in a gust. Here’s how they work and what holds up in our climate.",
  body="""
-        <h2>What are outdoor blinds?</h2>
-        <p>Exterior roller shades made from <strong>weatherproof mesh or PVC fabrics</strong>, fitted to a pergola, balcony opening, patio cover or the outside of a window. Lower them to cut sun and glare, block wind and add privacy; raise them to open the space right up.</p>
+        <h2>What are heavy-duty outdoor blinds?</h2>
+        <p>Exterior roller screens made from <strong>weatherproof mesh or PVC fabrics</strong>, fitted to a pergola, balcony opening, patio cover or the outside of a window. Lower them to cut sun and glare, block wind and add privacy; raise them to open the space right up. “Heavy-duty” is the point: aluminium hardware, side channels and fabrics rated for outdoor life.</p>
+        <figure>
+          <img src="../assets/outdoor-exterior.jpg" alt="Two heavy-duty outdoor screens fully lowered on a patio, seen from the garden" />
+          <figcaption>From outside: two zip-track screens down, edges sealed in the side channels.</figcaption>
+        </figure>
 
         <h2>How they work</h2>
         <h3>The systems</h3>
@@ -668,6 +672,10 @@ dict(slug="outdoor-blinds.html", type="guide", crumb="Outdoor blinds", read=5, i
           <li><strong>Cable / wire-guided</strong> — the shade runs on tensioned cables; lighter and more economical, best for sheltered spots.</li>
           <li><strong>Exterior window shades</strong> — an outdoor roller fitted over the outside of a window to stop heat before it reaches the glass — the most effective way to keep a sun-facing room cool.</li>
         </ul>
+        <figure>
+          <img src="../assets/outdoor-inside.jpg" alt="A covered patio with a heavy-duty mesh outdoor blind lowered, dining table set, garden visible through the screen" />
+          <figcaption>From inside: sun and wind out, the view and the breeze still in.</figcaption>
+        </figure>
         <h3>The fabrics</h3>
         <ul>
           <li><strong>Sunscreen mesh</strong> — blocks most UV and glare while keeping the view and airflow. The everyday choice.</li>

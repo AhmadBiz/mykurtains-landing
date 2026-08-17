@@ -8,7 +8,7 @@ IMG = {
     "zebra": "../assets/zebra.jpg",
     "motor": "../assets/roller-2.jpg",
     "blackout": "../assets/blockout.jpg",
-    "outdoor": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+    "outdoor": "../assets/outdoor.jpg",
     "film": "../assets/smartfilm.jpg",
     "honey": "../assets/honeycomb.jpg",
     "living": "../assets/curtains-office.jpg",
@@ -31,7 +31,7 @@ R = {
     "zebra": rel("day-and-night-zebra-blinds.html", IMG["zebra"], "Guide", "Zébrés", "Stores jour et nuit (zébrés)", "Intimité et lumière en un seul store."),
     "motor": rel("motorized-blinds.html", IMG["motor"], "Guide", "Motorisés", "Stores motorisés : ça vaut le coup ?", "Ce que l’automatisation apporte vraiment."),
     "blackout": rel("blackout-blinds.html", IMG["blackout"], "Guide", "Blockout", "Store Blockout : noirceur 100 %", "Un store encadré et scellé — aucune fuite de lumière."),
-    "outdoor": rel("outdoor-blinds.html", IMG["outdoor"], "Guide", "Extérieur", "Stores extérieurs", "De l’ombre pour patios et balcons."),
+    "outdoor": rel("outdoor-blinds.html", IMG["outdoor"], "Guide", "Robustes", "Stores robustes extérieurs", "Écrans à glissières pour patios et balcons."),
     "film": rel("smart-film.html", IMG["film"], "Guide", "Film intelligent", "Film intelligent", "Vitre d’intimité d’une simple pression."),
     "vs": rel("blinds-vs-curtains.html", IMG["living"], "Conseils", "Choisir", "Stores ou rideaux ?", "Lequel convient à votre pièce ?"),
     "winter": rel("best-blinds-for-montreal-winters.html", IMG["bedroom"], "Conseils", "Isolation", "Les meilleurs stores pour l’hiver montréalais", "Ce qui aide vraiment, classé."),
@@ -316,7 +316,7 @@ dict(slug="motorized-blinds.html", type="guide", crumb="Stores motorisés", read
  body="""
         <h2>Qu’est-ce qu’un store motorisé ?</h2>
         <p>N’importe quel store ou rideau équipé d’un petit moteur silencieux à la place d’une chaînette ou d’un cordon. Vous le commandez avec une <strong>télécommande</strong>, un <strong>interrupteur mural</strong>, une <strong>appli</strong> ou la <strong>voix</strong> (Google, Alexa, Maison d’Apple), et vous pouvez programmer des <strong>horaires</strong> — ouvrir au lever du soleil, fermer au crépuscule, tout automatiquement.</p>
-        <p><strong>Tout ce que nous vendons peut être motorisé :</strong> les <a href="roller-blinds.html">stores enrouleurs</a>, les <a href="day-and-night-zebra-blinds.html">stores zébrés</a>, les <a href="honeycomb-blinds.html">stores alvéolaires</a>, les <a href="roman-shades.html">stores bateau</a>, le <a href="blackout-blinds.html">store Blockout</a>, les <a href="outdoor-blinds.html">stores extérieurs</a> et les <a href="curtains-and-drapes.html">rails de rideaux</a>. C’est un choix par fenêtre, et vous pouvez mélanger motorisé et manuel.</p>
+        <p><strong>Tout ce que nous vendons peut être motorisé :</strong> les <a href="roller-blinds.html">stores enrouleurs</a>, les <a href="day-and-night-zebra-blinds.html">stores zébrés</a>, les <a href="honeycomb-blinds.html">stores alvéolaires</a>, les <a href="roman-shades.html">stores bateau</a>, le <a href="blackout-blinds.html">store Blockout</a>, les <a href="outdoor-blinds.html">stores robustes extérieurs</a> et les <a href="curtains-and-drapes.html">rails de rideaux</a>. C’est un choix par fenêtre, et vous pouvez mélanger motorisé et manuel.</p>
 
         <h2>Comment ça fonctionne</h2>
         <h3>L’alimentation</h3>
@@ -418,16 +418,20 @@ dict(slug="blackout-blinds.html", type="guide", crumb="Store Blockout", read=6, 
  related=[R["nursery"], R["honey"], R["motor"]]),
 
 # ---------------------------------------------------------------- OUTDOOR
-dict(slug="outdoor-blinds.html", type="guide", crumb="Stores extérieurs", read=5, image=IMG["outdoor"],
- alt="Un patio extérieur couvert avec des stores résistants aux intempéries",
- title="Stores extérieurs pour patios et balcons : fonctionnement, avantages, inconvénients",
+dict(slug="outdoor-blinds.html", type="guide", crumb="Stores robustes", read=5, image=IMG["outdoor"],
+ alt="Un store extérieur robuste à glissières fermant un patio couvert, le jardin visible à travers la toile maillée",
+ title="Stores robustes extérieurs pour patios et balcons : fonctionnement, avantages, inconvénients",
  description="Les stores extérieurs expliqués : tissus résistants aux intempéries, systèmes à glissières (zip) et à câbles, résistance au vent et au soleil, avantages et inconvénients honnêtes, et comment ils gèrent les saisons montréalaises. Installés gratuitement.",
- og="Prolongez votre espace de vie dehors — de l’ombre résistante aux intempéries qui gère les saisons montréalaises.",
- h1="Stores extérieurs : faites de votre patio une <em>pièce</em> de plus.",
- lede="De l’ombre contre le soleil de l’après-midi, un abri contre la brise, de l’intimité vis-à-vis des voisins — les stores extérieurs rendent un balcon, une terrasse ou un patio utilisable beaucoup plus longtemps dans l’année. Voici en quoi les systèmes diffèrent et ce qui tient le coup dans notre climat.",
+ og="Des écrans extérieurs à glissières conçus pour le vent, le soleil et les intempéries — faites d’un patio ou d’un balcon une pièce de plus.",
+ h1="Stores robustes extérieurs : faites de votre patio une <em>pièce</em> de plus.",
+ lede="De l’ombre contre le soleil de l’après-midi, un abri contre le vent, de l’intimité vis-à-vis des voisins — les stores robustes extérieurs rendent un balcon, une terrasse ou un patio utilisable beaucoup plus longtemps dans l’année. Les nôtres sont des écrans à glissières : la toile coulisse dans des rails latéraux, alors elle reste tendue et scellée même sous une rafale. Voici comment ils fonctionnent et ce qui tient le coup dans notre climat.",
  body="""
-        <h2>Qu’est-ce qu’un store extérieur ?</h2>
-        <p>Des stores enrouleurs d’extérieur faits de <strong>toiles maillées ou de PVC résistants aux intempéries</strong>, fixés à une pergola, une ouverture de balcon, une couverture de patio ou l’extérieur d’une fenêtre. Baissez-les pour couper le soleil et l’éblouissement, bloquer le vent et ajouter de l’intimité ; relevez-les pour ouvrir l’espace complètement.</p>
+        <h2>Qu’est-ce qu’un store robuste extérieur ?</h2>
+        <p>Des écrans enrouleurs d’extérieur faits de <strong>toiles maillées ou de PVC résistants aux intempéries</strong>, fixés à une pergola, une ouverture de balcon, une couverture de patio ou l’extérieur d’une fenêtre. Baissez-les pour couper le soleil et l’éblouissement, bloquer le vent et ajouter de l’intimité ; relevez-les pour ouvrir l’espace complètement. « Robuste », c’est le point : quincaillerie d’aluminium, rails latéraux et toiles conçues pour la vie dehors.</p>
+        <figure>
+          <img src="../assets/outdoor-exterior.jpg" alt="Deux écrans extérieurs robustes complètement baissés sur un patio, vus du jardin" />
+          <figcaption>De l’extérieur : deux écrans à glissières baissés, bords scellés dans les rails latéraux.</figcaption>
+        </figure>
 
         <h2>Comment ça fonctionne</h2>
         <h3>Les systèmes</h3>
@@ -436,6 +440,10 @@ dict(slug="outdoor-blinds.html", type="guide", crumb="Stores extérieurs", read=
           <li><strong>À câbles</strong> — le store coulisse sur des câbles tendus ; plus léger et plus économique, idéal pour les endroits abrités.</li>
           <li><strong>Stores de fenêtre extérieurs</strong> — un enrouleur d’extérieur posé sur la face externe d’une fenêtre pour arrêter la chaleur avant qu’elle n’atteigne la vitre — la façon la plus efficace de garder fraîche une pièce ensoleillée.</li>
         </ul>
+        <figure>
+          <img src="../assets/outdoor-inside.jpg" alt="Un patio couvert avec un store extérieur robuste en toile maillée baissé, table dressée, jardin visible à travers l’écran" />
+          <figcaption>De l’intérieur : le soleil et le vent dehors, la vue et la brise toujours là.</figcaption>
+        </figure>
         <h3>Les toiles</h3>
         <ul>
           <li><strong>Toile solaire maillée</strong> — bloque la plupart des UV et de l’éblouissement tout en gardant la vue et la circulation d’air. Le choix de tous les jours.</li>
