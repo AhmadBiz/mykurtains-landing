@@ -480,3 +480,4 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .card--link:hover .card__body::after { transform: translateX(4px); }
 html[lang="fr"] .card--link .card__body::after { content: "Lire le guide →"; }
 .footer__area { color: rgba(255,255,255,0.6); }
+.hp { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }

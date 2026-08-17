@@ -116,40 +116,75 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---- contact form (front-end only demo) ---- */
+  /* ---- contact form: emails hello@mykurtains.com via Web3Forms ---- */
+  // Access key is tied to the destination inbox (safe to expose client-side).
+  var WEB3FORMS_KEY = "c2581362-ef6a-4407-8387-f4eb78ae82cc";
   const form = document.getElementById("contactForm");
   const note = document.getElementById("formNote");
   if (form) {
-    form.addEventListener("submit", (e) => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const t = {
+      missing: FR ? "Ajoutez votre nom et une façon de vous joindre, s’il vous plaît." : "Please add your name and a way to reach you.",
+      sending: FR ? "Envoi en cours…" : "Sending…",
+      ok: FR ? "Merci ! Votre demande est bien reçue — on vous répond d’ici un jour ouvrable." : "Thanks! We’ve got your request — we’ll be in touch within one business day.",
+      okWa: FR ? "Vous préférez tout de suite ? Écrivez-nous sur WhatsApp." : "Prefer right now? Message us on WhatsApp.",
+      fail: FR ? "Oups — l’envoi n’a pas fonctionné. Ouverture de WhatsApp pour ne pas perdre votre demande…" : "Hmm — that didn’t send. Opening WhatsApp so your request isn’t lost…",
+      subject: FR ? "Nouvelle demande de consultation — mykurtains.com" : "New consultation request — mykurtains.com",
+    };
+    const waLink = (name, contact, interest, message) => {
+      const head = FR ? "Nouvelle demande de consultation" : "New consultation request";
+      const l = FR ? ["Nom", "Coordonnées", "Intéressé(e) par", "Notes"] : ["Name", "Contact", "Interested in", "Notes"];
+      const body = `${head}:%0A${l[0]}: ${encodeURIComponent(name)}%0A${l[1]}: ${encodeURIComponent(contact)}%0A${l[2]}: ${encodeURIComponent(interest)}%0A${l[3]}: ${encodeURIComponent(message || "—")}`;
+      return `https://wa.me/14384020559?text=${body}`;
+    };
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const name = form.name.value.trim();
       const contact = form.phone.value.trim();
-      if (!name || !contact) {
-        note.textContent = FR
-          ? "Ajoutez votre nom et une façon de vous joindre, s’il vous plaît."
-          : "Please add your name and a way to reach you.";
-        note.className = "contact__note err";
-        return;
-      }
-      // No backend wired yet — hand off to WhatsApp / email so the lead isn't lost.
       const interest = form.interest.value;
       const message = form.message.value.trim();
-      const head = FR ? "Nouvelle demande de consultation" : "New consultation request";
-      const lName = FR ? "Nom" : "Name";
-      const lContact = FR ? "Coordonnées" : "Contact";
-      const lInterest = FR ? "Intéressé(e) par" : "Interested in";
-      const lNotes = FR ? "Notes" : "Notes";
-      const body = `${head}:%0A${lName}: ${encodeURIComponent(name)}%0A${lContact}: ${encodeURIComponent(contact)}%0A${lInterest}: ${encodeURIComponent(interest)}%0A${lNotes}: ${encodeURIComponent(message || "—")}`;
+      if (!name || !contact) {
+        note.textContent = t.missing; note.className = "contact__note err"; return;
+      }
+      // honeypot: bots tick hidden fields; humans don't. (Use .checked — a
+      // checkbox's .value is always "on", even when unchecked.)
+      if (form.botcheck && form.botcheck.checked) return;
 
-      note.textContent = FR
-        ? "Merci ! Ouverture de WhatsApp pour confirmer vos détails…"
-        : "Thanks! Opening WhatsApp so we can confirm your details…";
-      note.className = "contact__note ok";
-      form.reset();
+      note.textContent = t.sending; note.className = "contact__note";
+      if (submitBtn) submitBtn.disabled = true;
 
-      setTimeout(() => {
-        window.open(`https://wa.me/14384020559?text=${body}`, "_blank", "noopener");
-      }, 600);
+      const payload = {
+        access_key: WEB3FORMS_KEY,
+        subject: t.subject,
+        from_name: "My Kurtains website",
+        name: name,
+        contact: contact,
+        interested_in: interest,
+        message: message || "—",
+        language: FR ? "fr" : "en",
+        page: location.href,
+      };
+
+      try {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.success) throw new Error(data.message || "send failed");
+
+        note.innerHTML = t.ok + ' <a href="' + waLink(name, contact, interest, message) + '" target="_blank" rel="noopener">' + t.okWa + "</a>";
+        note.className = "contact__note ok";
+        form.reset();
+      } catch (err) {
+        // Never lose a lead: fall back to the WhatsApp handoff.
+        note.textContent = t.fail; note.className = "contact__note err";
+        setTimeout(() => { window.open(waLink(name, contact, interest, message), "_blank", "noopener"); }, 700);
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   }
 })();
