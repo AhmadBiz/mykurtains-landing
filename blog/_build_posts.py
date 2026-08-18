@@ -152,6 +152,14 @@ def render(p, lang="en"):
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#141210" />
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEVD6Y804N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-CEVD6Y804N', {{ anonymize_ip: true, allow_google_signals: false, allow_ad_personalization_signals: false }});
+  </script>
   <title>{html.escape(p["title"])}{L['title_suffix']}</title>
   <meta name="description" content="{html.escape(p["description"])}" />
   <link rel="canonical" href="{url}" />

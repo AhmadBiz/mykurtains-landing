@@ -8,6 +8,11 @@
   // event and the form's user-facing strings.
   var FR = (document.documentElement.lang || "en").toLowerCase().slice(0, 2) === "fr";
 
+  // ---- analytics helper (no-op if GA hasn't loaded / is blocked)
+  var gaEvent = function (name, params) {
+    try { if (typeof window.gtag === "function") window.gtag("event", name, params || {}); } catch (e) {}
+  };
+
   const nav = document.getElementById("nav");
   const navToggle = document.getElementById("navToggle");
   const navMobile = document.getElementById("navMobile");
@@ -61,6 +66,7 @@
     el.addEventListener("click", function (e) {
       // If Calendly's widget is loaded, open the popup; otherwise let the
       // href="#contact" fallback scroll to the inline scheduler.
+      gaEvent("book_consultation_click", { method: "calendly_popup", lang: FR ? "fr" : "en", location: (el.closest("header") ? "nav" : el.closest(".hero") ? "hero" : el.closest(".post-cta") ? "post_cta" : el.closest(".aside-card") ? "sidebar" : "other") });
       if (window.Calendly && typeof window.Calendly.initPopupWidget === "function") {
         e.preventDefault();
         window.Calendly.initPopupWidget({ url: CALENDLY_URL });
@@ -178,13 +184,25 @@
         note.innerHTML = t.ok + ' <a href="' + waLink(name, contact, interest, message) + '" target="_blank" rel="noopener">' + t.okWa + "</a>";
         note.className = "contact__note ok";
         form.reset();
+        gaEvent("generate_lead", { method: "contact_form", interest: interest, lang: FR ? "fr" : "en" });
       } catch (err) {
         // Never lose a lead: fall back to the WhatsApp handoff.
         note.textContent = t.fail; note.className = "contact__note err";
+        gaEvent("form_send_failed", { interest: interest, lang: FR ? "fr" : "en" });
         setTimeout(() => { window.open(waLink(name, contact, interest, message), "_blank", "noopener"); }, 700);
       } finally {
         if (submitBtn) submitBtn.disabled = false;
       }
     });
   }
+
+  /* ---- contact taps: phone / WhatsApp / email ---- */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    var h = a.getAttribute("href") || "";
+    if (h.indexOf("tel:") === 0) gaEvent("phone_click", { lang: FR ? "fr" : "en" });
+    else if (h.indexOf("wa.me") !== -1) gaEvent("whatsapp_click", { lang: FR ? "fr" : "en", location: a.classList.contains("fab") ? "floating_button" : "inline" });
+    else if (h.indexOf("mailto:") === 0) gaEvent("email_click", { lang: FR ? "fr" : "en" });
+  }, true);
 })();
