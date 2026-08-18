@@ -74,6 +74,20 @@
     });
   });
 
+
+  /* ---- Calendly: fire the SAME key event the old site used when a booking is
+     actually completed (not just the button click), so reports stay continuous ---- */
+  window.addEventListener("message", function (e) {
+    try {
+      if (e.origin && e.origin.indexOf("calendly.com") === -1) return;
+      var ev = e.data && e.data.event;
+      if (ev === "calendly.event_scheduled") {
+        gaEvent("Booked_Calendly_Meeting", { lang: FR ? "fr" : "en", source: "website" });
+        gaEvent("generate_lead", { method: "calendly_booking", lang: FR ? "fr" : "en" });
+      }
+    } catch (err) {}
+  });
+
   /* ---- reviews carousel ---- */
   var track = document.getElementById("reviewsTrack");
   var revPrev = document.getElementById("revPrev");
