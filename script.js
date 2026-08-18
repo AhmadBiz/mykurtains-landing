@@ -9,8 +9,14 @@
   var FR = (document.documentElement.lang || "en").toLowerCase().slice(0, 2) === "fr";
 
   // ---- analytics helper (no-op if GA hasn't loaded / is blocked)
+  // Pushes to the GTM dataLayer. GTM's GA4 tag forwards these to GA4, and Meta's
+  // connection mirrors GA4 events to the Pixel/CAPI — so one push reaches both.
   var gaEvent = function (name, params) {
-    try { if (typeof window.gtag === "function") window.gtag("event", name, params || {}); } catch (e) {}
+    try {
+      window.dataLayer = window.dataLayer || [];
+      var p = Object.assign({ event: name }, params || {});
+      window.dataLayer.push(p);
+    } catch (e) {}
   };
 
   const nav = document.getElementById("nav");
