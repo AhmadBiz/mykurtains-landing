@@ -503,3 +503,28 @@ html[lang="fr"] .card--link .card__body::after { content: "Lire le guide →"; }
   .consent .btn { flex: 1; }
   .fab { bottom: 120px; }
 }
+
+/* ============================================================
+   STICKY MOBILE ACTION BAR (Call + Book) — mobile only
+   ============================================================ */
+.actbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 110;
+  display: none; gap: .6rem; padding: .6rem .8rem;
+  padding-bottom: calc(.6rem + env(safe-area-inset-bottom));
+  background: rgba(251,248,243,.94); backdrop-filter: saturate(180%) blur(14px);
+  border-top: 1px solid var(--line); box-shadow: 0 -10px 30px -18px rgba(23,19,15,.35);
+  transform: translateY(110%); transition: transform .35s var(--ease);
+}
+.actbar.is-on { transform: translateY(0); }
+.actbar a { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; border-radius: 100px; font-weight: 700; font-size: .95rem; padding: .9rem 1rem; }
+.actbar__call { flex: 0 0 34%; border: 1.5px solid var(--ink); color: var(--ink); background: var(--white); }
+.actbar__call svg { width: 18px; height: 18px; }
+.actbar__book { flex: 1 1 auto; background: var(--brass-dk); color: #fff; box-shadow: var(--shadow-sm); }
+.actbar__book:active, .actbar__call:active { transform: scale(.98); }
+@media (max-width: 860px) {
+  .actbar { display: flex; }
+  /* lift the WhatsApp button and the consent pill above the bar when it's on */
+  body.has-actbar .fab { bottom: calc(84px + env(safe-area-inset-bottom)); }
+  body.has-actbar .consent { bottom: calc(84px + env(safe-area-inset-bottom)); }
+  body.has-actbar { padding-bottom: 72px; } /* keep footer content clear of the bar */
+}

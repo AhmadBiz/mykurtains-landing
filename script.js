@@ -255,6 +255,54 @@
     if (!window.__mkConsent) show();
   })();
 
+
+  /* ---- Sticky mobile action bar: Call + Book, always a thumb away ---- */
+  (function () {
+    var bar = document.createElement("div");
+    bar.className = "actbar"; bar.setAttribute("aria-label", FR ? "Actions rapides" : "Quick actions");
+    var contactHref = (function () {
+      // link to the homepage contact section from wherever we are
+      var p = location.pathname;
+      if (/\/blog\/fr\//.test(p)) return "../../index-fr.html#contact";
+      if (/\/blog\//.test(p)) return "../index.html#contact";
+      return (FR ? "index-fr.html" : "index.html") + "#contact";
+    })();
+    bar.innerHTML =
+      '<a href="tel:+14384020559" class="actbar__call">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg>' +
+        '<span>' + (FR ? "Appeler" : "Call") + '</span></a>' +
+      '<a href="' + contactHref + '" class="actbar__book" data-calendly>' + (FR ? "Consultation gratuite" : "Book free consultation") + '</a>';
+    document.body.appendChild(bar);
+
+    // Calendly popup on the Book button (same behaviour as the other CTAs)
+    bar.querySelector("[data-calendly]").addEventListener("click", function (e) {
+      gaEvent("book_consultation_click", { method: "calendly_popup", lang: FR ? "fr" : "en", location: "sticky_bar" });
+      if (window.Calendly && typeof window.Calendly.initPopupWidget === "function") {
+        e.preventDefault(); window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+      }
+    });
+
+    // Show once the hero has (mostly) scrolled past; hide while the contact/booking
+    // section is on screen. Scroll-driven so it works everywhere; rAF-throttled.
+    var hero = document.querySelector(".hero, .post-hero, .blog-hero");
+    var contact = document.getElementById("contact");
+    var ticking = false;
+    var update = function () {
+      ticking = false;
+      var vh = window.innerHeight;
+      var pastHero = true;
+      if (hero) { var hr = hero.getBoundingClientRect(); pastHero = hr.bottom < vh * 0.35; }
+      var overContact = false;
+      if (contact) { var cr = contact.getBoundingClientRect(); overContact = cr.top < vh * 0.9 && cr.bottom > vh * 0.15; }
+      var on = pastHero && !overContact;
+      bar.classList.toggle("is-on", on); document.body.classList.toggle("has-actbar", on);
+    };
+    var onScrollBar = function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+    window.addEventListener("scroll", onScrollBar, { passive: true });
+    window.addEventListener("resize", onScrollBar);
+    update();
+  })();
+
   /* ---- contact taps: phone / WhatsApp / email ---- */
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("a[href]");
