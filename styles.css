@@ -481,3 +481,25 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 html[lang="fr"] .card--link .card__body::after { content: "Lire le guide →"; }
 .footer__area { color: rgba(255,255,255,0.6); }
 .hp { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
+
+/* ============================================================
+   COOKIE CONSENT (Law 25) — minimal
+   ============================================================ */
+.consent {
+  position: fixed; left: 50%; bottom: 18px; transform: translate(-50%, 20px);
+  width: min(560px, calc(100% - 32px)); z-index: 120;
+  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+  background: var(--white); border: 1px solid var(--line); border-radius: 100px;
+  box-shadow: var(--shadow-lg); padding: .6rem .7rem .6rem 1.15rem;
+  opacity: 0; pointer-events: none; transition: opacity .35s var(--ease), transform .35s var(--ease);
+}
+.consent.is-open { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
+.consent p { flex: 1 1 auto; margin: 0; color: var(--ink-2); font-size: .88rem; line-height: 1.35; }
+.consent .btn--sm { --pad-y: .5rem; --pad-x: .95rem; }
+.consent__link { margin-left: auto; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 560px) {
+  .consent { border-radius: var(--radius); padding: .85rem 1rem; }
+  .consent p { flex-basis: 100%; }
+  .consent .btn { flex: 1; }
+  .fab { bottom: 120px; }
+}

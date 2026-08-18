@@ -216,6 +216,45 @@
     });
   }
 
+
+  /* ---- Cookie consent (Québec Law 25) — minimal. Gates GA4 / Meta / Ads. ---- */
+  (function () {
+    var KEY = "mk_consent";
+    var T = FR
+      ? { body: "Nous utilisons des témoins pour mesurer l’audience et nos publicités.", accept: "Accepter", decline: "Refuser", link: "Témoins" }
+      : { body: "We use cookies for analytics and advertising.", accept: "Accept", decline: "Decline", link: "Cookies" };
+    var apply = function (granted) {
+      var v = granted ? "granted" : "denied";
+      try { localStorage.setItem(KEY, v); } catch (e) {}
+      window.__mkConsent = v;
+      if (typeof window.gtag === "function") window.gtag("consent", "update", { ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v });
+      // Meta Pixel: it was network-sunk while denied. On grant, a one-time reload lets GTM
+      // initialise the real pixel cleanly (and fires PageView with consent). No reload on deny.
+      if (granted && window.__mkPixelGranted === false) { setTimeout(function () { location.reload(); }, 150); return; }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: granted ? "consent_granted" : "consent_denied" });
+    };
+    var el = null;
+    var show = function () {
+      if (el) { el.classList.add("is-open"); return; }
+      el = document.createElement("div");
+      el.className = "consent"; el.setAttribute("role", "dialog"); el.setAttribute("aria-live", "polite");
+      el.innerHTML = '<p>' + T.body + '</p>' +
+        '<button type="button" class="btn btn--ghost btn--sm" data-consent="deny">' + T.decline + '</button>' +
+        '<button type="button" class="btn btn--solid btn--sm" data-consent="grant">' + T.accept + '</button>';
+      document.body.appendChild(el);
+      el.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-consent]"); if (!b) return;
+        apply(b.getAttribute("data-consent") === "grant"); el.classList.remove("is-open");
+      });
+      requestAnimationFrame(function () { el.classList.add("is-open"); });
+    };
+    var bar = document.querySelector(".footer__bar");
+    if (bar) { var a = document.createElement("a"); a.href = "#"; a.textContent = T.link; a.className = "consent__link";
+      a.addEventListener("click", function (e) { e.preventDefault(); show(); }); bar.appendChild(a); }
+    if (!window.__mkConsent) show();
+  })();
+
   /* ---- contact taps: phone / WhatsApp / email ---- */
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("a[href]");
