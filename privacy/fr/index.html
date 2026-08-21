@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#141210" />
+    <!-- Consent Mode v2 (Law 25): default = denied until the visitor chooses. Runs BEFORE GTM. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){
+      var saved = null; try { saved = localStorage.getItem('mk_consent'); } catch(e){}
+      var granted = saved === 'granted';
+      gtag('consent', 'default', {
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        analytics_storage: granted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      window.__mkConsent = saved; // 'granted' | 'denied' | null (not chosen yet)
+      // Meta Pixel doesn't follow Google Consent Mode, and GTM's fbq('init') resets Meta's own
+      // consent flag. So gate at the network level: while not granted, fbq is a sink that drops
+      // every call. On Accept we hand off to Meta's canonical bootstrap and GTM's tag re-inits.
+      window.__mkPixelGranted = granted;
+      if (!granted) {
+        var sink = function(){ /* dropped: no consent */ };
+        sink.callMethod = null; sink.queue = []; sink.push = sink; sink.loaded = true; sink.version = '2.0';
+        window.fbq = window._fbq = sink;
+      }
+    })();
+  </script>
+  <!-- Google Tag Manager (loads GA4 + Meta Pixel; configured in GTM) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-53NZB6T9');</script>
+  <!-- End Google Tag Manager -->
+  <title>Politique de confidentialité — My Kurtains</title>
+  <meta name="description" content="Comment My Kurtains recueille, utilise et protège vos renseignements personnels, conformément à la Loi 25 du Québec et à la LPRPDE." />
+  <link rel="canonical" href="https://www.mykurtains.com/privacy/fr/" />
+  <link rel="alternate" hreflang="en" href="https://www.mykurtains.com/privacy/" />
+  <link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/privacy/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/privacy/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_CA" />
+  <meta property="og:title" content="Politique de confidentialité — My Kurtains" />
+  <meta property="og:description" content="Comment My Kurtains recueille, utilise et protège vos renseignements personnels, conformément à la Loi 25 du Québec et à la LPRPDE." />
+  <meta property="og:url" content="https://www.mykurtains.com/privacy/fr/" />
+  <meta property="og:site_name" content="My Kurtains" />
+  <meta property="og:image" content="https://www.mykurtains.com/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../blog/blog.css" />
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53NZB6T9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="nav nav--light scrolled" id="nav">
+    <div class="nav__inner container">
+      <a href="../../index-fr.html" class="brand" aria-label="My Kurtains"><span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="3"/><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="9" y1="32" x2="29.5" y2="32"/><line x1="34.5" y1="32" x2="55" y2="32"/><line x1="32" y1="9" x2="32" y2="55"/><line x1="25" y1="10.1" x2="25" y2="53.9"/><line x1="39" y1="10.1" x2="39" y2="53.9"/><line x1="18" y1="32" x2="18" y2="50.25"/><line x1="46" y1="13.75" x2="46" y2="32"/></g></svg></span><span class="brand__name">My<em>Kurtains</em></span></a>
+      <nav class="nav__links" aria-label="Primary"><a href="../../index-fr.html#collections">Collections</a><a href="../../index-fr.html#why">Pourquoi nous</a><a href="../../index-fr.html#process">Comment ça marche</a><a href="../../index-fr.html#gallery">Galerie</a><a href="../../index-fr.html#reviews">Avis</a><a href="../../blog/fr/index.html">Guides</a></nav>
+      <div class="nav__cta">
+        <a href="../" class="btn btn--ghost btn--sm lang-switch" hreflang="en" aria-label="View the site in English">EN</a>
+        <a href="tel:+14384020559" class="btn btn--ghost btn--sm">438&nbsp;402&nbsp;0559</a>
+        <a href="../../index-fr.html#contact" class="btn btn--solid btn--sm" data-calendly>Consultation gratuite</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile" id="navMobile"><a href="../../index-fr.html#collections">Collections</a><a href="../../index-fr.html#why">Pourquoi nous</a><a href="../../index-fr.html#process">Comment ça marche</a><a href="../../index-fr.html#gallery">Galerie</a><a href="../../index-fr.html#reviews">Avis</a><a href="../../blog/fr/index.html">Guides</a>
+      <a href="../" hreflang="en" class="nav__mobile-lang">View in English →</a>
+      <a href="../../index-fr.html#contact" class="btn btn--solid" data-calendly>Réserver ma consultation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <p class="eyebrow">Confidentialité</p>
+        <h1 class="section__title">Vos renseignements, <em>traités correctement.</em></h1>
+        <p class="section__lede">Nous recueillons le strict minimum, nous vous disons ce que nous en faisons, et vous pouvez demander leur suppression en tout temps.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container" style="max-width:720px">
+        <div class="post-body">
+        <p><em>Dernière mise à jour : 2026-08-20</em></p>
+
+        <h2>Qui nous sommes</h2>
+        <p>My Kurtains est une entreprise de couvre-fenêtres sur mesure qui exerce ses activités dans le
+        Grand Montréal, au Québec (Canada). Pour toute question sur cette politique ou sur vos
+        renseignements personnels, écrivez-nous à <a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a> ou appelez au
+        +1 (438) 402-0559.</p>
+
+        <h2>Ce que nous recueillons</h2>
+        <p>Uniquement ce dont nous avons besoin pour vous répondre et faire le travail :</p>
+        <ul>
+          <li><strong>Quand vous remplissez notre formulaire :</strong> votre nom, votre numéro de
+          téléphone ou courriel, le produit qui vous intéresse et le contenu de votre message.</li>
+          <li><strong>Quand vous réservez une consultation :</strong> les renseignements saisis dans
+          notre outil de réservation (Calendly) — généralement nom, courriel, téléphone et heure du
+          rendez-vous.</li>
+          <li><strong>Quand vous devenez client :</strong> l'adresse où a lieu l'installation, les
+          mesures de vos fenêtres et les détails de votre commande.</li>
+          <li><strong>Quand vous naviguez sur le site :</strong> si — et seulement si — vous acceptez les
+          témoins, des données standards d'analyse et de publicité : pages consultées, localisation
+          approximative (ville), type d'appareil et de navigateur, et provenance de votre visite.</li>
+        </ul>
+        <p>Nous ne demandons pas de renseignements sensibles comme des numéros de pièces d'identité
+        gouvernementales. Aucun numéro de carte de crédit n'est conservé sur ce site.</p>
+
+        <h2>Pourquoi nous les utilisons</h2>
+        <ul>
+          <li>Pour répondre à votre demande et organiser votre consultation.</li>
+          <li>Pour mesurer, fabriquer, livrer et installer votre commande.</li>
+          <li>Pour assurer le service après-vente et honorer la garantie.</li>
+          <li>Avec votre consentement, pour mesurer la performance de notre site et de notre publicité,
+          et vous présenter des annonces pertinentes.</li>
+        </ul>
+
+        <h2>Témoins et suivi</h2>
+        <p>Notre site utilise Google Analytics 4 et le pixel Meta (Facebook), chargés via Google Tag
+        Manager, pour comprendre comment les gens trouvent et utilisent le site et pour mesurer notre
+        publicité.</p>
+        <p><strong>Tout cela est désactivé tant que vous n'avez pas accepté.</strong> À votre arrivée,
+        rien lié à l'analyse ou à la publicité ne s'exécute : le mode Consentement de Google est réglé
+        à « refusé » et le pixel Meta est bloqué complètement. Ce n'est qu'en cliquant sur
+        <em>Accepter</em> qu'ils se chargent. Vous pouvez changer d'avis en tout temps par le lien
+        <em>Témoins</em> au bas des pages, ou en effaçant le stockage de votre navigateur pour ce site.
+        Les témoins essentiels au fonctionnement du site sont toujours actifs.</p>
+
+        <h2>Qui d'autre voit vos renseignements</h2>
+        <p>Nous ne vendons pas vos renseignements personnels. Nous les partageons uniquement avec les
+        fournisseurs qui font fonctionner le site et notre entreprise :</p>
+        <ul>
+          <li><strong>Web3Forms</strong> — achemine les envois du formulaire vers notre courriel.</li>
+          <li><strong>Calendly</strong> — gère les réservations de consultation.</li>
+          <li><strong>Google</strong> (Analytics, Tag Manager, Ads) — mesure du site et publicité,
+          uniquement avec votre consentement.</li>
+          <li><strong>Meta</strong> (Facebook, Instagram) — mesure publicitaire, uniquement avec votre
+          consentement.</li>
+          <li><strong>Vercel</strong> — héberge ce site.</li>
+          <li>Nos partenaires de fabrication et d'installation, qui ne reçoivent que les mesures et les
+          détails de livraison nécessaires à votre commande.</li>
+        </ul>
+        <p>Nous pouvons aussi divulguer des renseignements lorsque la loi l'exige.</p>
+
+        <h2>Où vos renseignements sont conservés</h2>
+        <p>Certains de ces fournisseurs conservent et traitent des données à l'extérieur du Québec,
+        notamment aux États-Unis et dans l'Union européenne. Vos renseignements peuvent donc être soumis
+        aux lois de ces territoires. Nous faisons affaire uniquement avec des fournisseurs établis
+        offrant des protections contractuelles pour les renseignements personnels. Si vous préférez
+        éviter ce traitement, communiquez avec nous par téléphone plutôt que par les formulaires du
+        site.</p>
+
+        <h2>Durée de conservation</h2>
+        <p>Les demandes qui ne mènent pas à une commande sont conservées jusqu'à deux ans, au cas où
+        vous reveniez vers nous. Les dossiers clients sont conservés le temps nécessaire à la garantie
+        et selon les délais exigés par la loi québécoise pour les documents d'entreprise. Les données
+        d'analyse sont conservées selon la période par défaut de l'outil, jusqu'à 14 mois. Vous pouvez
+        demander une suppression plus rapide.</p>
+
+        <h2>Vos droits</h2>
+        <p>En vertu de la Loi 25 du Québec et de la LPRPDE, vous avez le droit :</p>
+        <ul>
+          <li>de savoir quels renseignements personnels nous détenons à votre sujet et d'en obtenir une
+          copie ;</li>
+          <li>de faire corriger des renseignements inexacts ;</li>
+          <li>de retirer votre consentement au marketing ou au suivi en tout temps ;</li>
+          <li>de demander la suppression de vos renseignements, sous réserve de ce que la loi nous
+          oblige à conserver ;</li>
+          <li>de porter plainte auprès de la <em>Commission d'accès à l'information du Québec</em> si
+          vous estimez que nous avons mal traité vos renseignements.</li>
+        </ul>
+        <p>Pour exercer l'un de ces droits, écrivez à <a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a>. Nous
+        répondons dans les 30 jours, comme la loi l'exige.</p>
+
+        <h2>Responsable de la protection des renseignements personnels</h2>
+        <p>La personne responsable de la protection des renseignements personnels chez My Kurtains peut
+        être jointe à <a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a>.</p>
+
+        <h2>Sécurité</h2>
+        <p>Ce site est entièrement servi en HTTPS. Nous limitons l'accès aux renseignements personnels
+        aux personnes qui en ont besoin pour leur travail, et nous exigeons la même chose de nos
+        fournisseurs. Aucun système n'est parfait, mais nous prenons cela au sérieux.</p>
+
+        <h2>Enfants</h2>
+        <p>Nos services s'adressent aux adultes. Nous ne recueillons pas sciemment de renseignements
+        personnels auprès d'enfants.</p>
+
+        <h2>Modifications</h2>
+        <p>Si nous changeons notre façon de traiter les renseignements personnels, nous mettrons cette
+        page à jour et modifierons la date en haut.</p>
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand"><span class="brand__name">My<em>Kurtains</em></span><p>Haut style, bas prix. Stores, rideaux et film intelligent sur mesure, fabriqués et installés partout à Montréal.</p></div>
+      <nav class="footer__col" aria-label="Sitemap"><h4>Explorer</h4><a href="../../index-fr.html#collections">Collections</a><a href="../../blog/fr/index.html">Guides &amp; conseils</a><a href="../../about/fr/">À propos</a><a href="../../faq/fr/">FAQ</a></nav>
+      <nav class="footer__col" aria-label="Contact"><h4>Nous joindre</h4><a href="tel:+14384020559">+1 (438) 402-0559</a><a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a><a href="https://wa.me/14384020559" target="_blank" rel="noopener">WhatsApp</a><a href="../../contact/fr/">Nous joindre</a></nav>
+      <div class="footer__col"><h4>Suivez-nous</h4><div class="footer__social"><a href="https://www.instagram.com/mykurtains/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/mykurtains" target="_blank" rel="noopener">Facebook</a></div></div>
+    </div>
+    <div class="footer__bar container"><span>© <span id="year"></span> My Kurtains — Montreal, QC</span><span class="footer__area">Montréal, Laval et la Rive-Sud · Du lundi au samedi, sur rendez-vous</span><span><a href="../../privacy/fr/">Confidentialité</a></span></div>
+  </footer>
+  <a href="https://wa.me/14384020559" class="fab" target="_blank" rel="noopener" aria-label="Écrivez-nous sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.86 9.86 0 004.76 1.22h.004c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0012.04 2zm5.8 14.2c-.24.68-1.42 1.32-1.95 1.36-.5.05-.98.24-3.33-.7-2.8-1.1-4.6-3.96-4.74-4.14-.14-.18-1.15-1.53-1.15-2.92s.73-2.07.98-2.35c.26-.28.56-.35.75-.35.18 0 .37 0 .53.01.17.01.4-.06.62.47.24.56.8 1.95.87 2.1.07.14.12.3.02.48-.1.18-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.9 1.06.94 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.18-.2.7-.8.88-1.08.18-.28.36-.24.6-.14.24.09 1.55.73 1.82.86.26.14.44.2.5.32.06.11.06.66-.18 1.34z"/></svg></a>
+  <script src="../../script.js"></script>
+</body>
+</html>

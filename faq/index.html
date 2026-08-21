@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#141210" />
+    <!-- Consent Mode v2 (Law 25): default = denied until the visitor chooses. Runs BEFORE GTM. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){
+      var saved = null; try { saved = localStorage.getItem('mk_consent'); } catch(e){}
+      var granted = saved === 'granted';
+      gtag('consent', 'default', {
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        analytics_storage: granted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      window.__mkConsent = saved; // 'granted' | 'denied' | null (not chosen yet)
+      // Meta Pixel doesn't follow Google Consent Mode, and GTM's fbq('init') resets Meta's own
+      // consent flag. So gate at the network level: while not granted, fbq is a sink that drops
+      // every call. On Accept we hand off to Meta's canonical bootstrap and GTM's tag re-inits.
+      window.__mkPixelGranted = granted;
+      if (!granted) {
+        var sink = function(){ /* dropped: no consent */ };
+        sink.callMethod = null; sink.queue = []; sink.push = sink; sink.loaded = true; sink.version = '2.0';
+        window.fbq = window._fbq = sink;
+      }
+    })();
+  </script>
+  <!-- Google Tag Manager (loads GA4 + Meta Pixel; configured in GTM) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-53NZB6T9');</script>
+  <!-- End Google Tag Manager -->
+  <title>FAQ — Custom Blinds & Curtains in Montreal | My Kurtains</title>
+  <meta name="description" content="Answers about our free in-home consultation, pricing, installation time, motorization, blackout options and the areas we serve across Greater Montreal." />
+  <link rel="canonical" href="https://www.mykurtains.com/faq/" />
+  <link rel="alternate" hreflang="en" href="https://www.mykurtains.com/faq/" />
+  <link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/faq/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/faq/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:title" content="FAQ — Custom Blinds & Curtains in Montreal | My Kurtains" />
+  <meta property="og:description" content="Answers about our free in-home consultation, pricing, installation time, motorization, blackout options and the areas we serve across Greater Montreal." />
+  <meta property="og:url" content="https://www.mykurtains.com/faq/" />
+  <meta property="og:site_name" content="My Kurtains" />
+  <meta property="og:image" content="https://www.mykurtains.com/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Is the in-home consultation really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — completely free, with no obligation to buy. We come to you, bring physical samples, measure every window and give you a written quote. If you decide it isn't for you, that's genuinely fine; there's no fee and no pressure."}}, {"@type": "Question", "name": "How soon can I book a visit?", "acceptedAnswer": {"@type": "Answer", "text": "Right away. Pick any open slot on our calendar and it's confirmed instantly — most people book a visit within the same week. If nothing suits you, call or WhatsApp us at +1 (438) 402-0559 and we'll find a time that works."}}, {"@type": "Question", "name": "What actually happens during the visit?", "acceptedAnswer": {"@type": "Answer", "text": "It takes about 45 minutes. We look at each window, ask how you use the room, and show you fabric and material samples in daylight — colour looks very different on a screen. Then we measure precisely and quote you on the spot, so you leave knowing the real price."}}, {"@type": "Question", "name": "Do you have a showroom I can visit?", "acceptedAnswer": {"@type": "Answer", "text": "No — and that's deliberate. We're a mobile company: instead of asking you to drive to a showroom and judge fabric under store lighting, we bring the showroom to your home, where you'll actually see the material against your own walls and light. It also means we don't carry retail overhead, which is a large part of why our prices are lower than a storefront's."}}, {"@type": "Question", "name": "How long until my blinds are installed?", "acceptedAnswer": {"@type": "Answer", "text": "Everything is made to measure, so there's a production window — typically around 10 days from the moment your order is confirmed. Large or specialty orders can take a little longer; we'll always give you a realistic date at the consultation rather than an optimistic one."}}, {"@type": "Question", "name": "Is installation included?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Professional installation is included free with every order, across our whole service area. Our installer mounts everything, checks the operation of each blind and takes the packaging away with them."}}, {"@type": "Question", "name": "Which areas do you serve?", "acceptedAnswer": {"@type": "Answer", "text": "The Greater Montreal area — the island of Montréal, Laval, the South Shore, and the West Island. If you're just outside and not sure, ask us; we travel further for larger projects."}}, {"@type": "Question", "name": "Can everything be motorized?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — every product we make can be motorized, including curtains. Motors can be rechargeable-battery or hardwired, and can be controlled by remote, by app, or through Alexa and Google Home. It's also the safest choice for homes with children or pets, since it removes hanging cords entirely."}}, {"@type": "Question", "name": "I need a room to be completely dark. What do you recommend?", "acceptedAnswer": {"@type": "Answer", "text": "A regular blackout blind still leaks light around the edges. For true darkness — nurseries, shift workers, home cinema — ask about our Blockout Blind: it's framed and edge-sealed so no light escapes at the sides. Honeycomb blackout with side channels is a good alternative."}}, {"@type": "Question", "name": "Do you do balconies, patios and outdoor spaces?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — our Heavy-Duty Blinds are built for exterior use: wind, sun and Montreal weather. They're popular for balconies, terraces and covered patios, and they can be motorized too."}}, {"@type": "Question", "name": "What about very large, arched or oddly shaped windows?", "acceptedAnswer": {"@type": "Answer", "text": "Everything is custom-made, so unusual shapes and oversized windows are normal work for us. Bring them up when you book and we'll come prepared."}}, {"@type": "Question", "name": "Do you serve customers in French and English?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely — we work in both languages, on the phone, in person and in writing. Cette page existe aussi en français."}}]}</script>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../blog/blog.css" />
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53NZB6T9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="nav nav--light scrolled" id="nav">
+    <div class="nav__inner container">
+      <a href="../index.html" class="brand" aria-label="My Kurtains"><span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="3"/><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="9" y1="32" x2="29.5" y2="32"/><line x1="34.5" y1="32" x2="55" y2="32"/><line x1="32" y1="9" x2="32" y2="55"/><line x1="25" y1="10.1" x2="25" y2="53.9"/><line x1="39" y1="10.1" x2="39" y2="53.9"/><line x1="18" y1="32" x2="18" y2="50.25"/><line x1="46" y1="13.75" x2="46" y2="32"/></g></svg></span><span class="brand__name">My<em>Kurtains</em></span></a>
+      <nav class="nav__links" aria-label="Primary"><a href="../index.html#collections">Collections</a><a href="../index.html#why">Why Us</a><a href="../index.html#process">How It Works</a><a href="../index.html#gallery">Gallery</a><a href="../index.html#reviews">Reviews</a><a href="../blog/index.html">Guides</a></nav>
+      <div class="nav__cta">
+        <a href="fr/" class="btn btn--ghost btn--sm lang-switch" hreflang="fr" aria-label="Voir le site en français">FR</a>
+        <a href="tel:+14384020559" class="btn btn--ghost btn--sm">438&nbsp;402&nbsp;0559</a>
+        <a href="../index.html#contact" class="btn btn--solid btn--sm" data-calendly>Free Consultation</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile" id="navMobile"><a href="../index.html#collections">Collections</a><a href="../index.html#why">Why Us</a><a href="../index.html#process">How It Works</a><a href="../index.html#gallery">Gallery</a><a href="../index.html#reviews">Reviews</a><a href="../blog/index.html">Guides</a>
+      <a href="fr/" hreflang="fr" class="nav__mobile-lang">Voir en français →</a>
+      <a href="../index.html#contact" class="btn btn--solid" data-calendly>Book Free Consultation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <p class="eyebrow">Frequently asked questions</p>
+        <h1 class="section__title">Everything you're about to <em>ask us.</em></h1>
+        <p class="section__lede">The questions we get most, answered plainly. If yours isn't here, call, WhatsApp or email us — a real person replies.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container" style="max-width:760px">
+        <div class="post-body faq"><details><summary>Is the in-home consultation really free?</summary><p>Yes — completely free, with no obligation to buy. We come to you, bring physical samples, measure every window and give you a written quote. If you decide it isn't for you, that's genuinely fine; there's no fee and no pressure.</p></details><details><summary>How soon can I book a visit?</summary><p>Right away. Pick any open slot on our calendar and it's confirmed instantly — most people book a visit within the same week. If nothing suits you, call or WhatsApp us at +1 (438) 402-0559 and we'll find a time that works.</p></details><details><summary>What actually happens during the visit?</summary><p>It takes about 45 minutes. We look at each window, ask how you use the room, and show you fabric and material samples in daylight — colour looks very different on a screen. Then we measure precisely and quote you on the spot, so you leave knowing the real price.</p></details><details><summary>Do you have a showroom I can visit?</summary><p>No — and that's deliberate. We're a mobile company: instead of asking you to drive to a showroom and judge fabric under store lighting, we bring the showroom to your home, where you'll actually see the material against your own walls and light. It also means we don't carry retail overhead, which is a large part of why our prices are lower than a storefront's.</p></details><details><summary>How long until my blinds are installed?</summary><p>Everything is made to measure, so there's a production window — typically around 10 days from the moment your order is confirmed. Large or specialty orders can take a little longer; we'll always give you a realistic date at the consultation rather than an optimistic one.</p></details><details><summary>Is installation included?</summary><p>Yes. Professional installation is included free with every order, across our whole service area. Our installer mounts everything, checks the operation of each blind and takes the packaging away with them.</p></details><details><summary>Which areas do you serve?</summary><p>The Greater Montreal area — the island of Montréal, Laval, the South Shore, and the West Island. If you're just outside and not sure, ask us; we travel further for larger projects.</p></details><details><summary>Can everything be motorized?</summary><p>Yes — every product we make can be motorized, including curtains. Motors can be rechargeable-battery or hardwired, and can be controlled by remote, by app, or through Alexa and Google Home. It's also the safest choice for homes with children or pets, since it removes hanging cords entirely.</p></details><details><summary>I need a room to be completely dark. What do you recommend?</summary><p>A regular blackout blind still leaks light around the edges. For true darkness — nurseries, shift workers, home cinema — ask about our <strong>Blockout Blind</strong>: it's framed and edge-sealed so no light escapes at the sides. Honeycomb blackout with side channels is a good alternative.</p></details><details><summary>Do you do balconies, patios and outdoor spaces?</summary><p>Yes — our Heavy-Duty Blinds are built for exterior use: wind, sun and Montreal weather. They're popular for balconies, terraces and covered patios, and they can be motorized too.</p></details><details><summary>What about very large, arched or oddly shaped windows?</summary><p>Everything is custom-made, so unusual shapes and oversized windows are normal work for us. Bring them up when you book and we'll come prepared.</p></details><details><summary>Do you serve customers in French and English?</summary><p>Absolutely — we work in both languages, on the phone, in person and in writing. <a href="fr/">Cette page existe aussi en français.</a></p></details></div>
+      </div>
+    </section>
+
+    <section class="post-cta">
+      <div class="container post-cta__inner">
+        <div><h2>Still have a question?</h2><p>Book a free consultation and ask us in person — no obligation, no pressure.</p></div>
+        <a href="../index.html#contact" class="btn btn--solid btn--lg" data-calendly>Book a free consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand"><span class="brand__name">My<em>Kurtains</em></span><p>High style, low cost. Custom blinds, curtains &amp; smart film, made and installed across Montreal.</p></div>
+      <nav class="footer__col" aria-label="Sitemap"><h4>Explore</h4><a href="../index.html#collections">Collections</a><a href="../blog/index.html">Guides &amp; advice</a><a href="../about/">About</a><a href="../faq/">FAQ</a></nav>
+      <nav class="footer__col" aria-label="Contact"><h4>Get in touch</h4><a href="tel:+14384020559">+1 (438) 402-0559</a><a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a><a href="https://wa.me/14384020559" target="_blank" rel="noopener">WhatsApp</a><a href="../contact/">Contact</a></nav>
+      <div class="footer__col"><h4>Follow</h4><div class="footer__social"><a href="https://www.instagram.com/mykurtains/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/mykurtains" target="_blank" rel="noopener">Facebook</a></div></div>
+    </div>
+    <div class="footer__bar container"><span>© <span id="year"></span> My Kurtains — Montreal, QC</span><span class="footer__area">Serving Montréal, Laval &amp; the South Shore · Mon–Sat by appointment</span><span><a href="../privacy/">Privacy</a></span></div>
+  </footer>
+  <a href="https://wa.me/14384020559" class="fab" target="_blank" rel="noopener" aria-label="Message us on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.86 9.86 0 004.76 1.22h.004c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0012.04 2zm5.8 14.2c-.24.68-1.42 1.32-1.95 1.36-.5.05-.98.24-3.33-.7-2.8-1.1-4.6-3.96-4.74-4.14-.14-.18-1.15-1.53-1.15-2.92s.73-2.07.98-2.35c.26-.28.56-.35.75-.35.18 0 .37 0 .53.01.17.01.4-.06.62.47.24.56.8 1.95.87 2.1.07.14.12.3.02.48-.1.18-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.9 1.06.94 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.18-.2.7-.8.88-1.08.18-.28.36-.24.6-.14.24.09 1.55.73 1.82.86.26.14.44.2.5.32.06.11.06.66-.18 1.34z"/></svg></a>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#141210" />
+    <!-- Consent Mode v2 (Law 25): default = denied until the visitor chooses. Runs BEFORE GTM. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){
+      var saved = null; try { saved = localStorage.getItem('mk_consent'); } catch(e){}
+      var granted = saved === 'granted';
+      gtag('consent', 'default', {
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        analytics_storage: granted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      window.__mkConsent = saved; // 'granted' | 'denied' | null (not chosen yet)
+      // Meta Pixel doesn't follow Google Consent Mode, and GTM's fbq('init') resets Meta's own
+      // consent flag. So gate at the network level: while not granted, fbq is a sink that drops
+      // every call. On Accept we hand off to Meta's canonical bootstrap and GTM's tag re-inits.
+      window.__mkPixelGranted = granted;
+      if (!granted) {
+        var sink = function(){ /* dropped: no consent */ };
+        sink.callMethod = null; sink.queue = []; sink.push = sink; sink.loaded = true; sink.version = '2.0';
+        window.fbq = window._fbq = sink;
+      }
+    })();
+  </script>
+  <!-- Google Tag Manager (loads GA4 + Meta Pixel; configured in GTM) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-53NZB6T9');</script>
+  <!-- End Google Tag Manager -->
+  <title>About My Kurtains — Custom Blinds & Curtains, Montreal</title>
+  <meta name="description" content="We're a Montreal mobile blinds company: we bring the samples to your home, measure, quote on the spot and install free. High style, low cost — here's how that works." />
+  <link rel="canonical" href="https://www.mykurtains.com/about/" />
+  <link rel="alternate" hreflang="en" href="https://www.mykurtains.com/about/" />
+  <link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/about/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/about/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:title" content="About My Kurtains — Custom Blinds & Curtains, Montreal" />
+  <meta property="og:description" content="We're a Montreal mobile blinds company: we bring the samples to your home, measure, quote on the spot and install free. High style, low cost — here's how that works." />
+  <meta property="og:url" content="https://www.mykurtains.com/about/" />
+  <meta property="og:site_name" content="My Kurtains" />
+  <meta property="og:image" content="https://www.mykurtains.com/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "inLanguage": "en", "url": "https://www.mykurtains.com/about/", "mainEntity": {"@id": "https://www.mykurtains.com/#business"}}</script>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../blog/blog.css" />
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53NZB6T9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="nav nav--light scrolled" id="nav">
+    <div class="nav__inner container">
+      <a href="../index.html" class="brand" aria-label="My Kurtains"><span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="3"/><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="9" y1="32" x2="29.5" y2="32"/><line x1="34.5" y1="32" x2="55" y2="32"/><line x1="32" y1="9" x2="32" y2="55"/><line x1="25" y1="10.1" x2="25" y2="53.9"/><line x1="39" y1="10.1" x2="39" y2="53.9"/><line x1="18" y1="32" x2="18" y2="50.25"/><line x1="46" y1="13.75" x2="46" y2="32"/></g></svg></span><span class="brand__name">My<em>Kurtains</em></span></a>
+      <nav class="nav__links" aria-label="Primary"><a href="../index.html#collections">Collections</a><a href="../index.html#why">Why Us</a><a href="../index.html#process">How It Works</a><a href="../index.html#gallery">Gallery</a><a href="../index.html#reviews">Reviews</a><a href="../blog/index.html">Guides</a></nav>
+      <div class="nav__cta">
+        <a href="fr/" class="btn btn--ghost btn--sm lang-switch" hreflang="fr" aria-label="Voir le site en français">FR</a>
+        <a href="tel:+14384020559" class="btn btn--ghost btn--sm">438&nbsp;402&nbsp;0559</a>
+        <a href="../index.html#contact" class="btn btn--solid btn--sm" data-calendly>Free Consultation</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile" id="navMobile"><a href="../index.html#collections">Collections</a><a href="../index.html#why">Why Us</a><a href="../index.html#process">How It Works</a><a href="../index.html#gallery">Gallery</a><a href="../index.html#reviews">Reviews</a><a href="../blog/index.html">Guides</a>
+      <a href="fr/" hreflang="fr" class="nav__mobile-lang">Voir en français →</a>
+      <a href="../index.html#contact" class="btn btn--solid" data-calendly>Book Free Consultation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <p class="eyebrow">About us</p>
+        <h1 class="section__title">We brought the showroom <em>to your living room.</em></h1>
+        <p class="section__lede">My Kurtains is a Montreal custom window-covering company built around one idea: buying blinds should be simple, honest and affordable.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container" style="max-width:760px">
+        <div class="post-body">
+        <h2>Why we started</h2>
+        <p>Buying custom window coverings used to mean driving to a showroom, judging fabric under
+        fluorescent lighting, waiting days for a quote, and then discovering that installation was an
+        extra line on the invoice. It was slow, opaque and more expensive than it needed to be.</p>
+        <p>We thought the whole thing could be turned inside out. So we did: we don't have a store.
+        We come to you.</p>
+
+        <h2>How it actually works</h2>
+        <p>You pick a time on our calendar. We arrive with fabric and material samples and look at your
+        windows with you — in your light, against your walls, in the room you actually live in. We
+        measure every window precisely, talk through what each material would do for that room, and give
+        you a written quote before we leave. Everything is then made to measure and
+        <strong>installed free</strong> by our own installer.</p>
+        <p>That's the whole process. No showroom trip, no waiting a week for a number, no surprise
+        installation fee.</p>
+
+        <div class="callout"><strong>Why we can charge less</strong><p>A retail showroom is expensive:
+        rent, staff, stock sitting on shelves. We carry none of that. Being mobile is not just more
+        convenient for you — it's a large part of why our prices come in below a storefront's for the
+        same quality.</p></div>
+
+        <h2>What we make</h2>
+        <p>Roller blinds, curtains and drapes, Roman shades, day &amp; night (zebra) blinds, honeycomb
+        (cellular) shades, our edge-sealed <strong>Blockout Blind</strong> for total darkness,
+        heavy-duty blinds for balconies and terraces, and switchable smart film for glass that needs to
+        turn private on demand.</p>
+        <p><strong>Every single one of them can be motorized</strong> — by remote, by app, or through
+        Alexa and Google Home. Motorization also removes hanging cords, which makes it the safe choice
+        in homes with young children or pets.</p>
+
+        <h2>The part we're proud of</h2>
+        <p>We hold a 5.0 rating across roughly 80 Google reviews. Read a few and you'll notice they tend
+        to mention the same things: we show up when we say we will, the quote is the price, and the
+        install is clean. That's the business, really.</p>
+        <p>We work in English and French, and we serve the island of Montréal, Laval, the South Shore
+        and the West Island.</p>
+      </div>
+      </div>
+    </section>
+
+    <section class="post-cta">
+      <div class="container post-cta__inner">
+        <div><h2>See it for yourself.</h2><p>Free in-home consultation. Samples, measurements and an honest quote — no obligation.</p></div>
+        <a href="../index.html#contact" class="btn btn--solid btn--lg" data-calendly>Book a free consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand"><span class="brand__name">My<em>Kurtains</em></span><p>High style, low cost. Custom blinds, curtains &amp; smart film, made and installed across Montreal.</p></div>
+      <nav class="footer__col" aria-label="Sitemap"><h4>Explore</h4><a href="../index.html#collections">Collections</a><a href="../blog/index.html">Guides &amp; advice</a><a href="../about/">About</a><a href="../faq/">FAQ</a></nav>
+      <nav class="footer__col" aria-label="Contact"><h4>Get in touch</h4><a href="tel:+14384020559">+1 (438) 402-0559</a><a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a><a href="https://wa.me/14384020559" target="_blank" rel="noopener">WhatsApp</a><a href="../contact/">Contact</a></nav>
+      <div class="footer__col"><h4>Follow</h4><div class="footer__social"><a href="https://www.instagram.com/mykurtains/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/mykurtains" target="_blank" rel="noopener">Facebook</a></div></div>
+    </div>
+    <div class="footer__bar container"><span>© <span id="year"></span> My Kurtains — Montreal, QC</span><span class="footer__area">Serving Montréal, Laval &amp; the South Shore · Mon–Sat by appointment</span><span><a href="../privacy/">Privacy</a></span></div>
+  </footer>
+  <a href="https://wa.me/14384020559" class="fab" target="_blank" rel="noopener" aria-label="Message us on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.86 9.86 0 004.76 1.22h.004c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0012.04 2zm5.8 14.2c-.24.68-1.42 1.32-1.95 1.36-.5.05-.98.24-3.33-.7-2.8-1.1-4.6-3.96-4.74-4.14-.14-.18-1.15-1.53-1.15-2.92s.73-2.07.98-2.35c.26-.28.56-.35.75-.35.18 0 .37 0 .53.01.17.01.4-.06.62.47.24.56.8 1.95.87 2.1.07.14.12.3.02.48-.1.18-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.9 1.06.94 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.18-.2.7-.8.88-1.08.18-.28.36-.24.6-.14.24.09 1.55.73 1.82.86.26.14.44.2.5.32.06.11.06.66-.18 1.34z"/></svg></a>
+  <script src="../script.js"></script>
+</body>
+</html>

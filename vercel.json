@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/contact-us", "destination": "/contact/", "permanent": true },
+    { "source": "/faqs", "destination": "/faq/", "permanent": true },
+    { "source": "/terms", "destination": "/privacy/", "permanent": true },
+    { "source": "/services", "destination": "/#collections", "permanent": true },
+    { "source": "/products", "destination": "/#collections", "permanent": true },
+    { "source": "/shop", "destination": "/#collections", "permanent": true },
+    { "source": "/gallery", "destination": "/#gallery", "permanent": true },
+    { "source": "/reviews", "destination": "/#reviews", "permanent": true },
+    { "source": "/book", "destination": "/contact/", "permanent": true },
+    { "source": "/booking", "destination": "/contact/", "permanent": true },
+    { "source": "/quote", "destination": "/contact/", "permanent": true }
+  ]
+}

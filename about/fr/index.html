@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#141210" />
+    <!-- Consent Mode v2 (Law 25): default = denied until the visitor chooses. Runs BEFORE GTM. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){
+      var saved = null; try { saved = localStorage.getItem('mk_consent'); } catch(e){}
+      var granted = saved === 'granted';
+      gtag('consent', 'default', {
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        analytics_storage: granted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      window.__mkConsent = saved; // 'granted' | 'denied' | null (not chosen yet)
+      // Meta Pixel doesn't follow Google Consent Mode, and GTM's fbq('init') resets Meta's own
+      // consent flag. So gate at the network level: while not granted, fbq is a sink that drops
+      // every call. On Accept we hand off to Meta's canonical bootstrap and GTM's tag re-inits.
+      window.__mkPixelGranted = granted;
+      if (!granted) {
+        var sink = function(){ /* dropped: no consent */ };
+        sink.callMethod = null; sink.queue = []; sink.push = sink; sink.loaded = true; sink.version = '2.0';
+        window.fbq = window._fbq = sink;
+      }
+    })();
+  </script>
+  <!-- Google Tag Manager (loads GA4 + Meta Pixel; configured in GTM) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-53NZB6T9');</script>
+  <!-- End Google Tag Manager -->
+  <title>À propos de My Kurtains — Stores et rideaux sur mesure, Montréal</title>
+  <meta name="description" content="Une entreprise mobile de stores à Montréal : nous apportons les échantillons chez vous, mesurons, soumissionnons sur place et installons gratuitement. Haut style, bas prix." />
+  <link rel="canonical" href="https://www.mykurtains.com/about/fr/" />
+  <link rel="alternate" hreflang="en" href="https://www.mykurtains.com/about/" />
+  <link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/about/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/about/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_CA" />
+  <meta property="og:title" content="À propos de My Kurtains — Stores et rideaux sur mesure, Montréal" />
+  <meta property="og:description" content="Une entreprise mobile de stores à Montréal : nous apportons les échantillons chez vous, mesurons, soumissionnons sur place et installons gratuitement. Haut style, bas prix." />
+  <meta property="og:url" content="https://www.mykurtains.com/about/fr/" />
+  <meta property="og:site_name" content="My Kurtains" />
+  <meta property="og:image" content="https://www.mykurtains.com/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "inLanguage": "fr", "url": "https://www.mykurtains.com/about/fr/", "mainEntity": {"@id": "https://www.mykurtains.com/#business"}}</script>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../blog/blog.css" />
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53NZB6T9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="nav nav--light scrolled" id="nav">
+    <div class="nav__inner container">
+      <a href="../../index-fr.html" class="brand" aria-label="My Kurtains"><span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="3"/><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="9" y1="32" x2="29.5" y2="32"/><line x1="34.5" y1="32" x2="55" y2="32"/><line x1="32" y1="9" x2="32" y2="55"/><line x1="25" y1="10.1" x2="25" y2="53.9"/><line x1="39" y1="10.1" x2="39" y2="53.9"/><line x1="18" y1="32" x2="18" y2="50.25"/><line x1="46" y1="13.75" x2="46" y2="32"/></g></svg></span><span class="brand__name">My<em>Kurtains</em></span></a>
+      <nav class="nav__links" aria-label="Primary"><a href="../../index-fr.html#collections">Collections</a><a href="../../index-fr.html#why">Pourquoi nous</a><a href="../../index-fr.html#process">Comment ça marche</a><a href="../../index-fr.html#gallery">Galerie</a><a href="../../index-fr.html#reviews">Avis</a><a href="../../blog/fr/index.html">Guides</a></nav>
+      <div class="nav__cta">
+        <a href="../" class="btn btn--ghost btn--sm lang-switch" hreflang="en" aria-label="View the site in English">EN</a>
+        <a href="tel:+14384020559" class="btn btn--ghost btn--sm">438&nbsp;402&nbsp;0559</a>
+        <a href="../../index-fr.html#contact" class="btn btn--solid btn--sm" data-calendly>Consultation gratuite</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile" id="navMobile"><a href="../../index-fr.html#collections">Collections</a><a href="../../index-fr.html#why">Pourquoi nous</a><a href="../../index-fr.html#process">Comment ça marche</a><a href="../../index-fr.html#gallery">Galerie</a><a href="../../index-fr.html#reviews">Avis</a><a href="../../blog/fr/index.html">Guides</a>
+      <a href="../" hreflang="en" class="nav__mobile-lang">View in English →</a>
+      <a href="../../index-fr.html#contact" class="btn btn--solid" data-calendly>Réserver ma consultation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <p class="eyebrow">À propos</p>
+        <h1 class="section__title">Nous avons apporté la salle de montre <em>dans votre salon.</em></h1>
+        <p class="section__lede">My Kurtains est une entreprise montréalaise de couvre-fenêtres sur mesure bâtie autour d'une idée : acheter des stores devrait être simple, honnête et abordable.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container" style="max-width:760px">
+        <div class="post-body">
+        <h2>Pourquoi nous avons commencé</h2>
+        <p>Acheter des couvre-fenêtres sur mesure, c'était se déplacer en salle de montre, juger un
+        tissu sous un néon, attendre des jours pour une soumission, puis découvrir que l'installation
+        était une ligne de plus sur la facture. Lent, opaque, et plus cher que nécessaire.</p>
+        <p>Nous étions convaincus qu'on pouvait renverser tout ça. Alors nous l'avons fait : nous
+        n'avons pas de magasin. C'est nous qui venons à vous.</p>
+
+        <h2>Comment ça se passe</h2>
+        <p>Vous choisissez une plage horaire dans notre calendrier. Nous arrivons avec les échantillons
+        de tissus et de matériaux, et nous regardons vos fenêtres avec vous — dans votre lumière, contre
+        vos murs, dans la pièce où vous vivez réellement. Nous mesurons chaque fenêtre avec précision,
+        nous expliquons ce que chaque matériau donnerait dans cette pièce, et nous vous remettons une
+        soumission écrite avant de partir. Tout est ensuite fabriqué sur mesure et
+        <strong>installé gratuitement</strong> par notre propre installateur.</p>
+        <p>C'est tout le processus. Aucun déplacement, aucune attente d'une semaine pour un prix, aucun
+        frais d'installation surprise.</p>
+
+        <div class="callout"><strong>Pourquoi nos prix sont plus bas</strong><p>Une salle de montre
+        coûte cher : loyer, personnel, inventaire immobilisé. Nous n'avons rien de tout ça. Être mobile
+        n'est pas seulement plus pratique pour vous — c'est une grande partie de la raison pour laquelle
+        nos prix sont inférieurs à ceux d'un magasin, à qualité égale.</p></div>
+
+        <h2>Ce que nous fabriquons</h2>
+        <p>Stores enrouleurs, rideaux et draperies, stores bateau, stores jour &amp; nuit (zébrés),
+        stores alvéolaires, notre <strong>store Blockout</strong> scellé sur les bords pour une
+        obscurité totale, stores robustes pour balcons et terrasses, et film intelligent commutable
+        pour les vitrages qui doivent devenir opaques sur demande.</p>
+        <p><strong>Chacun d'entre eux peut être motorisé</strong> — par télécommande, par application,
+        ou via Alexa et Google Home. La motorisation élimine aussi les cordons pendants, ce qui en fait
+        le choix sécuritaire avec de jeunes enfants ou des animaux.</p>
+
+        <h2>Ce dont nous sommes fiers</h2>
+        <p>Nous maintenons une note de 5,0 sur environ 80 avis Google. Lisez-en quelques-uns et vous
+        remarquerez qu'ils reviennent sur les mêmes points : nous arrivons quand nous l'avons dit, la
+        soumission est le prix final, et l'installation est propre. C'est ça, notre métier.</p>
+        <p>Nous servons notre clientèle en français et en anglais, sur l'île de Montréal, à Laval, sur
+        la Rive-Sud et dans l'Ouest-de-l'Île.</p>
+      </div>
+      </div>
+    </section>
+
+    <section class="post-cta">
+      <div class="container post-cta__inner">
+        <div><h2>Voyez par vous-même.</h2><p>Consultation gratuite à domicile. Échantillons, mesures et soumission honnête — sans obligation.</p></div>
+        <a href="../../index-fr.html#contact" class="btn btn--solid btn--lg" data-calendly>Réserver une consultation gratuite</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand"><span class="brand__name">My<em>Kurtains</em></span><p>Haut style, bas prix. Stores, rideaux et film intelligent sur mesure, fabriqués et installés partout à Montréal.</p></div>
+      <nav class="footer__col" aria-label="Sitemap"><h4>Explorer</h4><a href="../../index-fr.html#collections">Collections</a><a href="../../blog/fr/index.html">Guides &amp; conseils</a><a href="../../about/fr/">À propos</a><a href="../../faq/fr/">FAQ</a></nav>
+      <nav class="footer__col" aria-label="Contact"><h4>Nous joindre</h4><a href="tel:+14384020559">+1 (438) 402-0559</a><a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a><a href="https://wa.me/14384020559" target="_blank" rel="noopener">WhatsApp</a><a href="../../contact/fr/">Nous joindre</a></nav>
+      <div class="footer__col"><h4>Suivez-nous</h4><div class="footer__social"><a href="https://www.instagram.com/mykurtains/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/mykurtains" target="_blank" rel="noopener">Facebook</a></div></div>
+    </div>
+    <div class="footer__bar container"><span>© <span id="year"></span> My Kurtains — Montreal, QC</span><span class="footer__area">Montréal, Laval et la Rive-Sud · Du lundi au samedi, sur rendez-vous</span><span><a href="../../privacy/fr/">Confidentialité</a></span></div>
+  </footer>
+  <a href="https://wa.me/14384020559" class="fab" target="_blank" rel="noopener" aria-label="Écrivez-nous sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.86 9.86 0 004.76 1.22h.004c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0012.04 2zm5.8 14.2c-.24.68-1.42 1.32-1.95 1.36-.5.05-.98.24-3.33-.7-2.8-1.1-4.6-3.96-4.74-4.14-.14-.18-1.15-1.53-1.15-2.92s.73-2.07.98-2.35c.26-.28.56-.35.75-.35.18 0 .37 0 .53.01.17.01.4-.06.62.47.24.56.8 1.95.87 2.1.07.14.12.3.02.48-.1.18-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.9 1.06.94 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.18-.2.7-.8.88-1.08.18-.28.36-.24.6-.14.24.09 1.55.73 1.82.86.26.14.44.2.5.32.06.11.06.66-.18 1.34z"/></svg></a>
+  <script src="../../script.js"></script>
+</body>
+</html>

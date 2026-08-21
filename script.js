@@ -261,11 +261,13 @@
     var bar = document.createElement("div");
     bar.className = "actbar"; bar.setAttribute("aria-label", FR ? "Actions rapides" : "Quick actions");
     var contactHref = (function () {
-      // link to the homepage contact section from wherever we are
-      var p = location.pathname;
-      if (/\/blog\/fr\//.test(p)) return "../../index-fr.html#contact";
-      if (/\/blog\//.test(p)) return "../index.html#contact";
-      return (FR ? "index-fr.html" : "index.html") + "#contact";
+      // Link to the homepage contact section from wherever we are. Climb one level
+      // per directory we're nested in: "/" -> "", "/faq/" -> "../", "/faq/fr/" and
+      // "/blog/fr/x.html" -> "../../".
+      var seg = location.pathname.split("/").filter(Boolean);
+      if (seg.length && seg[seg.length - 1].indexOf(".") > -1) seg.pop(); // drop the file name
+      var up = new Array(seg.length + 1).join("../");
+      return up + (FR ? "index-fr.html" : "index.html") + "#contact";
     })();
     bar.innerHTML =
       '<a href="tel:+14384020559" class="actbar__call">' +

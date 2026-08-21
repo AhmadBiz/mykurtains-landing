@@ -50,7 +50,9 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <!-- LocalBusiness schema — TODO: add streetAddress/postalCode and openingHoursSpecification when confirmed -->
+  <!-- LocalBusiness schema. My Kurtains is a service-area business (mobile — we go to the
+       customer, there is no showroom), so we deliberately publish areaServed and city/region
+       only, with no streetAddress. That is Google's documented setup for SABs. -->
   <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -700,12 +702,15 @@
         <a href="#process">Comment ça marche</a>
         <a href="#gallery">Galerie</a>
         <a href="blog/fr/index.html">Guides et conseils</a>
+        <a href="about/fr/">À propos</a>
+        <a href="faq/fr/">FAQ</a>
       </nav>
       <nav class="footer__col" aria-label="Contact">
         <h4>Nous joindre</h4>
         <a href="tel:+14384020559">+1 (438) 402-0559</a>
         <a href="mailto:hello@mykurtains.com">hello@mykurtains.com</a>
         <a href="https://wa.me/14384020559" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="contact/fr/">Nous joindre</a>
       </nav>
       <div class="footer__col">
         <h4>Suivez-nous</h4>
@@ -718,7 +723,7 @@
     <div class="footer__bar container">
       <span>© <span id="year"></span> My Kurtains — Montréal, QC</span>
       <span class="footer__area">Montréal, Laval et Rive-Sud · Lun–Sam sur rendez-vous</span>
-      <span>Conçu avec soin pour de belles fenêtres.</span>
+      <span><a href="privacy/fr/">Confidentialité</a></span>
     </div>
   </footer>
 

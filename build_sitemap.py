@@ -15,6 +15,11 @@ o+=url(f"{SITE}/",f"{SITE}/",f"{SITE}/index-fr.html","1.0","weekly","index.html"
 o+=url(f"{SITE}/index-fr.html",f"{SITE}/",f"{SITE}/index-fr.html","1.0","weekly","index-fr.html")
 o+=url(f"{SITE}/blog/",f"{SITE}/blog/",f"{SITE}/blog/fr/","0.9","weekly","blog/index.html")
 o+=url(f"{SITE}/blog/fr/",f"{SITE}/blog/",f"{SITE}/blog/fr/","0.9","weekly","blog/fr/index.html")
+# Standalone pages. These paths carried over from the old site and are still indexed.
+# thank-you is noindex (post-conversion), so it stays out of the sitemap.
+for slug,pri in (("contact","0.9"),("faq","0.8"),("about","0.7"),("privacy","0.3")):
+    en=f"{SITE}/{slug}/"; fr=f"{SITE}/{slug}/fr/"
+    o+=url(en,en,fr,pri,"monthly",f"{slug}/index.html"); o+=url(fr,en,fr,pri,"monthly",f"{slug}/fr/index.html")
 for p in posts:
     en=f"{SITE}/blog/{p}"; fr=f"{SITE}/blog/fr/{p}"
     o+=url(en,en,fr,"0.8","monthly",f"blog/{p}"); o+=url(fr,en,fr,"0.8","monthly",f"blog/fr/{p}")

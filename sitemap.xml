@@ -37,6 +37,78 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/blog/"/>
   </url>
   <url>
+    <loc>https://www.mykurtains.com/contact/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mykurtains.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/contact/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.mykurtains.com/contact/fr/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mykurtains.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/contact/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.mykurtains.com/faq/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mykurtains.com/faq/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/faq/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/faq/"/>
+  </url>
+  <url>
+    <loc>https://www.mykurtains.com/faq/fr/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mykurtains.com/faq/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/faq/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/faq/"/>
+  </url>
+  <url>
+    <loc>https://www.mykurtains.com/about/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mykurtains.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/about/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/about/"/>
+  </url>
+  <url>
+    <loc>https://www.mykurtains.com/about/fr/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mykurtains.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/about/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/about/"/>
+  </url>
+  <url>
+    <loc>https://www.mykurtains.com/privacy/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mykurtains.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/privacy/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://www.mykurtains.com/privacy/fr/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mykurtains.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.mykurtains.com/privacy/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mykurtains.com/privacy/"/>
+  </url>
+  <url>
     <loc>https://www.mykurtains.com/blog/best-blinds-for-montreal-winters.html</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
